@@ -1,13 +1,13 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import Home from "../components/Home";
+import LandingLayout from "../components/LandingLayout";
 import Login from "./Login";
 
 const Landing = () => {
     return (
         <div>
             <NavBar />
-            <Home />
+            <LandingLayout />
         </div>
     )
 }
