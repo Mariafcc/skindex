@@ -1,5 +1,6 @@
-import NavBar from "../components/NavBar"
-import Home from "../components/Home"
+import NavBar from "../components/NavBar";
+import Home from "../components/Home";
+import Login from "./Login";
 
 const Landing = () => {
     return (
