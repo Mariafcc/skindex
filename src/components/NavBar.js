@@ -10,6 +10,9 @@ const NavBar = () => {
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" >SkinDex</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <Link to="/home" className={location.pathname === "/home" ? "nav-link active" : "nav-link"}>
