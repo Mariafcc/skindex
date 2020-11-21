@@ -1,6 +1,6 @@
 import React from "react"
 
-const Home = () => {
+const LandingLayout = () => {
 
     return (
         <div className="text-center">
@@ -10,4 +10,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default LandingLayout;
