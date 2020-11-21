@@ -1,10 +1,12 @@
 import React from "react";
-import Routine from "./Routine"
 
-const Quiz = () => {
-    <div>
-        <Routine/>
-    </div>
+
+const Login = () => {
+    return (
+        <div>
+            <button class="button">Submit</button>
+        </div>
+    )
 }
 
-export default Quiz;
+export default Login;
