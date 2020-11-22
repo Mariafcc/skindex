@@ -46,15 +46,46 @@ if logged in > do you have any products that are working well for you?
 
 
 */
-import React from "react";
+import React, { useState } from "react";
 import QuizModal from "../components/QuizModal";
 
+
+const questions = [
+        {
+                question: "What is your skin type?",
+                answers: ["Dry","Oily","Combination"]      
+        },
+        {
+                question: "What skin issues do you have? Check all that apply.",
+                answers: ["Sensitivity","Redness","Dark circles","Elasticity","Dryness"]
+        }
+]
+
 const Quiz = () => {
+        const [userAnswers, setUserAnswers] = useState([])
+
         return (
-                <div>
-                        <p> </p>
-                   < QuizModal />     
-                </div>
+                <body>
+
+                < QuizModal questions={questions}/>
+                   
+                        {/* {questions.map(question => {
+                                <React.Fragment>
+                                <h1>{question.question}</h1>
+                                <ul>
+                                        <li>
+                                                {question.answers}
+                                        </li>
+                                        <li>
+                                                {question.answers}
+                                        </li>
+                                        <li>
+                                                {question.answers}
+                                        </li>
+                                </ul>
+                                </React.Fragment>
+                        })} */}
+                </body>
         )
 
 }
