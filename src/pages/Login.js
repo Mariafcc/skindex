@@ -1,18 +1,10 @@
-import React, {useRedirect} from "react";
-import { useState } from "react";
+import React from "react";
 
 
 const Login = () => {
-    const [redirect, setRedirect] = useState();
-
-    const handleSubmit = e => {
-        e.preventDefault();
-        console.log("this works?")
-        
-    };
     return (
         <div>
-            <button className="button" onClick={handleSubmit}>Submit</button>
+            <button class="button">Submit</button>
         </div>
     )
 }
