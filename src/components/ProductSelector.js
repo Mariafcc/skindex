@@ -3,6 +3,7 @@ import "./style/productSelector.css"
 import { useState } from "react";
 
 
+
 const ProductSelector = () => {
     const [product, setProduct] = useState();
 
@@ -24,6 +25,11 @@ const ProductSelector = () => {
                     name="product" onChange={e => setProduct(e.target.value)}></input>
                 <br></br>
                 <label className="ptype" for="type">Product type:</label>
+            <div class="centered">
+                <label className="pname" for="fname">Product you have:</label>
+                <input className="pinput" type="text" id="fname" name="fname"></input>
+                <br></br>
+                <label className="ptype"for="type">Product type:</label>
                 <select className="selector" name="product" id="products">
                     <option value="cleanser">Cleanser</option>
                     <option value="toner">Toner</option>
@@ -42,6 +48,8 @@ const ProductSelector = () => {
                 </div> */}
             </div>
 
+                <button type="button" className="selectorBtn" >Submit</button>
+            </div>
         </div>
     )
 }

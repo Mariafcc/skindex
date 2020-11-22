@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.2.2",
     "bootstrap": "^4.5.3",
     "cors": "^2.8.5",
+    "eslint-plugin-promise": "^4.2.1",
     "express": "^4.17.1",
     "firebase": "^8.1.1",
     "jquery": "^3.5.1",
