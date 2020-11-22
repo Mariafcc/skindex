@@ -33,8 +33,10 @@ function QuizModal(props) {
           {props.questions.map(res => {
             return (
               <React.Fragment>
-                <h1>{res.question}</h1>
-                <h2>{res.answers}</h2>
+                <h3>{res.question}</h3>
+                {res.answers.map(answer => {
+                  return <Button>{answer}</Button>
+                })}
               </React.Fragment>
             )
           })}
