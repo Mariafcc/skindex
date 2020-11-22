@@ -1,19 +1,16 @@
 import React from "react";
+import "./style/steps.css";
+
 
 const Steps = () => {
-    return(
-        <div class="container">
-                <div class="row">
-                    <div class="col">
-                        1 of 2
-                    </div>
-                    <div class="col">
-                        2 of 2
-                    </div>
-                </div>
+    return (
+        <div className="container">
+            <img className="img-fluid" src="/img/routineList.jpg" alt="serum" />
+            
 
-            </div>
+        </div>
+        
     )
-}
+};
 
 export default Steps;
