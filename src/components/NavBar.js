@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./style/NavBar.css"
 
+
 const NavBar = () => {
     const location = useLocation();
 
