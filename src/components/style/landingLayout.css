@@ -1,0 +1,39 @@
+/* 1920 X 1080 */
+
+.img-fluid {
+    width: 500px;
+    height: 500px;
+}
+
+.footer {
+    font-family: 'Abel', sans-serif;   
+    align-content: center;
+}
+
+.emailArea, .passwordArea {
+    margin: 0px auto;
+    
+}
+
+.landinglogin {
+    margin-bottom: 5px;
+}
+
+.text-center {
+    background-color: #56c7c7;
+    opacity: 0.5;
+}
+
+#formBasicPassword, #formBasicEmail {
+    align-content: center;
+    max-width: 300px;
+    max-height: 300px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+
+
+
+
+
