@@ -12,6 +12,8 @@ const Routine = () => {
             </header>
             <div>
                 <ProductSelector/>
+            </div>
+            <div>
                 <Steps />
             </div>
 
