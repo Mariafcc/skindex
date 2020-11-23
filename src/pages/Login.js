@@ -1,5 +1,6 @@
 import React, {useRedirect} from "react";
 import { useState } from "react";
+import NavBar from "../components/NavBar";
 
 
 const Login = () => {
@@ -12,6 +13,7 @@ const Login = () => {
     };
     return (
         <div>
+            < NavBar />
             <button className="button" onClick={handleSubmit}>Submit</button>
         </div>
     )
