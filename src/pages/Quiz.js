@@ -7,11 +7,11 @@ import QuizPicks from "../components/QuizPicks";
 const questions = [
         {
                 question: "What is your skin type?",
-                answers: ["Dry", "Oily", "Combination", "Normal", "Sensitive"]
+                answers: ["Dry", "Oily", "Normal"]
         },
         {
                 question: "What is your primary skin issue?",
-                answers: ["Sensitivity", "Redness", "Dark circles", "Elasticity", "Dryness"]
+                answers: ["Dullness", "Acne", "Elasticity", "Dryness"]
         },
         {
                 question: "What price range are you comfortable with having recommended?",
