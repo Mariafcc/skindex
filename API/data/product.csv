@@ -1,0 +1,64 @@
+id,name,brand,type,store,skinType,price,goal
+0,Superfood Antioxidant Cleanser,Youth to the people, cleanser,sephora, all, $$, elasticity 
+1,Soy Face Wash, Fresh, cleanser, sephora, all, $$, elasticity 
+2,The Cleansing Foam, La Mer, cleanser, sephora, all, $$$, elasticity 
+3,Orange Essence Facial Cleanser, Burt's Bees, cleanser, target, all, $, elasticity 
+4,The Deep Cleanser Gentle Exfoliating Cleanser, Tatcha, cleanser, sephora, oily, $$, acne
+5,Special Cleansing Gel, Dermalogica, cleanser, sephora, all, $$, acne
+6,Purifying Pore Detox Cleanser, Tata Harper, cleanser, sephora, oily, $$$, acne
+7,Effaclar Gel Cleanser, La Roche Posey, cleanser, target, oily, $, acne
+8,Facial Treatment Cleanser, SK-II, cleanser, sephora, dry, $$$, dryness
+9,The Rice Wash Cleanser, Tatcha, cleanser, sephora, dry, $$, dryness
+10,Pure Skin Face Cleanser, First Aid Beauty, cleanser, sephora, dry, $$, dryness
+11,Hydrating Facial Cleanser, CeraVe, cleanser, target, dry, $, dryness
+12,ExfoliKate Cleanser, Kate Somerville, cleanser, sephora, normal, $$, dullness
+13,GinZing Refreshing Scrub Cleanser, Origins, cleanser, sephora, normal, $$, dullness
+14,Treatment Cleansing Foam Cleanser, Amorepacific, cleanser, sephora, dry, $$$, dullness
+15,Daily Vitamin C Facial Wash, Soap & Glory, cleanser, target, dry, $, dullness
+16,Tonique Confort Re-Hydrating Comforting Toner, Lancome, toner, sephora, dry, $$$, elasticity 
+17,Rose Deep Hydration Toner,Fresh, toner,sephora, dry, $$, elasticity 
+18,Dr.Andrew Weil Mega-Mushroom Treatment Lotion,origins, toner,sephora, all, $$, elasticity 
+19,Collagen Tonic,Pixi by Petra, toner,target, all, $$, elasticity 
+20,Vinopure Toner, Caudalie, toner, sephora, oily, $$, acne
+21,Supertoner Acid Solution Toner, Glamglow, toner, sephora, oily, $$, acne
+22,Facial Treatment Clear Lotion Toner, SK-II, toner, sephora, all, $$$, acne
+23,Acne Stress Control, Neutrogena, toner, target, oily, $, acne
+24,Multi-Active Toner, Dermalogica, toner, sephora, normal, $$$, dryness
+25,Ultra repair Wild Oat Hydrating Toner, First Aid Beauty, toner, sephora, all, $$, dryness
+26,Ultra Facial Toner, Kiehl's Since 1851, toner, sephora, dry, $$, dryness
+27,Roserwater Facial Toner, Heritage Store, toner, target, dry, $, dryness
+28,Ready Steady Glow, REN, toner, sephora, dry, $$, dullness
+29,Glow2OH Dark spot Toner, Olehenriksen, toner, sephora, oily, $$, dullness
+30,The Tonic, La Mer, toner, sephora, normal, $$$, dullness
+31,Glow Tonic, Pixi by Petra, toner, target, all, $, dullness
+32,Eudermine Revitalizing Essence, Shiseido, essence, sephora, dry, $$, elasticity 
+33,Facial Treatment Essence, SK-II, essence, sephora, all, $$$, elasticity 
+34,Kombucha Facial Treatment, Fresh, essence, sephora, all, $$, elasticity 
+35,Hydrating Water Essence, E.L.F, essence, target, all, $, elasticity 
+36,Pink Drink Firming Resurfacing Essence, Sunday Riley, essence, sephora, all, $$$, acne
+37,Original Skin Essence, Origins, essence, sephora, all, $$, acne
+38,SOS Daily Rescue Spray, Tower 28 Beauty, essence, sephora, normal, $$, acne
+39,Hydrating Water Essence, E.L.F, essence, target, all, $, acne
+40,The Essence Plumping Skin Softener, Tatcha, essence, sephora, all, $$$, dryness
+41,Hydrating Essence, Algenist, essence, sephora, all, $$, dryness
+42,Iris Extract Activating Treatment, Kiehl's Since 1851, essence, sephora, dry, $$, dryness
+43,Hydrating Water Essence, E.L.F, essence, target, all, $, dryness
+44,Vintage Single Extract Essence, Amorepacific, essence, sephora, all, $$$, dullness
+45,WASO: Fresh Jelly Essence, Shiseido, essence, sephora, all, $$, dullness
+46,Vinoperfect Brightening Glycolic Essence, Caudalie, essence, sephora, oily, $$, dullness
+47,Hydrating Water Essence, E.L.F, essence, target, all, $, dullness
+48,
+49,
+50,
+51,
+52,
+53,
+54,
+55,
+56,
+57,
+58,
+59,
+60,
+
+
