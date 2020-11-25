@@ -27,7 +27,7 @@ module.exports = (sequelize, Sequelize) => {
 
         },
         order: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
 
         }
     });

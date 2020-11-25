@@ -20,8 +20,10 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.Products = require("../models/product")(sequelize, Sequelize);
+db.products = require("../models/product")(sequelize, Sequelize);
 
 module.exports = db;
+
+
 
 
