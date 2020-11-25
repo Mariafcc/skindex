@@ -24,6 +24,9 @@ module.exports = (sequelize, Sequelize) => {
         },
         goal: {
             type: Sequelize.STRING
+        },
+        order: {
+            type: DataTypes.INTEGER
         }
     });
 
