@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import QuizModal from "../components/QuizModal";
+import NavBar from "../components/NavBar";
+import QuizPicks from "../components/QuizPicks";
 
 
 const questions = [
         {
                 question: "What is your skin type?",
-                answers: ["Dry","Oily","Combination","Normal","Sensitive"]      
+                answers: ["Dry", "Oily", "Normal"]
         },
         {
-                question: "What skin issues do you have? Check all that apply.",
-                answers: ["Sensitivity","Redness","Dark circles","Elasticity","Dryness"]
+                question: "What is your primary skin issue?",
+                answers: ["Dullness", "Acne", "Elasticity", "Dryness"]
         },
         {
                 question: "What price range are you comfortable with having recommended?",
@@ -17,35 +19,19 @@ const questions = [
         },
         {
                 question: "What level of intensity do you want in a skincare routine?",
-                answers: ["Very minmal","Moderate","Very extensive"]
+                answers: ["Very minimal (3 Products)", "Moderate (4 Products)", "Extensive (8 Products)", "Very extensive (9 Products)"]
         }
 ]
 
 const Quiz = () => {
-        const [userAnswers, setUserAnswers] = useState([])
 
         return (
-                <body>
-
-                < QuizModal questions={questions}/>
-                   
-                        {/* {questions.map(question => {
-                                <React.Fragment>
-                                <h1>{question.question}</h1>
-                                <ul>
-                                        <li>
-                                                {question.answers}
-                                        </li>
-                                        <li>
-                                                {question.answers}
-                                        </li>
-                                        <li>
-                                                {question.answers}
-                                        </li>
-                                </ul>
-                                </React.Fragment>
-                        })} */}
-                </body>
+                <div>
+                        <div>
+                                <NavBar />
+                                < QuizModal questions={questions} />
+                        </div>
+                </div>
         )
 
 }

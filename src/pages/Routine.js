@@ -2,6 +2,8 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import Steps from "../components/Steps";
 import ProductSelector from "../components/ProductSelector";
+import Footer from "../components/Footer";
+
 
 const Routine = () => {
     return (
@@ -15,6 +17,9 @@ const Routine = () => {
             </div>
             <div>
                 <Steps />
+            </div>
+            <div>
+                <Footer />
             </div>
 
         </div>
