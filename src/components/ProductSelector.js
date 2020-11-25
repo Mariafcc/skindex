@@ -37,9 +37,9 @@ const ProductSelector = () => {
                 </select>
                 <button type="button" className="selectorBtn"
                     onClick={handleSubmit}>Submit</button>
-                {/* <div>
+                <div>
                     <p>{product}</p>
-                </div> */}
+                </div>
             </div>
 
         </div>

@@ -1,3 +1,4 @@
+
 id,name,brand,type,store,skinType,price,goal,order
 0,Superfood Antioxidant Cleanser,Youth to the people, cleanser,sephora, all, $$, elasticity,1 
 1,Soy Face Wash, Fresh, cleanser, sephora, all, $$, elasticity,1 
@@ -127,5 +128,3 @@ id,name,brand,type,store,skinType,price,goal,order
 125,Future Solution LX, Shiseido, spf, sephora, all, $$$, dullness,9
 126,Squalane + Zinc Sheer Mineral Sunscreen, Biossance, spf, sephora, all, $$, dullness,9
 127,Tropic Silk Hydration Weightless Face Sunscreen, Hawaiian, spf, target, all, $, dullness,9
-
-
