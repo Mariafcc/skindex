@@ -47,18 +47,85 @@ id,name,brand,type,store,skinType,price,goal
 45,WASO: Fresh Jelly Essence, Shiseido, essence, sephora, all, $$, dullness
 46,Vinoperfect Brightening Glycolic Essence, Caudalie, essence, sephora, oily, $$, dullness
 47,Hydrating Water Essence, E.L.F, essence, target, all, $, dullness
-48,
-49,
-50,
-51,
-52,
-53,
-54,
-55,
-56,
-57,
-58,
-59,
-60,
+48,The Treatment Lotion, La Mer, serum, sephora, all, $$$, elasticity 
+49,Bakuchiol Serum, Herbivore, serum, sephora, normal, $$, elasticity 
+50,Advance Genefique Serum, Lancome, serum, sephora, all, $$, elasticity 
+51,Retinol Serum, Artnaturals, serum, target, oily, $, elasticity 
+52,Pure Shots Night Reboot Resurfacing Serum, Yves saint Laurent, serum, sephora, all, $$$, acne
+53,Anti Bac Acne Clearing Lotion, Kate Somerville, serum, sephora, oily, $$, acne
+54,Vinopure Natural Salicylic Acid Serum, Caudalie, serum, sephora, all, $$, acne
+55,Clarity Concentrate, Pixi by Petra, serum, target, all, $, acne
+56,C.E.O , Sunday Riley, serum, sephora, all, $$, dullness
+57,The Concentrate, La Mer, serum, sephora, all, $$$, dullness
+58,Vinoperfect, Caudalie, serum, sephora, normal, $$, dullness
+59,Vitamin C Serum, Artnaturals, serum, target, all, $, dullness
+60,The Regenerating Serum, La Mer, serum, sephora, all, $$$, dryness
+61,Plum Plump , Glow Recipe, serum, sephora, all, $$, dryness
+62,Ultra Repair Hydrating Serum, First Aid Beauty, serum, sephora, normal, $$, dryness
+63,Hydrating Hyaluronic Acid Face Serum, CeraVe, serum, target, all, $, dryness
+64,Creme de la Mer, La Mer, moisturizer, sephora, all, $$$, elasticity 
+65,Adaptogen Deep Moisture Cream, Youth To The People, moisturizer, sephora, dry, $$, elasticity 
+66,Barrier + Triple Lipid-Peptide Cream, Skinfix, moisturizer, sephora, all, $$, elasticity 
+67,Collagen Moisture Filler, L'oreal, moisturizer, target, all, $, elasticity 
+68,Moisture Bound Refreshing Hydra-Gel, Amorepacific, moisturizer, sephora, all, $$$, acne
+69,Oil Free moisturizer, Kate Somerville, moisturizer, sephora, all, $$, acne
+70,Counter Balance Oil Control Hydrator, Olehenriksen, moisturizer, sephora, oily, $$, acne
+71,Simply Calm Hydrating Face Cream For Stressed Skin, Botanics, moisturizer, target, all, $, acne
+72,The Moisturizing Soft Cream, La Mer, moisturizer, sephora, all, $$$, dryness
+73,The Dewy Skin Cream, Tatcha, moisturizer, sephora, dry, $$, dryness
+74,Rose & Hyaluronic Deep Hydration moisturizer, Fresh, moisturizer, sephora, all, $$, dryness
+75,Moisturizing Cream, CeraVe, moisturizer, target, all, $, dryness
+76,C-Rush Vitamin C Gel, Olehenriksen,  moisturizer, sephora, all, $$, dullness
+77,Squalane + Omego Repair Cream, Biossance,  moisturizer, sephora, normal, $$, dullness
+78,Creme Ancienne, Fresh,  moisturizer, sephora, all, $$$, dullness
+79,Watermelon Glowing Oil-Free Face moisturizer, St.Ives,  moisturizer, target, all, $, dullness
+80,Time Response Eye Reserve Creme, Amorepacific, eye cream, sephora, all, $$$, elasticity 
+81,Squalane + Marine Algea Eye Cream, Biossance, eye cream, sephora, all, $$, elasticity 
+82,Rapid Wrinkle Repair Eye Cream, Neutrogena, eye cream, target, all, $, elasticity 
+83,The Eye Balm Intense, La Mer, eye cream, sephora, all, $$$, acne
+84,The Silk Peony Melting Eye Cream, Tatcha, eye cream, sephora, all, $$, acne
+85,Tokyo Age Correcting Eye Cream, Hada Labo, eye cream, target, all, $, acne
+86,Boosted Contouring Retinol Eye Balm, Tata Harper, eye cream, sephora, all, $$$, dryness
+87,Moisturizing Eye Bomb, Belif, eye cream, sephora, all, $$, dryness 
+88,Hydro Boost Hyaluronic Acid Eye Cream, Neutrogena, eye cream, target, all, $, dryness
+89,Creme Ancienne Supreme, Fresh, eye cream, sephora, all, $$$, dullness 
+90,Vital-E Microbiome Age Defense Eye Cream, Peter Thomas Roth, eye cream, sephora, all, $$, dullness
+91,Illuminating Eye Cream, E.L.F, eye cream, target, all, $, dullness
+92,GOOPGLOW Microderm Insant Glow Exfoliator,Goop, exfoliator, sephora, all, $$$, elasticity 
+93,Daily Microfoliant Exfoliator, Dermalogica, exfoliator, sephora, all, $$, elasticity 
+94,Positively Radiant Skin Brightening Exfoliating Face Scrub, Aveeno, exfoliator, target, all, $, elasticity 
+95,The Replenishing Oil Exfoliator, La Mer, exfoliator, sephora, all, $$$, acne
+96,The Rice Polish, Tatcha, exfoliator, sephora, all, $$, acne
+97,Brightening Facial Scrub, Acure, exfoliator, target, all, $, acne
+98,Microdermabrasion Age Defying Exfoliator, Dr.Brandt, exfoliator, sephora, all, $$$, dryness
+99,Yo Glow Facial Enzyme Scrub, Wishful, exfoliator, sephora, all, $$, dryness
+100,Radiant Youth Microdermabrasion Polish, Botanics, exfoliator, target, all, $, dryness 
+101,Refining Facial Polish, Omorovicza, exfoliator, sephora, all, $$$, dullness
+102,Sugar Face Polish, Fresh, exfoliator, sephora, all, $$, dullness
+103,Peach & Willow Bark Deep Pore Exfoliating Facial Scrub, Burt's Bees, exfoliator, target, all, $, dullness
+104,The Lifting And Firming Mask, La Mer, mask, sephora, all, $$$, elasticity 
+105,Black Tea Firming Overnight Mask, Fresh, mask, sephora, all, $$, elasticity 
+106,LiftActiv Hyalu Face Mask, Vichy, mask, target, all, $, elasticity 
+107,Clarifying Mask, Dr.Barbara Sturm, mask, sephora, all, $$$, acne
+108,SUPERMUD, Glamglow, mask, sephora, all, $$, acne
+109,Detoxifying Clay Face Mask, Burt's Bees, mask, target, all, $, acne
+110,Creme Ancienne Ultimate Nourishing Honey Mask, Fresh, mask, sephora, all, $$$, dryness
+111,Jet Lag Mask, Summer Fridays, mask, sephora, all, $$, dryness
+112,Moisturizing Sleeping Face Mask, E.L.F, mask, target, all, $, dryness
+113,Youth Revolution Radiance Creme & Masque, Amorepacific, mask, sephora, all, $$$, dullness
+114,Violet-C Radiance Mask, Tatcha, mask, sephora, all, $$, dullness
+115,Watermelon Super Fresh Jelly Mask, Yes To, mask, target, all, $, dullness
+116,Sun Drops, Dr.Barbara Sturm, spf, sephora, all, $$$, elasticity
+117,Unseen Sunscreen, Supergoop!, spf, sephora, all, $$, elasticity
+118,Daily Anti-Aging Face Sunscreen, Vichy, spf, target, all, $, elasticity
+119,The Broad Spectrum SPF, La Mer, spf, sephora, all, $$$, acne
+120,Silken Pore Perfecting Sunscreen, Tatcha, spf, sephora, all, $$, acne
+121,Clear Face Sunscreen Lotion, Neutrogena, spf, target, all, $, acne
+122,Prisma Protect, Dermalogica, spf, sephora, all, $$$, dryness
+123,Water Drench Hyaluronic Hydrating Moisturizer SPF 45, Peter Thomas Roth, spf, sephora, all, $$, dryness
+124,Protect Hydrate Face Sunscreen, Aveeno, spf, target, all, $, dryness
+125,Future Solution LX, Shiseido, spf, sephora, all, $$$, dullness
+126,Squalane + Zinc Sheer Mineral Sunscreen, Biossance, spf, sephora, all, $$, dullness
+127,Tropic Silk Hydration Weightless Face Sunscreen, Hawaiian, spf, target, all, $, dullness
 
 
