@@ -1,21 +1,38 @@
 const db = require("../models");
-const { products } = require("../models");
-const { Profiler } = require("react");
-const Product = db.products;
+const Tutorial = db.tutorials;
 const Op = db.Sequelize.Op;
 
-module.exports = (app) => {
-    app.get("/api/productlist", (req, res) => {
-        db.Product.findAll({
-            where: {
-                [Op.or]: [
-                    { id: req.query.id }
+// Create and Save a new Tutorial
+exports.create = (req, res) => {
 
-                ]
-            }
-        }).then((products) => {
-            res.json(products)
-        })
-    })
+};
 
-}
+// Retrieve all Tutorials from the database.
+exports.findAll = (req, res) => {
+
+};
+
+// Find a single Tutorial with an id
+exports.findOne = (req, res) => {
+
+};
+
+// Update a Tutorial by the id in the request
+exports.update = (req, res) => {
+
+};
+
+// Delete a Tutorial with the specified id in the request
+exports.delete = (req, res) => {
+
+};
+
+// Delete all Tutorials from the database.
+exports.deleteAll = (req, res) => {
+
+};
+
+// Find all published Tutorials
+exports.findAllPublished = (req, res) => {
+
+};
