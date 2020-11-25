@@ -5,7 +5,7 @@ import Landing from "./pages/Landing"
 import Login from "./pages/Login";
 import Routine from "./pages/Routine";
 import Home from "./pages/Home"
-import API from "./utils/firebase/functions/API"
+
 
 
 
