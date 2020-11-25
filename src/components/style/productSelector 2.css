@@ -1,0 +1,40 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pname {
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+}
+
+.pinput{
+    border-radius: 10%;
+    background-color: rgb(218, 235, 238);
+}
+
+.ptype{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+}
+
+.selector{
+    border-radius: 10%;
+    background-color: rgb(218, 235, 238);
+    height: 30px;
+}
+
+.selectorBtn{
+    background-color: rgb(218, 235, 238);
+    border-radius: 10%;
+    
+}
+
+img{
+    width: 100%;
+}
+
