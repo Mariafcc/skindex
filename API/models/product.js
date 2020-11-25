@@ -24,12 +24,13 @@ module.exports = (sequelize, Sequelize) => {
         },
         goal: {
             type: Sequelize.STRING
+
         },
         order: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
+
         }
     });
 
     return Product;
 };
-
