@@ -24,7 +24,9 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+
 db.products = require("./product")(sequelize, Sequelize);
+
 
 module.exports = db;
 
