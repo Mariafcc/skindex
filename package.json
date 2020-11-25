@@ -13,13 +13,17 @@
     "firebase": "^8.1.1",
     "jquery": "^3.5.1",
     "materialize-css": "^1.0.0-rc.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.0",
+    "react-scripts": "^4.0.1",
     "semantic-ui-react": "^2.0.1",
+    "sequelize": "^6.3.5",
+    "start": "^5.1.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

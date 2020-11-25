@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
     const Product = sequelize.define("product", {
         id: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             primaryKey: true
         },
         brand: {
@@ -24,10 +24,13 @@ module.exports = (sequelize, Sequelize) => {
         },
         goal: {
             type: Sequelize.STRING
+
+        },
+        order: {
+            type: Sequelize.INTEGER
+
         }
     });
 
     return Product;
 };
-
-
