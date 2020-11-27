@@ -1,10 +1,10 @@
 import React from "react";
 import "./style/productSelector.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const ProductSelector = () => {
-    const [product, setProduct] = useState();
+    const [product, setProduct] = useState("");
 
     const handleSubmit = e => {
         e.preventDefault();
