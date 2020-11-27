@@ -1,13 +1,19 @@
 const express = require("express");
+const mysql = require("mysql")
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const db = require("./API/models");
-
 
 const app = express();
 
+const db = mysql.createPool({
+    host: "localhost",
+    user: "3306",
+    password: "",
+    database: "userinputdb"
+})
+
 var corsOptions = {
-    origin: "http://localhost:8081"
+    origin: "http://localhost:8080"
 };
 
 app.use(cors(corsOptions));
@@ -21,8 +27,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-    
-    res.json({ message: "Welcome to bezkoder application." });
+    const sqlInsert = 
+    "INSERT INTO userProducts (productName, productType) VALUES ('test', 'test');";
+    db.query(sqlInsert, (err, result) => {
+        res.send("hi maria");
+    })
 });
 
 // set port, listen for requests
@@ -30,15 +39,3 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
-// // set port, listen for requests
-// const PORT = process.env.PORT || 8080;
-// db.sequelize.sync({ truncate: true }).then(function () {
-//     app.listen(PORT, function () {
-//         console.log("App listening on PORT " + PORT);
-//     });
-// });
-
-
-
-
-
