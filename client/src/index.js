@@ -8,9 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import $ from "jquery";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );
 
