@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import QuizModal from "../components/QuizModal";
 import NavBar from "../components/NavBar";
-import QuizPicks from "../components/QuizPicks";
 
 
 const questions = [
