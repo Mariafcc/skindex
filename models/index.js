@@ -27,6 +27,11 @@ db.sequelize = sequelize;
 db.user = require("./user.model")(sequelize, Sequelize);
 db.product = require("./product.model")(sequelize, Sequelize);
 
+db.result = require("./result.model")(sequelize, Sequelize);
+
+db.user.hasMany(db.result, {foreignKey: 'userId'});
+
+
 module.exports = db;
 
 
