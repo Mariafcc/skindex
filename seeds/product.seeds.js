@@ -2,6 +2,7 @@ const db = require("../models/index");
 const Product = db.product;
 
 const InitializeProducts = () => {
+
   Product.create({
     "id": 1,
     "name": "Superfood Antioxidant Cleanser",
@@ -1664,6 +1665,7 @@ const InitializeProducts = () => {
       "order": 9
     }
   );
+
 }
 
 module.exports = InitializeProducts;
