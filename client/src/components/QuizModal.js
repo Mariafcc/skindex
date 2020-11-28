@@ -30,7 +30,7 @@ function QuizModal(props) {
 		empties !== undefined
 			? //if user didn't answer all the questios, show it some message, for now just console.log
 			  console.log('please select missing answers')
-			: //if all qauetions has been answered, set isSubmited to true, also here you want to perform your axios call and send user data to DB
+			: //if all questions has been answered, set isSubmited to true, also here you want to perform your axios call and send user data to DB
 			  setIsSubmitted(true);
 		console.log('ready to send userAnswers to DB');
 	};
