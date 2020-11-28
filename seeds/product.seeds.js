@@ -25,6 +25,112 @@ const InitializeProducts = () => {
         "goal": "elasticity",
         "order": 1
       });
+
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
+      Product.create(
+
+      );
 }
 
 module.exports = InitializeProducts;
