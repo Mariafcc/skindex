@@ -1,0 +1,50 @@
+const db = require("../models");
+const User = db.user;
+
+checkDuplicateUsernameOrEmail = (req, res, next) => {
+	if (!req.body.username){
+		res.status(422).send({ message: "Invalid or blank username" });
+		return;
+	}
+
+	if (!req.body.email){
+		res.status(422).send({ message: "Invalid or blank email" });
+		return;
+	}
+
+	// Username
+	User.findOne({
+		where: {
+			username: req.body.username
+		}
+	}).then(user => {
+		if (user) {
+			res.status(400).send({
+				message: "Failed! Username is already in use!"
+			});
+			return;
+		}
+
+		// Email
+		User.findOne({
+			where: {
+				email: req.body.email
+			}
+		}).then(user => {
+			if (user) {
+				res.status(400).send({
+					message: "Failed! Email is already in use!"
+				});
+				return;
+			}
+
+			next();
+		});
+	});
+};
+
+const verifySignUp = {
+	checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail,
+};
+
+module.exports = verifySignUp;
