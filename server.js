@@ -1,44 +1,34 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const db = require("./API/models");
-
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
 
 const app = express();
 
-var corsOptions = {
-    origin: "http://localhost:8081"
-};
-
-app.use(cors(corsOptions));
-
-// parse requests of content-type - application/json
 app.use(bodyParser.json());
-
-// parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const db = require("./models");
 
-// simple route
-app.get("/", (req, res) => {
-    
-    res.json({ message: "Welcome to bezkoder application." });
+
+//run initially
+const seeds = require("./seeds");
+db.sequelize.sync({force: true}).then(() => {
+    console.log('Drop and Resync Db');
+    seeds.productSeeds();
 });
 
-// set port, listen for requests
+//comment out initially
+//db.sequelize.sync();
+
+// load in routes
+fs.readdir('./routes', (err, files) => {
+	files.forEach((file) => {
+		const routeFile = `./routes/${file}`;
+		require(routeFile)  (app);
+	});
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
+	console.log(`Server is running on port ${PORT}.`);
 });
-// // set port, listen for requests
-// const PORT = process.env.PORT || 8080;
-// db.sequelize.sync({ truncate: true }).then(function () {
-//     app.listen(PORT, function () {
-//         console.log("App listening on PORT " + PORT);
-//     });
-// });
-
-
-
-
-
