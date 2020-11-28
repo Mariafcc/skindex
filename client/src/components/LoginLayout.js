@@ -1,6 +1,10 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
 
 const LoginLayout = () => {
+
+    const history = useHistory()
+
     return (
         <div>
             <form>
@@ -25,7 +29,9 @@ const LoginLayout = () => {
                 </div>
 
 
-                <button type="logInsubmit" className="btn btn-dark btn-lg btn-block">Sign in</button>
+                <button type="logInsubmit" className="btn btn-dark btn-lg btn-block"
+                    onClick={() => history.push('/routine')}
+                >Sign in</button>
 
             </form>
 

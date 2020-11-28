@@ -1,6 +1,8 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
 
 const SignupLayout = () => {
+    const history = useHistory()
 
     return (
         <form>
@@ -21,7 +23,9 @@ const SignupLayout = () => {
                 <input type="password" className="form-control" placeholder="Enter password" />
             </div>
 
-            <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
+            <button type="submit" className="btn btn-dark btn-lg btn-block"
+            onClick={() => history.push('/home')}
+            >Register</button>
 
         </form>
     );

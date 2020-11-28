@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ButtonGroup, Button, Modal, Alert } from 'react-bootstrap';
 import Quiz from '../pages/Quiz';
 import '../components/style/QuizModal.css';
+import { useHistory } from 'react-router-dom';
+
 function QuizModal(props) {
 
 	const [show, setShow] = useState(false);
@@ -28,7 +30,7 @@ function QuizModal(props) {
 		const empties = userAnswers.find(item => item.selection === '');
 		//if there are no empties, the .find method will return undefined, verifying that user selected answers to each series of questions
 		empties !== undefined
-			? //if user didn't answer all the questios, show it some message, for now just console.log
+			? //if user didn't answer all the questions, show it some message, for now just console.log
 			  console.log('please select missing answers')
 			: //if all questions has been answered, set isSubmited to true, also here you want to perform your axios call and send user data to DB
 			  setIsSubmitted(true);
@@ -55,7 +57,10 @@ function QuizModal(props) {
 		});
 		//finally assigning new state to user answers 
 		setUserAnswers([...finalSelection]);
-	};
+  };
+
+  const history = useHistory()
+
 	console.log(userAnswers);
 	return (
 		<>
@@ -166,6 +171,13 @@ function QuizModal(props) {
 									);
 								})}
 							</ButtonGroup>
+              <Button
+              className={`py-lg-3 border rounded-0`}
+              variant='secondary'
+              onClick={() => history.push('/routine')}
+              style={{ overflowWrap: 'anywhere' }}
+            >
+              Go To Routine</Button>
 						</React.Fragment>
 					)}
 				</Modal.Body>
