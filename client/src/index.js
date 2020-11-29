@@ -5,12 +5,23 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import { BrowserRouter } from "react-router-dom";
+import AuthWrapper from "./authorization/authWrapper";
 import $ from "jquery";
 
+const Root = () => (
+  <BrowserRouter>
+    <AuthWrapper>
+      <App />
+    </AuthWrapper>
+  </BrowserRouter>
+)
+
 ReactDOM.render(
-    <App />,
+  <Root/>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

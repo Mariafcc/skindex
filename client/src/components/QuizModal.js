@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ButtonGroup, Button, Modal, Alert } from 'react-bootstrap';
 import Quiz from '../pages/Quiz';
-import '../components/style/QuizModal.css';
 import { useHistory } from 'react-router-dom';
 
 function QuizModal(props) {

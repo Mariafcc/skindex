@@ -38,8 +38,8 @@ exports.signup = (req, res) => {
 };
 
 exports.signin = (req, res) => {
-	if (!req.body.username){
-		res.status(422).send({ message: "Invalid or blank username" });
+	if (!req.body.email){
+		res.status(422).send({ message: "Invalid or blank email" });
 		return;
 	}
 
@@ -50,7 +50,7 @@ exports.signin = (req, res) => {
 
 	User.findOne({
 			where: {
-				username: req.body.username
+				email: req.body.email
 			}
 		})
 		.then(user => {
