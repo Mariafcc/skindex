@@ -74,7 +74,7 @@ const LoginLayout = () => {
 
                 <div className="form-group">
                     <label>Email</label>
-                    <Input type="text" name="email" value={email} onChange={onChangeEmail}
+                    <Input type="email" name="email" value={email} onChange={onChangeEmail}
                     validations={[required]} className="form-control" placeholder="Enter email" />
                 </div>
                 
