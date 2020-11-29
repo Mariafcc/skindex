@@ -10,13 +10,19 @@ const Routine = () => {
         <div class="container">
             <header>
                 <NavBar />
-               
+
             </header>
-            <div>
-                <ProductSelector/>
-            </div>
-            <div>
-                <Steps />
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ProductSelector />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <Steps />
+                    </div>
+                </div>
             </div>
             <div>
                 <Footer />
