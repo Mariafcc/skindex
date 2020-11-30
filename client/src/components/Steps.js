@@ -1,39 +1,53 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, setState } from "react";
 import "./style/steps.css";
-import axios from "axios";
+import GettingRoutine from "../services/routine.service"
+import { ListGroup } from "react-bootstrap"
+import { useEffect } from "react";
+
 
 const Steps = () => {
-    const [products, setProducts] = useState({ hits: [] });
 
-    useEffect(async () => {
-        const fetchData = async () => {
-            const result = await axios("http://localhost:8080/api/products",
-            );
-            setProducts(result.products)
-        };
-        fetchData();
-    }, []);
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        routine();
+    })
+
+    const routine = () => {
+        GettingRoutine.productDisplay()
+    }
+
+
 
     return (
         <Fragment>
-            
+
             <div class="container">
 
                 <div class="row">
                     <div class="col-4">These are your recommendations
-                <ul class="list-group">
-                            {products.hits.map(item => (
-                                <li key={item.name}>
-                                    <a href={item.url}>{item.title}</a>
-                                </li>
+                    <ListGroup>
+                            {products.map(product => (
+                                <ListGroup.Item key={product.name}>
+                                    <strong>
+                                        {product.name}
+                                    </strong>
+                                </ListGroup.Item>
                             ))}
+                            <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                        </ListGroup>
+                        {/* <ul class="list-group">
 
 
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            {gettingProducts.map(data => (<li key={data.products.name} class="list-group-item"></li>))}
                             <li class="list-group-item">Morbi leo risus</li>
                             <li class="list-group-item">Porta ac consectetur ac</li>
                             <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
             </div>
