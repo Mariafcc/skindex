@@ -18,11 +18,6 @@ const LandingLayout = () => {
                 <div class="row">
                     <div class="col">
                         <div>
-                            <LoginLayout />
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div>
                             <SignupLayout />
                         </div>
                     </div>
@@ -30,21 +25,6 @@ const LandingLayout = () => {
 
             </div>
 
-            {/* <Form className="footer">
-                <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control className="emailArea" type="email" placeholder="Enter email" />
-                </Form.Group>
-
-                <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control className="passwordArea" type="password" placeholder="Password" />
-                </Form.Group>
-                <Button className="landinglogin" variant="dark" type="submit">
-                    Log In
-                 </Button>
-            </Form> */}
-            {/* change the img file to googledrive */}
         </div>
     )
 }

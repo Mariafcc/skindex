@@ -1,20 +1,18 @@
-import React, {useRedirect} from "react";
-import { useState } from "react";
+import React from "react";
 import NavBar from "../components/NavBar";
+import LoginLayout from "../components/LoginLayout"
 
 
 const Login = () => {
-    const [redirect, setRedirect] = useState();
-
-    const handleSubmit = e => {
-        e.preventDefault();
-        console.log("this works?")
-        
-    };
+    
     return (
         <div>
-            < NavBar />
-            <button className="button" onClick={handleSubmit}>Submit</button>
+            <div>
+                < NavBar />
+            </div>
+            <div>
+                <LoginLayout />
+            </div>
         </div>
     )
 }

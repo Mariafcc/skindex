@@ -1,23 +1,43 @@
-import React from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import "./style/steps.css";
-import ProductSelector from "./ProductSelector"
-
+import axios from "axios";
 
 const Steps = () => {
-    return (
+    const [products, setProducts] = useState({ hits: [] });
 
-        <div class="container">
+    useEffect(async () => {
+        const fetchData = async () => {
+            const result = await axios("http://localhost:8080/api/products",
+            );
+            setProducts(result.products)
+        };
+        fetchData();
+    }, []);
+
+    return (
+        <Fragment>
             
-            <div class="row">
-                <div class="col-8">This will display the google map and recommendations</div>
-                <div class="col-4">This is your routine!
-                {/* <div>
-                    <p>{product}</p>
-                </div> */}
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-4">These are your recommendations
+                <ul class="list-group">
+                            {products.hits.map(item => (
+                                <li key={item.name}>
+                                    <a href={item.url}>{item.title}</a>
+                                </li>
+                            ))}
+
+
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </Fragment>
 
 
     )

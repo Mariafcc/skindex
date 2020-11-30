@@ -9,7 +9,9 @@ const Landing = () => {
     return (
         <div>
             <NavBar />
-            <LandingLayout />
+            <div>
+                <LandingLayout />
+            </div>
             <Footer />
         </div>
 
