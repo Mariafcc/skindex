@@ -5,7 +5,11 @@ import ProductSelector from "../components/ProductSelector";
 import Footer from "../components/Footer";
 
 
+
 const Routine = () => {
+
+
+
     return (
         <div class="container">
             <header>
@@ -14,9 +18,9 @@ const Routine = () => {
             </header>
             <div class="container">
                 <div class="row">
-                    <div class="col">
+                    {/* <div class="col">
                         <ProductSelector />
-                    </div>
+                    </div> */}
                 </div>
                 <div class="row">
                     <div class="col">

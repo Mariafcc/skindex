@@ -1,18 +1,50 @@
 const db = require("../models");
 const Op = db.Sequelize.Op;
 const Product = db.product;
-
+const Result = db.result
 
 exports.getProducts = (req, res) => {
-    Product.findAll()
-    .then(products => {
-        res.status(200).send({
-            products
-        });
+    Product.findAll({
+        attributes: ['id', 'brand', 'name']
     })
-    .catch(err => {
-        res.status(500).send({ message: err.message });
-    });
+        .then(products => {
+            res.status(200).send({
+                products
+            });
+        })
+        .catch(err => {
+            res.status(500).send({ message: err.message });
+        });
+};
+
+exports.findAllSkinType = (req, res) => {
+    Result.findAll({
+        where: {
+            userId: req.userId
+        }
+    })
+        .then((answers) => {
+            const skinType = answers.find(x => x.question_id == 1);
+            console.log(skinType);
+            Product.findAll({
+                where: {
+                    skinType: {
+                        [Op.in]: [skinType.answer, 'all']
+                    }
+                }
+            })
+                .then(products => {
+                    res.status(200).send({
+                        products
+                    });
+                })
+                .catch(err => {
+                    res.status(500).send({ message: err.message });
+                });
+        })
+        .catch(err => {
+            res.status(500).send({ message: err.message });
+        });
 };
 
 /*
@@ -46,8 +78,5 @@ exports.deleteAll = (req, res) => {
 
 };
 
-// Find all published Tutorials
-exports.findAllPublished = (req, res) => {
 
-};
 */

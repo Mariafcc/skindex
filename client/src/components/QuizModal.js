@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { ButtonGroup, Button, Modal, Alert } from 'react-bootstrap';
-import Quiz from '../pages/Quiz';
 import { useHistory } from 'react-router-dom';
 import ResultService from "../services/results.service";
-import CheckButton from "react-validation/build/button";
+
 
 
 function QuizModal(props) {
@@ -37,6 +36,7 @@ function QuizModal(props) {
     //looking for empty selection values in userAnswers array
     //const empties = userAnswers.find(item => item.selection === '');
     if (userAnswers.length != questions.length){
+      //change to alert
       console.log('please select missing answers');
       return;
     }

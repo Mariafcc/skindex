@@ -10,6 +10,6 @@ module.exports = function(app) {
 		next();
 	});
 
-	app.get("/api/products", controller.getProducts);
-	app.get("/api/productsAuth", [authJwt.verifyToken], controller.getProducts);
+	app.get("/api/products", [authJwt.verifyToken], controller.getProducts);
+	app.get("/api/products/myroutine", [authJwt.verifyToken], controller.findAllSkinType);
 };
