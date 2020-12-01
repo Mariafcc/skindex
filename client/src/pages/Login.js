@@ -1,18 +1,16 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import LoginLayout from "../components/LoginLayout"
+import LoginLayout from "../components/LoginLayout";
+import Footer from "../components/Footer";
 
 
 const Login = () => {
-    
+
     return (
         <div>
-            <div>
-                < NavBar />
-            </div>
-            <div>
-                <LoginLayout />
-            </div>
+            < NavBar />
+            <LoginLayout />
+            <Footer />
         </div>
     )
 }
