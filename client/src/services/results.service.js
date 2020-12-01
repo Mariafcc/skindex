@@ -16,3 +16,7 @@ const saveQuestion = (id, question, answer) => {
         console.log(err);
     });
 };
+
+export default {
+    saveQuestion,
+};
