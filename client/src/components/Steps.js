@@ -1,21 +1,45 @@
-import React, { Fragment, useState, setState } from "react";
+import React, { Fragment, useState } from "react";
 import "./style/steps.css";
-import GettingRoutine from "../services/routine.service"
+import RoutineService from "../services/routine.service"
 import { ListGroup } from "react-bootstrap"
 import { useEffect } from "react";
+import axios from "axios"
 
 
 const Steps = () => {
-
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        routine();
-    })
+        getProducts();
+    }, [])
 
-    const routine = () => {
-        GettingRoutine.productDisplay()
-    }
+    const getProducts = () => {
+        RoutineService.productDisplay().then((data) => {
+            setProducts(data.data.products);
+        }).catch((error) => {
+            console.log(error);
+        });
+    };
+
+    // const getProducts = () => {
+    //     RoutineService.routineDisplay().then((data) => {
+    //         setProducts(data.data.products);
+    //     }).catch((error) => {
+    //         console.log(error);
+    //     });
+    // };
+
+    
+
+    // const routine = () => {
+    //     GettingRoutine.productDisplay()
+    //     .then((response) => {
+    //         setProducts(response)
+    //         console.log(response)
+    //     })
+
+
+    // }
 
 
 
@@ -27,18 +51,12 @@ const Steps = () => {
                 <div class="row">
                     <div class="col-4">These are your recommendations
                     <ListGroup>
-                            {products.map(product => (
-                                <ListGroup.Item key={product.name}>
-                                    <strong>
-                                        {product.name}
-                                    </strong>
+                            {products && products.length > 0 ? products.map((product, index) => (
+                                <ListGroup.Item key={index}>
+                                    {product.brand},
+                                    {product.name}
                                 </ListGroup.Item>
-                            ))}
-                            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-                            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                            )) : ''}
                         </ListGroup>
                         {/* <ul class="list-group">
 

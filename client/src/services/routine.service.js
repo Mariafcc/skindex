@@ -3,19 +3,15 @@ import authHeader from "./auth-header";
 
 const API_URL = "/api/products"
 
-const productDisplay = (brand, name) => {
-    return axios.get(API_URL, {
-        brand,
-        name
-    },{ headers: authHeader() })
-    .then((response) => {
-        console.log(response);
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+const productDisplay = () => {
+    return axios.get(API_URL, { headers: authHeader() });
+}
+
+const routineDisplay = () => {
+    return axios.get(`${API_URL}/myroutine`, { headers: authHeader() });
 }
 
 export default {
     productDisplay,
+    routineDisplay
 }
