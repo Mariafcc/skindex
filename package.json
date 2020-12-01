@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Mariafcc/skindex#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -29,6 +30,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
-    "sequelize": "^6.3.5"
+    "react-validation": "^3.0.7",
+    "sequelize": "^6.3.5",
+    "validator": "^13.5.1"
   }
 }

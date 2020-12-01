@@ -35,7 +35,7 @@
 
   To install necessary dependencies, run the following command:
   ```
-  npm install axios, reeact-bootstrap, react-dom, react-router-dom, sequelize, validator, json webtkn, bcrypt, nodemon, bodyparser, exprress, sql, materialize-css
+  npm install axios, reeact-bootstrap, react-dom, react-router-dom, sequelize, react-validation, json-webtkn, bcrypt, nodemon, bodyparser, exprress, sql, materialize-css
   ```
 
   ## Usage
@@ -64,7 +64,9 @@
 
   To run tests, run the following command:
   ```
-  NA
+  To run the front-end, cd into the client directory and run "npm start";
+  To run the back-end, run "npm run server" from the root directory;
+  To run both, run "npm run dev" from the root directory. 
   ```
   
   ## Questions
