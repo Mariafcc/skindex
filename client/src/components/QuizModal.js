@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { ButtonGroup, Button, Modal, Alert } from 'react-bootstrap';
-import Quiz from '../pages/Quiz';
 import { useHistory } from 'react-router-dom';
 import ResultService from "../services/results.service";
-import CheckButton from "react-validation/build/button";
+
 
 
 function QuizModal(props) {
@@ -22,15 +21,6 @@ function QuizModal(props) {
   //state for checking if the form has been submitted
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  //mcadded
-  const form = useRef();
-  const checkBtn = useRef();
-  const [successful, setSuccessful] = useState(false);
-  const [message, setMessage] = useState("");
-  const [id, setId] = useState("");
-  const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("");
-
 
   //or use useEffect and watch for props
   const handleClose = () => {
@@ -46,6 +36,7 @@ function QuizModal(props) {
     //looking for empty selection values in userAnswers array
     //const empties = userAnswers.find(item => item.selection === '');
     if (userAnswers.length != questions.length){
+      //change to alert
       console.log('please select missing answers');
       return;
     }
@@ -77,38 +68,6 @@ function QuizModal(props) {
     */
 
   };
-  /*
-  //trying to import answers to db
-  const handleAnswerTable = (e) => {
-    e.preventDefault();
-
-        setMessage("");
-        setSuccessful(false);
-
-        
-
-        if (checkBtn.current.context._errors.length === 0) {
-            Result.saveQuestion(id, question, answer).then(
-                (response) => {
-                    setMessage(response.data.message);
-                    setSuccessful(true);
-                },
-                (error) => {
-                    const resMessage =
-                        (error.response &&
-                            error.response.data &&
-                            error.response.data.message) ||
-                        error.message ||
-                        error.toString();
-
-                    setMessage(resMessage);
-                    setSuccessful(false);
-                }
-            );
-        }
-  }
-  */
-  
 
 
 
