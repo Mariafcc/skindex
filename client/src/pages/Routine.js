@@ -3,6 +3,8 @@ import NavBar from "../components/NavBar";
 import Steps from "../components/Steps";
 import ProductSelector from "../components/ProductSelector";
 import Footer from "../components/Footer";
+import RoutineLayout from "../components/RoutineLayout";
+import { Container, Row, Column, Card } from "react-bootstrap";
 
 
 
@@ -11,26 +13,11 @@ const Routine = () => {
 
 
     return (
-        <div class="container">
-            <header>
-                <NavBar />
 
-            </header>
-            <div class="container">
-                <div class="row">
-                    {/* <div class="col">
-                        <ProductSelector />
-                    </div> */}
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <Steps />
-                    </div>
-                </div>
-            </div>
-            <div>
-                <Footer />
-            </div>
+        <div>
+            <NavBar />
+            <RoutineLayout />
+            <Footer />
 
         </div>
     )

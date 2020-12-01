@@ -13,10 +13,10 @@ function App() {
       <div className="App">
         <header className="App-header">
           <div>
-            <Route exact path="/" component={Landing}/>
-            <Route exact path="/login" component={Login}/>
-            <AuthRouter exact path="/routine" component={Routine}/>
-            <AuthRouter exact path="/home" component={Home}/>
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/routine" component={Routine} />
+            <AuthRouter exact path="/home" component={Home} />
           </div>
         </header>
         <p></p>
