@@ -1,10 +1,9 @@
 const db = require("../models");
-//const Tutorial = db.tutorials;
 const Op = db.Sequelize.Op;
 const Results = db.results;
 
 
-exports.getResultss = (req, res) => {
+exports.getResults = (req, res) => {
     Results.findAll()
     .then(results => {
         res.status(200).send({

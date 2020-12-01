@@ -7,12 +7,18 @@ import RoutineLayout from "../components/RoutineLayout";
 import { Container, Row, Column, Card } from "react-bootstrap";
 
 
+
 const Routine = () => {
+
+
+
     return (
+
         <div>
             <NavBar />
             <RoutineLayout />
             <Footer />
+
         </div>
     )
 }
