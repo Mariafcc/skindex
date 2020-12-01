@@ -1,5 +1,5 @@
 import React from "react"
-import "./style/descriptionCard.css"
+import "./style/opacity.css"
 import { Card } from "react-bootstrap"
 
 function DescriptionCard() {

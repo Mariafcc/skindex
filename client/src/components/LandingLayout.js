@@ -1,10 +1,10 @@
 import React from "react"
 // import { Form, Button} from "react-bootstrap";
-// import "./style/landingLayout.css"
+import "./style/opacity.css"
 import LoginLayout from "./LoginLayout.js"
 import SignupLayout from "./SignupLayout"
 import DescriptionCard from "./DescriptionCard"
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 
 const LandingLayout = () => {
 
@@ -19,19 +19,16 @@ const LandingLayout = () => {
             height: "100%"
         }} >
             {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
-            <Container >
+            <Container className="justify-content-center">
                 <Row>
-                    <Col>
+                    <Col className="col-sm-6 pb-5">
                         <DescriptionCard />
                     </Col>
-                    <Col>
-                        <SignupLayout />
+                    <Col className="col-sm-6">
+                        <Card className="p-4">
+                            <SignupLayout />
+                        </Card>
                     </Col>
-                </Row>
-                <Row className="center">
-                    {/* <Col>
-                        <SignupLayout />
-                    </Col> */}
                 </Row>
             </Container>
         </div>
