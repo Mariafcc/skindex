@@ -3,31 +3,26 @@ import NavBar from "../components/NavBar";
 import Steps from "../components/Steps";
 import ProductSelector from "../components/ProductSelector";
 import Footer from "../components/Footer";
+import { Container, Row, Column, Card } from "react-bootstrap";
 
 
 const Routine = () => {
     return (
-        <div class="container">
-            <header>
-                <NavBar />
-
-            </header>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <ProductSelector />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <Steps />
-                    </div>
-                </div>
-            </div>
-            <div>
-                <Footer />
-            </div>
-
+        <div>
+            <NavBar />
+            <Container className="" style={{
+                backgroundImage: `url(https://cdn.hipwallpaper.com/i/77/23/vEinft.jpg)`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundAttachment: "fixed",
+                position: "absolute",
+                width: "100%",
+                height: "100%"
+            }} >
+                <ProductSelector />
+                <Steps />
+            </Container>
+            <Footer />
         </div>
     )
 }

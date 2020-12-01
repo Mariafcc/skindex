@@ -19,7 +19,7 @@ const LandingLayout = () => {
             height: "100%"
         }} >
             {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
-            <Container className="justify-content-center">
+            <Container>
                 <Row>
                     <Col className="col-sm-6 pb-5">
                         <DescriptionCard />
