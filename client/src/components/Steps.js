@@ -30,18 +30,6 @@ const Steps = () => {
         });
     };
 
-    
-
-    // const routine = () => {
-    //     GettingRoutine.productDisplay()
-    //     .then((response) => {
-    //         setProducts(response)
-    //         console.log(response)
-    //     })
-
-
-    // }
-
 
 
     return (
