@@ -8,8 +8,12 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "start": "node server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "heroku-postbuild": "cd client && npm run build"
   },
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mariafcc/skindex.git"
@@ -30,6 +34,7 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
+    "path": "^0.12.7",
     "react-validation": "^3.0.7",
     "sequelize": "^6.3.5",
     "validator": "^13.5.1"
