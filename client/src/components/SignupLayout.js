@@ -97,7 +97,7 @@ const SignupLayout = () => {
 
     const redirectAfterSuccessfulRegister = () => {
         const to = { pathname: `home`, hash: `#hash` };
-        setTimeout(() => history.push(to), 5000);
+        setTimeout(() => history.push(to), 3000);
     };
 
     useEffect(() => {
@@ -143,7 +143,7 @@ const SignupLayout = () => {
                     >
                         {message}
                     </div>
-                    <div className="success-message text-center">You will be redirected to Skin test in 5 seconds</div>
+                    <div className="success-message text-center">You will be redirected to Skin test in 3 seconds</div>
                 </div>
             )}
             <CheckButton style={{ display: "none" }} ref={checkBtn} />

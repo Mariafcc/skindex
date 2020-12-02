@@ -25,12 +25,17 @@ exports.findAllSkinType = (req, res) => {
     })
         .then((answers) => {
             const skinType = answers.find(x => x.question_id == 1);
+            const goal = answers.find(x => x.question_id == 2);
+            const price = answers.find(x => x.question_id == 3);
+            
             console.log(skinType);
             Product.findAll({
                 where: {
                     skinType: {
                         [Op.in]: [skinType.answer, 'all']
-                    }
+                    },
+                    goal: goal.answer,
+                    price: price.answer
                 }
             })
                 .then(products => {
@@ -42,10 +47,13 @@ exports.findAllSkinType = (req, res) => {
                     res.status(500).send({ message: err.message });
                 });
         })
+
         .catch(err => {
             res.status(500).send({ message: err.message });
         });
 };
+
+
 
 /*
 // Create and Save a new Tutorial

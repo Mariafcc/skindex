@@ -13,21 +13,22 @@ const Steps = () => {
         getProducts();
     }, [])
 
-    const getProducts = () => {
-        RoutineService.productDisplay().then((data) => {
-            setProducts(data.data.products);
-        }).catch((error) => {
-            console.log(error);
-        });
-    };
-
     // const getProducts = () => {
-    //     RoutineService.routineDisplay().then((data) => {
+    //     RoutineService.productDisplay().then((data) => {
     //         setProducts(data.data.products);
     //     }).catch((error) => {
     //         console.log(error);
     //     });
     // };
+
+    const getProducts = () => {
+        RoutineService.routineDisplay().then((data) => {
+            setProducts(data.data.products);
+            console.log(data)
+        }).catch((error) => {
+            console.log(error);
+        });
+    };
 
     
 
