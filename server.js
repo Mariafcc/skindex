@@ -9,24 +9,38 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
+
 app.use(express.static('client/public'));
+
 
 //heroku run if we add this the routine does not display 
 // app.get('*', (req, res) => { 
 //      res.sendfile(path.join(__dirname = 'client/public/index.html'));
 // })
 
-//run initially
-// const seeds = require("./seeds");
-// db.sequelize.sync({force: true}).then(() => {
-//     console.log('Drop and Resync Db');
-//     seeds.productSeeds();
+
+// if (process.env.NODE_ENV === 'production') {
+// 	app.use(express.static('client/build'));
+// }
+
+app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));})
+
+
+// app.get('*', (request, response) => {
+// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 // });
 
-//comment out initially
-db.sequelize.sync();
+//run initially
+const seeds = require("./seeds");
+db.sequelize.sync({force: true}).then(() => {
+    console.log('Drop and Resync Db');
+    seeds.productSeeds();
+});
 
-// load in routes
+//comment out initially
+// db.sequelize.sync();
+
+// load in routess
 fs.readdir('./routes', (err, files) => {
 	files.forEach((file) => {
 		const routeFile = `./routes/${file}`;
