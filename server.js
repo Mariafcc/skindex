@@ -22,9 +22,6 @@ app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build
 app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));})
 
 
-// app.get('*', (request, response) => {
-// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
 //run initially
 const seeds = require("./seeds");
 db.sequelize.sync({force: true}).then(() => {
