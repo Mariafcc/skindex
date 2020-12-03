@@ -32,7 +32,7 @@ db.sequelize.sync({force: true}).then(() => {
 //comment out initially
 // db.sequelize.sync();
 
-// load in routes
+// load in routess
 fs.readdir('./routes', (err, files) => {
 	files.forEach((file) => {
 		const routeFile = `./routes/${file}`;

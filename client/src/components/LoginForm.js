@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 const required = (value) => {
     if (!value) {
         return (
-            // make into an Alert
+            // make into an Alert!!
             <div>This field is required!</div>
         );
     }
