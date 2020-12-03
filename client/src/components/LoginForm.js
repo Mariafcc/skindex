@@ -67,9 +67,39 @@ const LoginForm = () => {
         }
     };
 
+    const handleLogintoRoutine = (e) => {
+        e.preventDefault();
+
+        setMessage("");
+
+        form.current.validateAll();
+
+        if (checkBtn.current.context._errors.length === 0) {
+            AuthService.login(email, password).then(
+                (authData) => {
+                    onLogin(authData);
+                    history.push("/routine");
+                    window.location.reload();
+                },
+                (error) => {
+                    const resMessage =
+                        (error.response &&
+                            error.response.data &&
+                            error.response.data.message) ||
+                        error.message ||
+                        error.toString();
+
+                    setMessage(resMessage);
+                }
+            );
+        } else {
+
+        }
+    };
+
     return (
         <div>
-            <Form onSubmit={handleLogin} ref={form} className="input-sm">
+            <Form  ref={form} className="input-sm">
                 <h3>Log in</h3>
 
                 <div className="form-group">
@@ -82,7 +112,8 @@ const LoginForm = () => {
                     <label>Password</label>
                     <Input type="password" name="password" value={password} onChange={onChangePassword} validations={[required]} className="form-control" placeholder="Enter password" />
                 </div>
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
+                <button onClick={handleLogin} type="submit" className="btn btn-dark btn-lg btn-block">To Take Test</button>
+                <button onClick={handleLogintoRoutine} type="submit" className="btn btn-dark btn-lg btn-block">To Routine</button>
 
                 {message && (
                     <div className="form-group">
