@@ -2,6 +2,8 @@ import React from "react";
 import "./style/productSelector.css"
 // import { useState, useEffect } from "react";
 
+import Map from "./Map"
+
 
 const ProductSelector = () => {
     // const [product, setProduct] = useState("");
@@ -39,6 +41,7 @@ const ProductSelector = () => {
                         <li class="list-group-item">Vestibulum at eros</li>
                     </ul>
                 </div>
+                <Map />
             </div>
 
         </div>
