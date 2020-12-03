@@ -12,12 +12,10 @@ const db = require("./models");
 app.use(express.static('client/build'));
 
 
+
 // if (process.env.NODE_ENV === 'production') {
 // 	app.use(express.static('client/build'));
 // }
-
-if(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'client/build')));   
-app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build/index.html'));  })}
 
 app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));})
 
@@ -27,16 +25,16 @@ app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/i
 // });
 
 //run initially
-// const seeds = require("./seeds");
-// db.sequelize.sync({force: true}).then(() => {
-//     console.log('Drop and Resync Db');
-//     seeds.productSeeds();
-// });
+const seeds = require("./seeds");
+db.sequelize.sync({force: true}).then(() => {
+    console.log('Drop and Resync Db');
+    seeds.productSeeds();
+});
 
 //comment out initially
-db.sequelize.sync();
+// db.sequelize.sync();
 
-// load in routes
+// load in routess
 fs.readdir('./routes', (err, files) => {
 	files.forEach((file) => {
 		const routeFile = `./routes/${file}`;

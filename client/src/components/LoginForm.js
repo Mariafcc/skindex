@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 const required = (value) => {
     if (!value) {
         return (
-            // make into an Alert
+            // make into an Alert!!
             <div>This field is required!</div>
         );
     }
@@ -48,7 +48,7 @@ const LoginForm = () => {
             AuthService.login(email, password).then(
                 (authData) => {
                     onLogin(authData);
-                    history.push("/routine");
+                    history.push("/home");
                     window.location.reload();
                 },
                 (error) => {
