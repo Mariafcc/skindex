@@ -49,6 +49,7 @@ const LoginForm = () => {
                 (authData) => {
                     onLogin(authData);
                     history.push("/home");
+
                     window.location.reload();
                 },
                 (error) => {
@@ -79,6 +80,7 @@ const LoginForm = () => {
                 (authData) => {
                     onLogin(authData);
                     history.push("/routine");
+
                     window.location.reload();
                 },
                 (error) => {

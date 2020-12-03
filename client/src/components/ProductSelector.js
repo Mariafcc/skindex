@@ -5,6 +5,10 @@ import RoutineService from "../services/routine.service"
 import { ListGroup } from "react-bootstrap"
 
 
+import Map from "./Map"
+
+
+
 const ProductSelector = () => {
     // const [product, setProduct] = useState("");
 
@@ -74,6 +78,7 @@ const ProductSelector = () => {
                         </ul> */}
                     </div>
                 </div>
+                <Map />
             </div>
         </Fragment>
 
