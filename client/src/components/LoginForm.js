@@ -48,7 +48,7 @@ const LoginForm = () => {
             AuthService.login(email, password).then(
                 (authData) => {
                     onLogin(authData);
-                    history.push("/routine");
+                    history.push("/home");
                     window.location.reload();
                 },
                 (error) => {

@@ -26,14 +26,14 @@ app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/i
 // 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 // });
 //run initially
-// const seeds = require("./seeds");
-// db.sequelize.sync({force: true}).then(() => {
-//     console.log('Drop and Resync Db');
-//     seeds.productSeeds();
-// });
+const seeds = require("./seeds");
+db.sequelize.sync({force: true}).then(() => {
+    console.log('Drop and Resync Db');
+    seeds.productSeeds();
+});
 
 //comment out initially
-db.sequelize.sync();
+// db.sequelize.sync();
 
 // load in routes
 fs.readdir('./routes', (err, files) => {
