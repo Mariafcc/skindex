@@ -96,7 +96,7 @@ const SignupLayout = () => {
     };
 
     const redirectAfterSuccessfulRegister = () => {
-        const to = { pathname: `home`, hash: `#hash` };
+        const to = { pathname: `login`, hash: `#hash` };
         setTimeout(() => history.push(to), 3000);
     };
 
@@ -143,7 +143,7 @@ const SignupLayout = () => {
                     >
                         {message}
                     </div>
-                    <div className="success-message text-center">You will be redirected to Skin test in 3 seconds</div>
+                    <div className="success-message text-center">You will be redirected to longin in 3 seconds</div>
                 </div>
             )}
             <CheckButton style={{ display: "none" }} ref={checkBtn} />
