@@ -9,8 +9,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
-app.use(express.static('client/build'));
 
+app.use(express.static('client/public'));
+
+
+//heroku run if we add this the routine does not display 
+// app.get('*', (req, res) => { 
+//      res.sendfile(path.join(__dirname = 'client/public/index.html'));
+// })
 
 
 // if (process.env.NODE_ENV === 'production') {

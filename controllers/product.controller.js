@@ -53,8 +53,6 @@ exports.findAllSkinType = (req, res) => {
         });
 };
 
-
-
 /*
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
