@@ -27,16 +27,31 @@ exports.findAllSkinType = (req, res) => {
             const skinType = answers.find(x => x.question_id == 1);
             const goal = answers.find(x => x.question_id == 2);
             const price = answers.find(x => x.question_id == 3);
-            
+            const amount = answers.find(x => x.question_id == 4);
             console.log(skinType);
+            // if (amount.answer === 3) {
+
+            //     Product.findAll({
+            //         where: {
+            //             type: [cleanser, moisturizer, spf]
+            //         }
+            //     })
+            // }
+
             Product.findAll({
                 where: {
                     skinType: {
                         [Op.in]: [skinType.answer, 'all']
                     },
                     goal: goal.answer,
-                    price: price.answer
-                }
+                    price: price.answer,
+                    // type: [cleanser, moisturizer,spf]
+                },
+                // offset:{
+                //     limit: 3,
+                //     // attributes:["cleanser", "moisturizer","spf"]
+                // }
+
             })
                 .then(products => {
                     res.status(200).send({
@@ -46,14 +61,7 @@ exports.findAllSkinType = (req, res) => {
                 .catch(err => {
                     res.status(500).send({ message: err.message });
                 });
-                // if (amount === 3){
-                //     const amount = answers.find(x => x.question_id == 4);
-                //     Product.findAll({
-                //         where:{
-                //             type: [cleanser, moisturizer,spf]
-                //         }
-                //     })
-                // }
+
         })
 
         .catch(err => {
