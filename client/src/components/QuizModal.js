@@ -46,7 +46,7 @@ function QuizModal(props) {
       let tempSelection = x.selection;
       if (x.id === 4){
         //grabs number from question number four string 
-        tempSelection = x.selection.replace(/[^0-6]/g, "");
+        tempSelection = x.selection.replace(/[^0-9]/g, "");
       }
 
       ResultService.saveQuestion(x.id, questions[index].question, tempSelection);

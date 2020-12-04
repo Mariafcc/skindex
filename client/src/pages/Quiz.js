@@ -22,7 +22,7 @@ const questions = [
         {
                 id: 4,
                 question: "What level of intensity do you want in a skincare routine?",
-                answers: ["Very minimal (3 Products)", "Moderate (4 Products)", "Extensive (5 Products)", "Very extensive (6 Products)"]
+                answers: ["Very minimal (3 Products)", "Moderate (4 Products)", "Extensive (5 Products)", "Very extensive (9 Products)"]
         }
 ]
 
