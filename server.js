@@ -38,14 +38,14 @@ app.use(express.static('client/public'));
 // });
 
 //run initially
-// const seeds = require("./seeds");
-// db.sequelize.sync({force: true}).then(() => {
-//     console.log('Drop and Resync Db');
-//     seeds.productSeeds();
-// });
+const seeds = require("./seeds");
+db.sequelize.sync({force: true}).then(() => {
+    console.log('Drop and Resync Db');
+    seeds.productSeeds();
+});
 
 //comment out initially
-db.sequelize.sync();
+// db.sequelize.sync();
 
 // load in routess
 fs.readdir('./routes', (err, files) => {
