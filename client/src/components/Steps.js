@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment} from "react";
 import "./style/steps.css";
 
 
 
 const Steps = () => {
-   
 
 
 
@@ -14,8 +13,8 @@ const Steps = () => {
             <div className="container">
 
                 <div className="row">
-                    <div className="col-4">
-                    <div>MAP WILL GO HERE</div>
+                    <div className="col-4">Map will go here
+                    
                     </div>
                 </div>
             </div>

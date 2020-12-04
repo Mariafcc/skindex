@@ -46,6 +46,14 @@ exports.findAllSkinType = (req, res) => {
                 .catch(err => {
                     res.status(500).send({ message: err.message });
                 });
+                // if (amount === 3){
+                //     const amount = answers.find(x => x.question_id == 4);
+                //     Product.findAll({
+                //         where:{
+                //             type: [cleanser, moisturizer,spf]
+                //         }
+                //     })
+                // }
         })
 
         .catch(err => {
