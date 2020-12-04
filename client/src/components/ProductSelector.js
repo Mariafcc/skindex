@@ -54,7 +54,8 @@ const ProductSelector = () => {
                             {products && products.length > 0 ? products.map((product, index) => (
                                 <ListGroup.Item key={index}>
                                     {product.brand},
-                                    {product.name}
+                                    {product.name},
+                                    {product.type}
                             <div className="input-group input-group-sm">
                                 <div className="input-group-prepend">
                                     <span className="input-group-text" id="inputGroup-sizing-sm">Replace Item</span>
@@ -78,7 +79,7 @@ const ProductSelector = () => {
                         </ul> */}
                     </div>
                 </div>
-                <Map />
+                {/* <Map /> */}
             </div>
         </Fragment>
 

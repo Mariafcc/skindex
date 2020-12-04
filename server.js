@@ -29,7 +29,8 @@ app.use(express.static('client/public'));
 // 	app.use(express.static('client/build'));
 // }
 
-app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));})
+//if i comment this in the products dont pull in routine ask tutor about it
+// app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));})
 
 
 // app.get('*', (request, response) => {
@@ -37,14 +38,14 @@ app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/i
 // });
 
 //run initially
-const seeds = require("./seeds");
-db.sequelize.sync({force: true}).then(() => {
-    console.log('Drop and Resync Db');
-    seeds.productSeeds();
-});
+// const seeds = require("./seeds");
+// db.sequelize.sync({force: true}).then(() => {
+//     console.log('Drop and Resync Db');
+//     seeds.productSeeds();
+// });
 
 //comment out initially
-// db.sequelize.sync();
+db.sequelize.sync();
 
 // load in routess
 fs.readdir('./routes', (err, files) => {
