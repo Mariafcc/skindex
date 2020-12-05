@@ -107,16 +107,57 @@ exports.findAllSkinType = async (req, res) => {
 
 
             if (amount == 9){
-                products = await Product.findAll({
+                const essences = await Product.findAll({
                     where: {
                         skinType: {
                             [Op.in]: [skinType.answer, 'all']
                         },
                         goal: goal.answer,
                         price: price.answer,
-                    },
-                    // limit: 1,
+                        type:"essence"
+                    }
                 });
+
+                products.essence = essences[Math.floor(Math.random() * essences.length)];
+
+                const exfoliators = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"exfoliator"
+                    }
+                });
+
+                products.exfoliator = exfoliators[Math.floor(Math.random() * exfoliators.length)];
+
+                const masks = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"mask"
+                    }
+                });
+
+                products.mask = masks[Math.floor(Math.random() * masks.length)];
+
+                const eyes = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"eye cream"
+                    }
+                });
+
+                products.eye = eyes[Math.floor(Math.random() * eyes.length)];
             }
 
             res.status(200).send({
