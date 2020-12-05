@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./style/productSelector.css"
 import RoutineService from "../services/routine.service"
 // import { useState, useEffect } from "react";
-import { ListGroup } from "react-bootstrap"
+import { ListGroup, Table } from "react-bootstrap"
 
 
 import Map from "./Map"
@@ -31,17 +31,19 @@ const ProductSelector = () => {
     //         console.log(error);
     //     });
     // };
+    // console.log(reccs)
+
 
     const getProducts = () => {
-        RoutineService.routineDisplay().then((data) => {
-            setProducts(data.data.products);
-            console.log(data.data.products)
+        RoutineService.routineDisplay().then((res) => {
+            const reccs = Object.values(res.data.products)
+            setProducts([...reccs]);
+            // console.log(res)
         }).catch((error) => {
             console.log(error);
         });
     };
-
-
+    console.log(products)
 
     return (
 
@@ -50,17 +52,37 @@ const ProductSelector = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-4">This is your routine!
-                         <ListGroup>
-                             <ListGroup.Item>
-                                 
-                                 {console.log(products.moisturizer)}
-                                 {/* {products.moisturizer.brand} */}
-                                 {/* {products.moisturizer.name}
-                                 {products.moisturizer.type} */}
-                             {/* {products.map(product => <div>{product.moisturizer}</div>)} */}
-                             </ListGroup.Item>
-                         </ListGroup>
-                        
+                         <Table>
+                            <thead>
+                                <th>ID</th>
+                                <th>Type</th>
+                                <th>Brand</th>
+                                <th>Name</th>
+
+                            </thead>
+                            {[...products].map(product => {
+                                return (
+
+                                    <tr key={product.id}>
+                                        <td>
+                                            {product.id}
+                                        </td>
+                                        <td>
+                                            {product.type}
+                                        </td>
+
+                                        <td>
+                                            {product.brand}
+                                        </td>
+                                        <td>
+                                            {product.name}
+                                        </td>
+                                    </tr>
+
+                                )
+                            })}
+                        </Table>
+
                     </div>
                 </div>
                 {/* <Map /> */}
