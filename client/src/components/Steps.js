@@ -1,16 +1,11 @@
 
 import React, { Fragment} from "react";
 import "./style/steps.css";
-
-
-import React, { Fragment} from "react";
 import Map from "./Map"
 
 
 
 const Steps = () => {
-
-import "./style/steps.css";
 
 
 
