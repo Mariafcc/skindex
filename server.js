@@ -13,6 +13,7 @@ app.use(express.static('client/public'));
 
 
 
+
 //run initially
 // const seeds = require("./seeds");
 // db.sequelize.sync({force: true}).then(() => {

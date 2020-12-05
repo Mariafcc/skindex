@@ -45,9 +45,11 @@ exports.findAllSkinType = async (req, res) => {
                     price: price.answer,
                     type:"cleanser"
                 }
+
             });
             //randomizing selection if more than one product shows for the category.
             products.cleanser = cleansers[Math.floor(Math.random() * cleansers.length)];
+
 
             const moisturizers = await Product.findAll({
                 where: {
