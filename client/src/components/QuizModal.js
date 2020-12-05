@@ -24,7 +24,7 @@ function QuizModal(props) {
 
   //or use useEffect and watch for props
   const handleClose = () => {
-    if (isSubmitted){
+    if (isSubmitted) {
       setShow(false);
     }
     //this is bootstrap close modal handler, setting here setIsSubmitted to false, so user can start the quiz again
@@ -35,7 +35,7 @@ function QuizModal(props) {
     e.preventDefault();
     //looking for empty selection values in userAnswers array
     //const empties = userAnswers.find(item => item.selection === '');
-    if (userAnswers.length != questions.length){
+    if (userAnswers.length != questions.length) {
       //change to alert
       console.log('please select missing answers');
       return;
@@ -44,9 +44,9 @@ function QuizModal(props) {
     console.log(userAnswers);
     userAnswers.forEach((x, index) => {
       let tempSelection = x.selection;
-      if (x.id === 4){
+      if (x.id === 4) {
         //grabs number from question number four string 
-        tempSelection = x.selection.replace(/[^0-6]/g, "");
+        tempSelection = x.selection.replace(/[^0-9]/g, "");
       }
 
       ResultService.saveQuestion(x.id, questions[index].question, tempSelection);
@@ -81,7 +81,7 @@ function QuizModal(props) {
 
     const inArray = userAnswers.find(item => item.id === id);
     let newArray = userAnswers;
-    if (inArray){
+    if (inArray) {
       newArray = userAnswers.filter(item => item.id !== id);
     }
     newArray.push({ id, selection })
@@ -240,7 +240,7 @@ function QuizModal(props) {
               variant='link'
               size='lg'
               className='mx-auto text-uppercase font-weight-bold text-dark'
-              onClick={(handleClose,handleSubmit)}
+              onClick={(handleClose, handleSubmit)}
             >
               Submit Answers
             </Button>

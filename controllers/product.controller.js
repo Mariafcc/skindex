@@ -77,36 +77,45 @@ exports.findAllSkinType = async (req, res) => {
 
             products.spf = spfs[Math.floor(Math.random() * spfs.length)];
 
-            if (amount >= 4){
-
-            }
-
-            if (amount >= 8){
-                products.mask = await Product.findAll({
+            if (amount >= 5){
+                products.serum = await Product.findAll({
                     where: {
                         skinType: {
                             [Op.in]: [skinType.answer, 'all']
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"mask"
+                        type:"serum"
                     }
                 });
 
-                products.mask = masks[Math.floor(Math.random() * masks.length)];
+                products.serum = serums[Math.floor(Math.random() * serums.length)];
+
+                products.toner = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"toner"
+                    }
+                });
+
+                products.toner = toners[Math.floor(Math.random() * toners.length)];
             }
 
 
             if (amount == 9){
-                products.mask = await Product.findOne({
+                products = await Product.findAll({
                     where: {
                         skinType: {
                             [Op.in]: [skinType.answer, 'all']
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"mask"
-                    }
+                    },
+                    // limit: 1,
                 });
             }
 
