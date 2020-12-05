@@ -78,7 +78,7 @@ exports.findAllSkinType = async (req, res) => {
             products.spf = spfs[Math.floor(Math.random() * spfs.length)];
 
             if (amount >= 5){
-                products.serum = await Product.findAll({
+                const serums = await Product.findAll({
                     where: {
                         skinType: {
                             [Op.in]: [skinType.answer, 'all']
@@ -91,7 +91,7 @@ exports.findAllSkinType = async (req, res) => {
 
                 products.serum = serums[Math.floor(Math.random() * serums.length)];
 
-                products.toner = await Product.findAll({
+                const toners = await Product.findAll({
                     where: {
                         skinType: {
                             [Op.in]: [skinType.answer, 'all']
