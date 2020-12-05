@@ -50,33 +50,17 @@ const ProductSelector = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-4">This is your routine!
-                    <ListGroup>
-                            {products && products.length > 0 ? products.map((product, index) => (
-                                <ListGroup.Item key={index}>
-                                    {product.brand},
-                                    {product.name},
-                                    {product.type}
-                            <div className="input-group input-group-sm">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text" id="inputGroup-sizing-sm">Replace Item</span>
-                                </div>
-                                <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                                </input>
-                                <div className="input-group-append">
-                                    <button className="input-group-text">submit</button>
-                                </div>
-                            </div>
-                                </ListGroup.Item>
-                            )) : ''}
-                        </ListGroup>
-                        {/* <ul className="list-group">
-
-
-                            {gettingProducts.map(data => (<li key={data.products.name} className="list-group-item"></li>))}
-                            <li className="list-group-item">Morbi leo risus</li>
-                            <li className="list-group-item">Porta ac consectetur ac</li>
-                            <li className="list-group-item">Vestibulum at eros</li>
-                        </ul> */}
+                         <ListGroup>
+                             <ListGroup.Item>
+                                 
+                                 {console.log(products.moisturizer)}
+                                 {/* {products.moisturizer.brand} */}
+                                 {/* {products.moisturizer.name}
+                                 {products.moisturizer.type} */}
+                             {/* {products.map(product => <div>{product.moisturizer}</div>)} */}
+                             </ListGroup.Item>
+                         </ListGroup>
+                        
                     </div>
                 </div>
                 {/* <Map /> */}

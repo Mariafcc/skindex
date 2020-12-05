@@ -11,6 +11,7 @@ const routineDisplay = () => {
     return axios.get(`${API_URL}/myroutine`, { headers: authHeader() });
 }
 
+
 export default {
     productDisplay,
     routineDisplay,
