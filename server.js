@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
-app.use(express.static('client/public'));
+// app.use(express.static('client/public'));
 
 
 
@@ -24,13 +24,28 @@ app.use(express.static('client/public'));
 //comment out initially
 db.sequelize.sync();
 
-// load in routess
-fs.readdir('./routes', (err, files) => {
-    files.forEach((file) => {
-        const routeFile = `./routes/${file}`;
-        require(routeFile)(app);
+// load in routes
+// fs.readdir('./routes', (err, files) => {
+//     files.forEach((file) => {
+//         const routeFile = `./routes/${file}`;
+//         require(routeFile)(app);
+//     });
+// });
+
+require('./routes/auth.routes')(app);
+require('./routes/product.routes')(app);
+require('./routes/result.routes')(app);
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'client/build')));
+    app.get('*', (req, res) => {
+        res.sendfile(path.join(__dirname = 'client/build/index.html'));
+    })
+} else {
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname + '/client/public/index.html'));
     });
-});
+}
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
