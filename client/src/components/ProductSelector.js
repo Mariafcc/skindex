@@ -35,7 +35,7 @@ const ProductSelector = () => {
     const getProducts = () => {
         RoutineService.routineDisplay().then((data) => {
             setProducts(data.data.products);
-            console.log(data)
+            console.log(data.data.products)
         }).catch((error) => {
             console.log(error);
         });
