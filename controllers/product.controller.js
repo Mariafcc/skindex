@@ -17,88 +17,102 @@ exports.getProducts = (req, res) => {
         });
 };
 
-exports.findAllSkinType = (req, res) => {
+exports.findAllSkinType = async (req, res) => {
+
+
     Result.findAll({
         where: {
             userId: req.userId
         }
     })
-        .then((answers) => {
+        .then( async (answers) => {
             const skinType = answers.find(x => x.question_id == 1);
             const goal = answers.find(x => x.question_id == 2);
             const price = answers.find(x => x.question_id == 3);
-            const amount = answers.find(x => x.question_id == 4);
+            const amountAnswer = answers.find(x => x.question_id == 4);
+
+            const amount = parseInt(amountAnswer.answer)
             console.log(skinType);
-            // if (amount.answer === 3) {
 
-            //     Product.findAll({
-            //         where: {
-            //             type: [cleanser, moisturizer, spf]
-            //         }
-            //     })
-            // }
+            const products = {};
 
-            Product.findAll({
+            const cleansers = await Product.findAll({
                 where: {
                     skinType: {
                         [Op.in]: [skinType.answer, 'all']
                     },
                     goal: goal.answer,
                     price: price.answer,
-                    // type: [cleanser, moisturizer,spf]
-                },
-                // offset:{
-                //     limit: 3,
-                //     // attributes:["cleanser", "moisturizer","spf"]
-                // }
+                    type:"cleanser"
+                }
+            });
+            //randomizing selection if more than one product shows for the category.
+            products.cleanser = cleansers[Math.floor(Math.random() * cleansers.length)];
 
-            })
-                .then(products => {
-                    res.status(200).send({
-                        products
-                    });
-                })
-                .catch(err => {
-                    res.status(500).send({ message: err.message });
+            const moisturizers = await Product.findAll({
+                where: {
+                    skinType: {
+                        [Op.in]: [skinType.answer, 'all']
+                    },
+                    goal: goal.answer,
+                    price: price.answer,
+                    type:"moisturizer"
+                }
+            });
+
+            products.moisturizer = moisturizers[Math.floor(Math.random() * moisturizers.length)];
+
+            const spfs = await Product.findAll({
+                where: {
+                    skinType: {
+                        [Op.in]: [skinType.answer, 'all']
+                    },
+                    goal: goal.answer,
+                    price: price.answer,
+                    type:"spf"
+                }
+            });
+
+            products.spf = spfs[Math.floor(Math.random() * spfs.length)];
+
+            if (amount >= 4){
+
+            }
+
+            if (amount >= 8){
+                products.mask = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"mask"
+                    }
                 });
 
-        })
+                products.mask = masks[Math.floor(Math.random() * masks.length)];
+            }
 
+
+            if (amount == 9){
+                products.mask = await Product.findOne({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"mask"
+                    }
+                });
+            }
+
+            res.status(200).send({
+                products
+            });
+        })
         .catch(err => {
             res.status(500).send({ message: err.message });
         });
 };
-
-/*
-// Create and Save a new Tutorial
-exports.create = (req, res) => {
-
-};
-
-// Retrieve all Tutorials from the database.
-exports.findAll = (req, res) => {
-
-};
-
-// Find a single Tutorial with an id
-exports.findOne = (req, res) => {
-
-};
-
-// Update a Tutorial by the id in the request
-exports.update = (req, res) => {
-
-};
-
-// Delete a Tutorial with the specified id in the request
-exports.delete = (req, res) => {
-
-};
-
-// Delete all Tutorials from the database.
-exports.deleteAll = (req, res) => {
-
-};
-
-
-*/

@@ -10,12 +10,9 @@ const productDisplay = () => {
 const routineDisplay = () => {
     return axios.get(`${API_URL}/myroutine`, { headers: authHeader() });
 }
-const reccDisplay = () => {
-    return axios.get(`${API_URL}/myrecommendations`, { headers: authHeader() });
-}
 
 export default {
     productDisplay,
     routineDisplay,
-    reccDisplay
+    
 }
