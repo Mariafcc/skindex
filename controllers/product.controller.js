@@ -116,6 +116,7 @@ exports.findAllSkinType = async (req, res) => {
                         price: price.answer,
                         type:"essence"
                     }
+
                 });
 
                 products.essence = essences[Math.floor(Math.random() * essences.length)];
@@ -145,6 +146,7 @@ exports.findAllSkinType = async (req, res) => {
                     
                 });
 
+
                 products.mask = masks[Math.floor(Math.random() * masks.length)];
 
                 const eyes = await Product.findAll({
@@ -156,8 +158,7 @@ exports.findAllSkinType = async (req, res) => {
                         price: price.answer,
                         type:"eye cream"
                     }
-                    
-            
+
                 });
 
                 products.eye = eyes[Math.floor(Math.random() * eyes.length)];
