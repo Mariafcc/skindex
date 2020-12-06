@@ -30,13 +30,13 @@ exports.findAllSkinType = async (req, res) => {
             const goal = answers.find(x => x.question_id == 2);
             const price = answers.find(x => x.question_id == 3);
             const amountAnswer = answers.find(x => x.question_id == 4);
-
             const amount = parseInt(amountAnswer.answer)
             console.log(skinType);
 
             const products = {};
 
             const cleansers = await Product.findAll({
+                
                 where: {
                     skinType: {
                         [Op.in]: [skinType.answer, 'all']
@@ -142,6 +142,7 @@ exports.findAllSkinType = async (req, res) => {
                         price: price.answer,
                         type:"mask"
                     }
+                    
                 });
 
                 products.mask = masks[Math.floor(Math.random() * masks.length)];
@@ -155,10 +156,13 @@ exports.findAllSkinType = async (req, res) => {
                         price: price.answer,
                         type:"eye cream"
                     }
+                    
+            
                 });
 
                 products.eye = eyes[Math.floor(Math.random() * eyes.length)];
             }
+            
 
             res.status(200).send({
                 products

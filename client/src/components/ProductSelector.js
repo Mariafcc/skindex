@@ -37,12 +37,16 @@ const ProductSelector = () => {
     const getProducts = () => {
         RoutineService.routineDisplay().then((res) => {
             const reccs = Object.values(res.data.products)
+            reccs.sort((a,b)=>{return a.order - b.order})
             setProducts([...reccs]);
             // console.log(res)
-        }).catch((error) => {
+        })
+        .catch((error) => {
             console.log(error);
         });
     };
+
+   
     console.log(products)
 
     return (
@@ -54,7 +58,7 @@ const ProductSelector = () => {
                     <div className="col-4">This is your routine!
                          <Table>
                             <thead>
-                                <th>ID</th>
+                                <th>Order</th>
                                 <th>Type</th>
                                 <th>Brand</th>
                                 <th>Name</th>
@@ -63,9 +67,9 @@ const ProductSelector = () => {
                             {[...products].map(product => {
                                 return (
 
-                                    <tr key={product.id}>
+                                    <tr key={product.order}>
                                         <td>
-                                            {product.id}
+                                            {product.order}
                                         </td>
                                         <td>
                                             {product.type}
