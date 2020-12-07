@@ -26,12 +26,6 @@ const CustomMarker = ({ index, marker }) => {
         </Marker>
     )
 };
-
-// let currentLat;
-// let currentLng;
-
-
-
 class Map extends Component {
     constructor(props) {
         super(props);
@@ -41,10 +35,29 @@ class Map extends Component {
                 longitude: -87.6298,
                 zoom: 10
             },
+            userLocation: {},
             tempMarker: null,
             markers: []
         };
 
+    }
+
+    setUserLocation = () => {
+        navigator.geolocation.getCurrentPosition(position => {
+            let setUserLocation = {
+                lat: position.coords.latitude,
+                long: position.coords.longitude
+            };
+            let newViewport = {
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+                zoom: 5
+            };
+            this.setState({
+                viewport: newViewport,
+                userLocation: setUserLocation
+            })
+        })
     }
 
     onSelected = (viewport, item) => {
@@ -67,41 +80,8 @@ class Map extends Component {
         }))
     }
 
-    // getCurrentLocation = () => {
-    //     if ("geolocation" in navigator) {
-    //         console.log("Available");
-    //         let currentLat=0;
-    //         let currentLng=0;
-    //         navigator.geolocation.getCurrentPosition(function(position) {
-    //             currentLat = position.coords.latitude;
-    //             currentLng = position.coords.longitude;
-    //             this.setState({
-    //                 ...prevState,
-    //                 latitude: currentLat,
-    //                 longitude: currentLng
-    //             })
-    //             // console.log(currentLat, currentLng)
-    //         })
-    //         console.log(this.state.viewport.latitude)
-    //     } else{
-    //         console.log("Not available")
-    //     }
-    // }
-
     componentDidMount() {
-        //     this.getCurrentLocation()
-        if ("geolocation" in navigator) {
-            console.log("Available");
-            navigator.geolocation.getCurrentPosition(function (position) {
-                console.log(position)
-                // currentLat = position.coords.latitude;
-                // currentLng = position.coords.longitude;
-                console.log(position.coords.latitude, position.coords.longitude)
-            });
-            // console.log(currentLat, currentLng)
-        } else {
-            console.log("Location Not Available");
-        }
+        this.setUserLocation();
     }
 
     render() {
@@ -111,7 +91,7 @@ class Map extends Component {
                 {/* <Row>
                     <Col><h2>Mapbox Tutorial</h2></Col>
                 </Row> */}
-                <Row className="py-4">
+                {/* <Row className="py-4">
                     <Col xs={2}>
                         <Geocoder
                             mapboxApiAccessToken={mapboxApiKey}
@@ -123,9 +103,9 @@ class Map extends Component {
                         />
                     </Col>
                     <Col>
-                        {/* <Button color="primary" onClick={this.add}>Add</Button> */}
+                        <Button color="primary" onClick={this.add}>Add</Button>
                     </Col>
-                </Row>
+                </Row> */}
                 <Row>
                     <Col>
                         <ReactMapGL
@@ -135,7 +115,18 @@ class Map extends Component {
                             {...mapStyle}
                             onViewportChange={(viewport) => this.setState({ viewport })}
                         >
-                            {tempMarker &&
+                            {Object.keys(this.state.userLocation).length !==0 ? (
+                                <Marker
+                                latitude = {this.state.userLocation.lat}
+                                longitude = {this.state.userLocation.long}
+                                >
+                                    <img className="location-icon" src="img/map-location-icon.png" />
+                                </Marker>
+                            ) : (
+                                <div>Empty</div>
+                            )}
+
+                            {/* {tempMarker &&
                                 <Marker
                                     longitude={tempMarker.longitude}
                                     latitude={tempMarker.latitude}>
@@ -152,7 +143,7 @@ class Map extends Component {
                                         />
                                     )
                                 })
-                            }
+                            } */}
                         </ReactMapGL>
                     </Col>
                 </Row>
