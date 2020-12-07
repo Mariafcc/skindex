@@ -48,3 +48,8 @@
 .temporary-marker span {
     background: #D3D3D3;
 }
+
+.location-icon {
+    width: 30px;
+    height: 30px
+}
