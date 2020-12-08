@@ -1,5 +1,6 @@
-import React, { Component, PureComponent } from 'react';
-import ReactMapGL, { Marker } from 'react-map-gl';
+import React, { Component } from 'react';
+import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+
 import { Container, Col, Row } from 'react-bootstrap';
 import "./style/map.css"
 
@@ -9,7 +10,8 @@ const mapStyle = {
 }
 
 const mapboxApiKey = 'pk.eyJ1Ijoic2FyYW1jZ3Vpbm4iLCJhIjoiY2tkdG9wandhMDU3ZTJ4cGxtaG5yd2d3aiJ9.FMU72HehweqVt3eGAhkuDg'
-class Map extends PureComponent {
+
+class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,66 +24,72 @@ class Map extends PureComponent {
                 lat: 0,
                 long: 0
             },
-            storeLocations: []
+            storeLocations: [],
+            selectedStore: null
         };
 
     }
 
-    // setUserLocation = () => {
-    //     navigator.geolocation.getCurrentPosition(position => {
-    //         let currentUserLocation = {
-    //             lat: position.coords.latitude,
-    //             long: position.coords.longitude
-    //         };
-    //         let newViewport = {
-    //             latitude: position.coords.latitude,
-    //             longitude: position.coords.longitude,
-    //             zoom: 5
-    //         };
-    //         this.setState({
-    //             viewport: newViewport,
-    //             userLocation: currentUserLocation
-    //         })
-    //     })
-    //     // if (this.state.userLocation.lat !== 0 && this.state.userLocation.long !==0) {
-    //     //     // this.getTargetStores()
-    //     //     this.getSephoraStores()
-    //     // }
-    //     console.log("setUserLocation", this.state.userLocation)
-    // }
-
     getTargetStores = () => {
         console.log("getTargetStores running")
-        let targetURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/target.json?limit=10&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
+        let targetURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/target.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
         console.log(targetURL);
         fetch(targetURL)
         .then(response => response.json())
-        .then(data => {
-            let targetStoreList = data.features;
+        .then(targetStores => {
+            console.log(targetStores.features)
             this.setState({
-                storeLocations: targetStoreList
+                storeLocations: targetStores.features
             })
         })
+        console.log("componentDidMount", this.state.userLocation);
     }
 
     getSephoraStores = () => {
         console.log("getSephoraStores running")
-        let sephoraURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/sephora.json?limit=10&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
+        let sephoraURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/sephora.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
         console.log(sephoraURL);
         fetch(sephoraURL)
         .then(response => response.json())
-        // .then(data => console.log(data.features))
-        .then(data => {
-            let sephoraStoreList = data.features;
+        .then(sephoraStores => {
+            console.log(sephoraStores.features)
             this.setState({
-                storeLocations: sephoraStoreList
+                storeLocations: sephoraStores.features
             })
         })
-        // .then(console.log(this.state.storeLocations))
+    }
+
+    setSelectedStore = (object) => {
+        this.setState({
+            selectedStore: object
+        })
+    }
+
+    closePopup = () => {
+        this.setState({
+            selectedStore: null
+        })
+    }
+
+    loadStoreMarkers = () => {
+        console.log(this.state.storeLocations)
+        if (this.state.storeLocations.length > 0) {
+            return this.state.storeLocations.map(store => {
+                return (
+                    <Marker
+                        key={store.id}
+                        latitude={parseFloat(store.geometry.coordinates[1])}
+                        longitude={parseFloat(store.geometry.coordinates[0])}
+                    >
+                        <img onClick={() => {this.setSelectedStore(store)}} className="location-icon" src="img/map-target-logo.png" />
+                    </Marker>
+                )
+            })
+        }
+        
     }
 
     componentDidMount() {
-        // this.setUserLocation();
         navigator.geolocation.getCurrentPosition(position => {
             let currentUserLocation = {
                 lat: position.coords.latitude,
@@ -90,23 +98,23 @@ class Map extends PureComponent {
             let newViewport = {
                 latitude: position.coords.latitude,
                 longitude: position.coords.longitude,
-                zoom: 5
+                zoom: 7
             };
-            this.setState({
+            this.setState(() => ({
                 viewport: newViewport,
                 userLocation: currentUserLocation
-            })
+            }))
         })
         console.log("componentDidMount", this.state.userLocation);
     }
 
-    // componentDidUpdate() {
-    //     console.log("componentDidUpdate,", this.state.userLocation)
-    //     if (this.state.userLocation.lat !== 0 && this.state.userLocation.long !==0) {
-    //         // this.getTargetStores()
-    //         this.getSephoraStores()
-    //     }
-    // }
+    componentDidUpdate(prevProps, prevState) {
+        console.log("componentDidUpdate,", this.state.userLocation)
+        if (this.state.userLocation !== prevState.userLocation) {
+            this.getTargetStores()
+            // this.getSephoraStores()
+        }
+    }
 
     render() {
         const { viewport, markers } = this.state;
@@ -135,6 +143,16 @@ class Map extends PureComponent {
                             ) : (
                                 <div>Empty</div>
                             )}
+                            {this.loadStoreMarkers()}
+                            {this.state.selectedStore !== null ? (
+                            <Popup
+                                latitude={parseFloat(this.state.selectedStore.latitude)}
+                                longitude={parseFloat(this.state.selectedStore.longitude)}
+                                onClose={this.closePopup}
+                            >
+                                <p>Store Information</p>
+                            </Popup>
+                            ) : null}
                         </ReactMapGL>
                     </Col>
                 </Row>
