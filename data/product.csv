@@ -6,15 +6,15 @@ id,name,brand,type,store,skinType,price,goal,order
 4,The Deep Cleanser Gentle Exfoliating Cleanser,Tatcha,cleanser,sephora,oily,$$,acne,1
 5,Special Cleansing Gel,Dermalogica,cleanser,sephora,all,$$,acne,1
 6,Purifying Pore Detox Cleanser,Tata Harper,cleanser,sephora,oily,$$$,acne,1
-7,Effaclar Gel Cleanser,La Roche Posey,cleanser,target,oily,$,acne,1
+7,Effaclar Gel Cleanser,La Roche Posey,cleanser,target,all,$,acne,1
 8,Facial Treatment Cleanser,SK-II,cleanser,sephora,dry,$$$,dryness,1
 9,The Rice Wash Cleanser,Tatcha,cleanser,sephora,dry,$$,dryness,1
 10,Pure Skin Face Cleanser,First Aid Beauty,cleanser,sephora,dry,$$,dryness,1
-11,Hydrating Facial Cleanser,CeraVe,cleanser,target,dry,$,dryness,1
+11,Hydrating Facial Cleanser,CeraVe,cleanser,target,all,$,dryness,1
 12,ExfoliKate Cleanser,Kate Somerville,cleanser,sephora,normal,$$,dullness,1
 13,GinZing Refreshing Scrub Cleanser,Origins,cleanser,sephora,normal,$$,dullness,1
 14,Treatment Cleansing Foam Cleanser,Amorepacific,cleanser,sephora,dry,$$$,dullness,1
-15,Daily Vitamin C Facial Wash,Soap & Glory,cleanser,target,dry,$,dullness,1
+15,Daily Vitamin C Facial Wash,Soap & Glory,cleanser,target,all,$,dullness,1
 16,Tonique Confort Re-Hydrating Comforting Toner,Lancome,toner,sephora,dry,$$$,elasticity,2
 17,Rose Deep Hydration Toner,Fresh,toner,sephora,dry,$$,elasticity,2
 18,Dr.Andrew Weil Mega-Mushroom Treatment Lotion,origins,toner,sephora,all,$$,elasticity,2 
@@ -22,11 +22,11 @@ id,name,brand,type,store,skinType,price,goal,order
 20,Vinopure Toner,Caudalie,toner,sephora,oily,$$,acne,2
 21,Supertoner Acid Solution Toner,Glamglow,toner,sephora,oily,$$,acne,2
 22,Facial Treatment Clear Lotion Toner,SK-II,toner,sephora,all,$$$,acne,2
-23,Acne Stress Control,Neutrogena,toner,target,oily,$,acne,2
+23,Acne Stress Control,Neutrogena,toner,target,all,$,acne,2
 24,Multi-Active Toner,Dermalogica,toner,sephora,normal,$$$,dryness,2
 25,Ultra repair Wild Oat Hydrating Toner,First Aid Beauty,toner,sephora,all,$$,dryness,2
 26,Ultra Facial Toner,Kiehl's Since 1851,toner,sephora,dry,$$,dryness,2
-27,Roserwater Facial Toner,Heritage Store,toner,target,dry,$,dryness,2
+27,Roserwater Facial Toner,Heritage Store,toner,target,all,$,dryness,2
 28,Ready Steady Glow,REN,toner,sephora,dry,$$,dullness,2
 29,Glow2OH Dark spot Toner,Olehenriksen,toner,sephora,oily,$$,dullness,2
 30,The Tonic,La Mer,toner,sephora,normal,$$$,dullness,2
@@ -50,14 +50,14 @@ id,name,brand,type,store,skinType,price,goal,order
 48,The Treatment Lotion,La Mer,serum,sephora,all,$$$,elasticity,4 
 49,Bakuchiol Serum,Herbivore,serum,sephora,normal,$$,elasticity,4 
 50,Advance Genefique Serum,Lancome,serum,sephora,all,$$,elasticity,4 
-51,Retinol Serum,Artnaturals,serum,target,oily,$,elasticity,4 
+51,Retinol Serum,Artnaturals,serum,target,all,$,elasticity,4 
 52,Pure Shots Night Reboot Resurfacing Serum,Yves saint Laurent,serum,sephora,all,$$$,acne,4
 53,Anti Bac Acne Clearing Lotion,Kate Somerville,serum,sephora,oily,$$,acne,4
 54,Vinopure Natural Salicylic Acid Serum,Caudalie,serum,sephora,all,$$,acne,4
 55,Clarity Concentrate,Pixi by Petra,serum,target,all,$,acne,4
 56,C.E.O,Sunday Riley,serum,sephora,all,$$,dullness,4
 57,The Concentrate,La Mer,serum,sephora,all,$$$,dullness,4
-58,Vinoperfect,Caudalie,serum,sephora,normal,$$,dullness,4
+58,Vinoperfect,Caudalie,serum,sephora,all,$$,dullness,4
 59,Vitamin C Serum,Artnaturals,serum,target,all,$,dullness,4
 60,The Regenerating Serum,La Mer,serum,sephora,all,$$$,dryness,4
 61,Plum Plump,Glow Recipe,serum,sephora,all,$$,dryness,4
