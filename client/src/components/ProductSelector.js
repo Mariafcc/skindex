@@ -54,9 +54,9 @@ const ProductSelector = () => {
 
         <Fragment>
 
-            <div className="container">
-                <Card>
-                    <div className="col-4">This is your routine!
+            <Container>
+                <Card className="mx-auto">
+                    <div>This is your routine!
                          <Table>
                             <thead>
                                 <th>Order</th>
@@ -91,7 +91,7 @@ const ProductSelector = () => {
                     </div>
                 </Card>
                 {/* <Map /> */}
-            </div>
+            </Container>
         </Fragment>
 
         // <div className="container">
