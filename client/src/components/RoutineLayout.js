@@ -25,11 +25,11 @@ const RoutineLayout = () => {
         }} >
             <Container>
                 <Row>
-                    <Col className="col-sm-6 pb-5">
+                    <Col className="col-sm-6 col-md-6 col-lg-12 center-text">
                         <ProductSelector />
-                        <Button onClick={handleShow}>Open Modal</Button>
+                        <Button onClick={handleShow} className="m-4">Find Store</Button>
                         <Modal show={show} onHide={handleClose} >
-                            <Modal.Header closeButton>Header</Modal.Header>
+                            <Modal.Header closeButton>Stores Near You</Modal.Header>
                             <Modal.Body>
                                 <Card className="p-4">
                                     <Steps />
