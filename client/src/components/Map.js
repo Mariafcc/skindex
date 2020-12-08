@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+
 import { Container, Col, Row } from 'react-bootstrap';
 import "./style/map.css"
 
@@ -9,6 +10,7 @@ const mapStyle = {
 }
 
 const mapboxApiKey = 'pk.eyJ1Ijoic2FyYW1jZ3Vpbm4iLCJhIjoiY2tkdG9wandhMDU3ZTJ4cGxtaG5yd2d3aiJ9.FMU72HehweqVt3eGAhkuDg'
+
 class Map extends Component {
     constructor(props) {
         super(props);
@@ -40,6 +42,7 @@ class Map extends Component {
                 storeLocations: targetStores.features
             })
         })
+        console.log("componentDidMount", this.state.userLocation);
     }
 
     getSephoraStores = () => {
