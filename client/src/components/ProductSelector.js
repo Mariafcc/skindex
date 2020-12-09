@@ -73,29 +73,27 @@ const ProductSelector = () => {
                                         <td>
                                             <p></p>
                                             {/* {product.type} */}
-                                            <div className="row">
-                                                {
-                                                    (product.type === 'moisturizer')
-                                                        ? <img src="./icons/mouisturizer.png" alt="moisturizer"></img>
-                                                        : product.type === 'cleanser'
-                                                            ? <img src="./icons/cleanser.png" alt="cleanser"></img>
-                                                            : product.type === 'spf'
-                                                                ? <img src="./icons/spf.png" alt="spf"></img>
-                                                                : product.type === 'toner'
-                                                                    ? <img src="./icons/toner.png" alt="toner"></img>
-                                                                    : product.type === 'essence'
-                                                                        ? <img src="./icons/essence.png" alt="essence"></img>
-                                                                        : product.type === 'exfoliator'
-                                                                            ? <img src="./icons/exfoliator.png" alt="exfoliator"></img>
-                                                                            : product.type === 'eye cream'
-                                                                                ? <img src="./icons/eyecream.png" alt="eyecream"></img>
-                                                                                : product.type === 'mask'
-                                                                                    ? <img src="./icons/facemask.png" alt="facemask"></img>
-                                                                                    : product.type === 'serum'
-                                                                                        ? <img src="./icons/serum.png" alt="serum"></img>
-                                                                                        : <div>not found</div>
-                                                }
-                                            </div>
+                                            {
+                                                (product.type === 'moisturizer')
+                                                    ? <img src="./icons/mouisturizer.png" alt="moisturizer" id="type-image"></img>
+                                                    : product.type === 'cleanser'
+                                                        ? <img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img>
+                                                        : product.type === 'spf'
+                                                            ? <img src="./icons/spf.png" alt="spf" id="type-image"></img>
+                                                            : product.type === 'toner'
+                                                                ? <img src="./icons/toner.png" alt="toner" id="type-image"></img>
+                                                                : product.type === 'essence'
+                                                                    ? <img src="./icons/essence.png" alt="essence" id="type-image"></img>
+                                                                    : product.type === 'exfoliator'
+                                                                        ? <img src="./icons/exfoliator.png" alt="exfoliator" id="type-image"></img>
+                                                                        : product.type === 'eye cream'
+                                                                            ? <img src="./icons/eyecream.png" alt="eyecream" id="type-image"></img>
+                                                                            : product.type === 'mask'
+                                                                                ? <img src="./icons/facemask.png" alt="facemask" id="type-image"></img>
+                                                                                : product.type === 'serum'
+                                                                                    ? <img src="./icons/serum.png" alt="serum" id="type-image"></img>
+                                                                                    : <div>not found</div>
+                                            }
                                         </td>
 
                                         <td>
