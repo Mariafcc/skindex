@@ -1,14 +1,13 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./style/productSelector.css"
 import RoutineService from "../services/routine.service"
+import Map from "./Map"
+
+import { Button, Modal } from "react-bootstrap";
+
 // import { useState, useEffect } from "react";
 import { ListGroup, Table } from "react-bootstrap"
 import { Container, Row, Col, Card } from "react-bootstrap";
-
-
-import Map from "./Map"
-
-
 
 const ProductSelector = () => {
     // const [product, setProduct] = useState("");
@@ -47,6 +46,11 @@ const ProductSelector = () => {
                 console.log(error);
             });
     };
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
 
     // console.log(products)
@@ -101,6 +105,20 @@ const ProductSelector = () => {
                                         </td>
                                         <td>
                                             {product.name}
+                                            <Button onClick={handleShow} className="m-4">Find Store</Button>
+                                            <Modal show={show} onHide={handleClose} >
+                                                <Modal.Header closeButton>Stores Near You</Modal.Header>
+                                                <Modal.Body>
+                                                    <Card className="p-4">
+                                                        <Map />
+                                                    </Card>
+                                                </Modal.Body>
+                                                <Modal.Footer variant="secondary" onClick={handleClose}>
+                                                    <Button>
+                                                        Close
+                                                    </Button>
+                                                </Modal.Footer>
+                                            </Modal>
                                         </td>
                                     </tr>
 
