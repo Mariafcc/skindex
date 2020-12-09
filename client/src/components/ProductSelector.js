@@ -60,9 +60,9 @@ const ProductSelector = () => {
         <Fragment>
 
             <Container>
-                <Card className="mx-auto">
+                <Card className="mx-auto" id="table-card">
                     <div>This is your routine!
-                         <Table>
+                         <Table className="table-fit">
                             <thead>
                                 {/* <th>Order</th> */}
                                 <th>Type</th>
@@ -105,7 +105,9 @@ const ProductSelector = () => {
                                         </td>
                                         <td>
                                             {product.name}
-                                            <Button onClick={handleShow} className="m-4">Find Store</Button>
+                                            <p>
+                                                <Button onClick={handleShow} className="m-4 btn-sm">Find Store</Button>
+                                            </p>
                                             <Modal show={show} onHide={handleClose} >
                                                 <Modal.Header closeButton>Stores Near You</Modal.Header>
                                                 <Modal.Body>
@@ -131,7 +133,7 @@ const ProductSelector = () => {
                 </Card>
                 {/* <Map /> */}
             </Container>
-        </Fragment>
+        </Fragment >
 
         // <div className="container">
         //     <div>

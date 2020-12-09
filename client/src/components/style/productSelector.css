@@ -39,6 +39,31 @@ img{
 }
 
 #type-image{
-    width: 100px;
+    width: 80px;
+    align-items: center;
 }
 
+#table-card{
+    max-width: 80%;
+}
+@media only screen and (max-width: 815px) {
+    #table-card {
+      max-width: 90%;
+    }
+  }
+@media only screen and (max-width: 420px) {
+    #table-card {
+      max-width: 100%;
+    }
+  }
+
+/* table.table-fit {
+    width: auto !important;
+    table-layout: auto !important;
+}
+table.table-fit thead th, table.table-fit tfoot th {
+    width: auto !important;
+}
+table.table-fit tbody td, table.table-fit tfoot td {
+    width: auto !important;
+} */
