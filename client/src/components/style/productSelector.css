@@ -44,7 +44,7 @@ img{
 }
 
 #table-card{
-    max-width: 80%;
+    max-width: 70%;
 }
 @media only screen and (max-width: 815px) {
     #table-card {
@@ -56,6 +56,8 @@ img{
       max-width: 100%;
     }
   }
+
+
 
 /* table.table-fit {
     width: auto !important;

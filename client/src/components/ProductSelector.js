@@ -60,9 +60,13 @@ const ProductSelector = () => {
         <Fragment>
 
             <Container>
-                <Card className="mx-auto" id="table-card">
-                    <div>This is your routine!
-                         <Table className="table-fit">
+                <Card className="mx-auto mb-4 p-2" id="table-card">
+                    <h3>This is your routine!</h3>
+                    <p>Here is a list of products that have been generated for you based on your quiz answers. Enjoy!</p>
+                </Card>
+                <Card className="mx-auto mb-4" id="table-card">
+                    <div>
+                        <Table className="table-fit table-info">
                             <thead>
                                 {/* <th>Order</th> */}
                                 <th>Type</th>
