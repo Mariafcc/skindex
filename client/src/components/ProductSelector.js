@@ -116,7 +116,9 @@ const ProductSelector = () => {
                                                 <Modal.Header closeButton>Stores Near You</Modal.Header>
                                                 <Modal.Body>
                                                     <Card className="p-4">
-                                                        <Map />
+                                                        <Map store={product.store} />
+                                                        <p>{product.store}</p>
+                                                        {console.log(product.store)}
                                                     </Card>
                                                 </Modal.Body>
                                                 <Modal.Footer variant="secondary" onClick={handleClose}>
