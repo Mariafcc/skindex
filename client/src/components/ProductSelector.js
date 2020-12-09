@@ -59,7 +59,7 @@ const ProductSelector = () => {
                     <div>This is your routine!
                          <Table>
                             <thead>
-                                <th>Order</th>
+                                {/* <th>Order</th> */}
                                 <th>Type</th>
                                 <th>Brand</th>
                                 <th>Name</th>
@@ -69,10 +69,11 @@ const ProductSelector = () => {
                                 return (
 
                                     <tr key={product.order}>
-                                        <td>
+                                        {/* <td>
                                             {product.order}
-                                        </td>
+                                        </td> */}
                                         <td>
+                                            <p></p>
                                             {product.type}
                                         </td>
 
@@ -83,6 +84,7 @@ const ProductSelector = () => {
                                             {product.name}
                                         </td>
                                     </tr>
+
 
                                 )
                             })}
