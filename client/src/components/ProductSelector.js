@@ -40,7 +40,8 @@ const ProductSelector = () => {
             const reccs = Object.values(res.data.products)
             reccs.sort((a, b) => { return a.order - b.order })
             setProducts([...reccs]);
-            // console.log(res)
+            // console.log(res);
+            console.log(reccs);
         })
             .catch((error) => {
                 console.log(error);
@@ -48,7 +49,7 @@ const ProductSelector = () => {
     };
 
 
-    console.log(products)
+    // console.log(products)
 
     return (
 
@@ -69,12 +70,21 @@ const ProductSelector = () => {
                                 return (
 
                                     <tr key={product.order}>
-                                        {/* <td>
-                                            {product.order}
-                                        </td> */}
                                         <td>
                                             <p></p>
                                             {product.type}
+                                            <div className="row">
+                                                {
+                                                    (product.type === 'moisturizer')
+                                                        ? <img src="./client/public/icons/mouisturizer.png" alt="moisturizer"></img>
+                                                        : <img></img>
+                                                }
+                                                {
+                                                    (product.type === 'cleanser')
+                                                        ? <img src="../client/public/icons/mouisturizer.png" alt="cleanser"></img>
+                                                        : <img></img>
+                                                }
+                                            </div>
                                         </td>
 
                                         <td>
