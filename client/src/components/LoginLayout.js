@@ -24,7 +24,7 @@ const LoginLayout = () => {
 				</Card>
 			</Container>
 		</div>
-	)  
+	)
 }
 
 export default LoginLayout;

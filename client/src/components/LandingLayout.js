@@ -4,7 +4,9 @@ import "./style/opacity.css"
 import LoginLayout from "./LoginLayout.js"
 import SignupLayout from "./SignupLayout"
 import DescriptionCard from "./DescriptionCard"
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col, CardImg, Nav, Card, Button } from 'react-bootstrap';
+import LoginSignup from "./LoginSignup"
+
 
 const LandingLayout = () => {
 
@@ -17,7 +19,7 @@ const LandingLayout = () => {
             backgroundPosition: "fixed",
             position: "absolute",
             width: "100%",
-            height: "100%"
+            height: "auto"
         }} >
             {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
             <Container>
@@ -38,9 +40,10 @@ const LandingLayout = () => {
                         <DescriptionCard />
                     </Col>
                     <Col className="col-sm-12 col-md-12 col-lg-6 pb-5">
-                        <Card className="p-4">
+                        <LoginSignup />
+                        {/* <Card className="p-4">
                             <SignupLayout />
-                        </Card>
+                        </Card> */}
                     </Col>
                 </Row>
             </Container>
