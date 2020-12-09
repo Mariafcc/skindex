@@ -35,8 +35,11 @@
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
     "path": "^0.12.7",
+    "react-animated-slider": "^2.0.0",
+    "react-fade-in": "^1.1.1",
     "react-map-gl": "^5.2.10",
     "react-mapbox-gl-geocoder": "^1.1.0",
+    "react-slide-animation": "^15.5.0",
     "react-validation": "^3.0.7",
     "sequelize": "^6.3.5",
     "validator": "^13.5.1"

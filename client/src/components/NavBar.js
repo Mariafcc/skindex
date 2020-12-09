@@ -4,6 +4,7 @@ import { AuthDataContext } from "../authorization/authWrapper";
 import "./style/NavBar.css"
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
+
 const NavBar = () => {
     const location = useLocation();
     const authContext = useContext(AuthDataContext);
