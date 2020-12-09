@@ -16,7 +16,7 @@ function App() {
             <Route exact path="/" component={Landing} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/routine" component={Routine} />
-            <AuthRouter exact path="/home" component={Home} />
+            <Route exact path="/home" component={Home} />
           </div>
         </header>
         <p></p>

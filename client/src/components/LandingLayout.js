@@ -14,6 +14,7 @@ const LandingLayout = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
+            backgroundPosition: "fixed",
             position: "absolute",
             width: "100%",
             height: "100%"
@@ -21,10 +22,22 @@ const LandingLayout = () => {
             {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
             <Container>
                 <Row>
-                    <Col className="col-sm-6 pb-5">
+                    <Col className="pb-2" style={{
+                        textShadow: "2px 0px 10px white",
+                        color: "black",
+                        fontFamily: "'Abel', sans-serif",
+                        fontWeight: "bold"
+                    }}>
+                        <h1>SkinDex</h1>
+                    </Col>
+                </Row>
+            </Container>
+            <Container className="p-4">
+                <Row>
+                    <Col className="col-sm-12 col-md-12 col-lg-6 pb-5">
                         <DescriptionCard />
                     </Col>
-                    <Col className="col-sm-6">
+                    <Col className="col-sm-12 col-md-12 col-lg-6 pb-5">
                         <Card className="p-4">
                             <SignupLayout />
                         </Card>

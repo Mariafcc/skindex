@@ -3,6 +3,7 @@ import "./style/productSelector.css"
 import RoutineService from "../services/routine.service"
 // import { useState, useEffect } from "react";
 import { ListGroup, Table } from "react-bootstrap"
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 
 import Map from "./Map"
@@ -37,25 +38,25 @@ const ProductSelector = () => {
     const getProducts = () => {
         RoutineService.routineDisplay().then((res) => {
             const reccs = Object.values(res.data.products)
-            reccs.sort((a,b)=>{return a.order - b.order})
+            reccs.sort((a, b) => { return a.order - b.order })
             setProducts([...reccs]);
             // console.log(res)
         })
-        .catch((error) => {
-            console.log(error);
-        });
+            .catch((error) => {
+                console.log(error);
+            });
     };
 
-   
+
     console.log(products)
 
     return (
 
         <Fragment>
 
-            <div className="container">
-                <div className="row">
-                    <div className="col-4">This is your routine!
+            <Container>
+                <Card className="mx-auto">
+                    <div>This is your routine!
                          <Table>
                             <thead>
                                 <th>Order</th>
@@ -88,9 +89,9 @@ const ProductSelector = () => {
                         </Table>
 
                     </div>
-                </div>
+                </Card>
                 {/* <Map /> */}
-            </div>
+            </Container>
         </Fragment>
 
         // <div className="container">
