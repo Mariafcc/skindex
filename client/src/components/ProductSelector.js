@@ -117,8 +117,7 @@ const ProductSelector = () => {
                                                 <Modal.Body>
                                                     <Card className="p-4">
                                                         <Map store={product.store} />
-                                                        <p>{product.store}</p>
-                                                        {console.log(product.store)}
+                                                        {/* <p>{product.store}</p> */}
                                                     </Card>
                                                 </Modal.Body>
                                                 <Modal.Footer variant="secondary" onClick={handleClose}>
