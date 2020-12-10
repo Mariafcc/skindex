@@ -22,18 +22,15 @@ const LandingLayout = () => {
             height: "auto"
         }} >
             {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
-            <Container>
+            {/* <Container className="fluid">
                 <Row>
-                    <Col className="pb-2" style={{
-                        textShadow: "2px 0px 10px white",
-                        color: "black",
-                        fontFamily: "'Abel', sans-serif",
-                        fontWeight: "bold"
-                    }}>
-                        <h1>SkinDex</h1>
+                    <Col className="">
+                        <Card className="pb-2 w-75">
+                            <img src="./img/header.png"></img>
+                        </Card>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
             <Container className="p-4">
                 <Row>
                     <Col className="col-sm-12 col-md-12 col-lg-6 pb-5">

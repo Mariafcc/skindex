@@ -1,5 +1,5 @@
 import React from "react";
-import LoginForm from "./LoginForm.js";
+import LoginLayout from "./LoginForm.js";
 import SignupLayout from "./SignupLayout";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import $ from "jquery";
@@ -13,33 +13,31 @@ const LoginSignup = () => {
         })
     }
     return (
-        <Container>
-            <Row>
-                <Card>
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#signuptab" role="tab" aria-controls="description" aria-selected="true">Sign Up</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#logintab" role="tab" aria-controls="history" aria-selected="false">Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <div class="tab-content mt-3">
-                            <div class="tab-pane active" id="signuptab" role="tabpanel">
-                                <SignupLayout />
-                            </div>
+        <Col>
+            <Card >
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#signuptab" role="tab" aria-controls="description" aria-selected="true">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#logintab" role="tab" aria-controls="history" aria-selected="false">Login</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="signuptab" role="tabpanel">
+                            <SignupLayout />
+                        </div>
 
-                            <div class="tab-pane" id="logintab" role="tabpanel" aria-labelledby="history-tab">
-                                <LoginForm />
-                            </div>
+                        <div class="tab-pane" id="logintab" role="tabpanel" aria-labelledby="history-tab">
+                            <LoginLayout />
                         </div>
                     </div>
-                </Card>
-            </Row>
-        </Container>
+                </div>
+            </Card>
+        </Col>
         //     <Accordion defaultActiveKey="0">
         //         <Card className="p-4">
         //             <Card.Header>
