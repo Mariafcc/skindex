@@ -8,7 +8,7 @@ import { Container, Row, Col, CardImg, Nav, Card, Button } from 'react-bootstrap
 import LoginSignup from "./LoginSignup"
 
 
-const LandingLayout = () => {
+const QuizLayout = () => {
 
     return (
         <div className="text-center pt-5 pb-5" style={{
@@ -48,4 +48,4 @@ const LandingLayout = () => {
     )
 }
 
-export default LandingLayout;
+export default QuizLayout;

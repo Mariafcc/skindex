@@ -25,9 +25,9 @@ const RoutineLayout = () => {
         }} >
             <Container>
                 <Row>
-                    <Col className="col-sm-6 col-md-12 col-lg-12 center-text">
-                        <ProductSelector />
-                        {/* <Button onClick={handleShow} className="m-4">Find Store</Button>
+
+                    <ProductSelector />
+                    {/* <Button onClick={handleShow} className="m-4">Find Store</Button>
                         <Modal show={show} onHide={handleClose} >
                             <Modal.Header closeButton>Stores Near You</Modal.Header>
                             <Modal.Body>
@@ -41,7 +41,7 @@ const RoutineLayout = () => {
                                 </Button>
                             </Modal.Footer>
                         </Modal> */}
-                    </Col>
+
                     {/* <Col className="col-sm-6">
                         <Card className="p-4">
                             <Steps />
