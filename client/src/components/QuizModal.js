@@ -121,7 +121,7 @@ function QuizModal(props) {
         }}
         variant='outline-dark'
         onClick={handleShow}
-        className='text-uppercase font-weight-bold p-lg-4 p-3 rounded-0'
+        className='text-uppercase font-weight-bold p-lg-4 p-3 rounded-0 bg-light'
       >
         Begin Your Skin Assessment
 			</Button>

@@ -14,8 +14,10 @@ const LoginSignup = () => {
     }
     return (
         <Col>
-            <Card >
-                <div class="card-header">
+            <Card>
+                <div class="card-header" style={{
+                    fontFamily: "Helvetica"
+                }}>
                     <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" href="#signuptab" role="tab" aria-controls="description" aria-selected="true">Sign Up</a>
