@@ -41,6 +41,9 @@ img{
 #type-image{
     width: 80px;
     align-items: center;
+    border-style: solid;
+    border-color: rgb(170, 204, 202);
+    border-width: 2px;
 }
 
 #table-card{
@@ -56,6 +59,10 @@ img{
       max-width: 100%;
     }
   }
+
+#table-col{
+    padding-bottom: 0px;
+}
 
 
 

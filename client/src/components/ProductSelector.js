@@ -60,14 +60,17 @@ const ProductSelector = () => {
         <Fragment>
 
             <Container>
-                <Card className="mx-auto mb-4 p-2" id="table-card">
+                <Card className="mx-auto mb-4 p-2 pr-5 pl-5" id="table-card">
                     <h3>This is your routine!</h3>
+                    <br></br>
                     <p>Here is a list of products that have been generated for you based on your quiz answers. Enjoy!</p>
                 </Card>
-                <Card className="mx-auto mb-4" id="table-card">
+                <Card className="mx-auto mb-4" id="table-card" style={{
+                    backgroundColor: ""
+                }}>
                     <div>
-                        <Table className="table-fit table-info">
-                            <thead>
+                        <Table className="table-fit">
+                            <thead className="thead-dark">
                                 {/* <th>Order</th> */}
                                 <th>Type</th>
                                 <th>Brand</th>
@@ -78,12 +81,12 @@ const ProductSelector = () => {
                                 return (
 
                                     <tr key={product.order}>
-                                        <td>
+                                        <td id="table-col align-baseline">
                                             <p></p>
                                             {/* {product.type} */}
                                             {
                                                 (product.type === 'moisturizer')
-                                                    ? <img src="./icons/mouisturizer.png" alt="moisturizer" id="type-image"></img>
+                                                    ? <img src="./icons/moisturizer.png" alt="moisturizer" id="type-image"></img>
                                                     : product.type === 'cleanser'
                                                         ? <img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img>
                                                         : product.type === 'spf'
@@ -104,13 +107,13 @@ const ProductSelector = () => {
                                             }
                                         </td>
 
-                                        <td>
+                                        <td id="table-col align-baseline">
                                             {product.brand}
                                         </td>
-                                        <td>
+                                        <td id="table-col">
                                             {product.name}
                                             <p>
-                                                <Button onClick={handleShow} className="m-4 btn-sm">Find Store</Button>
+                                                <Button onClick={handleShow} className="m-4 btn-sm" variant="secondary">Find Store</Button>
                                             </p>
                                             <Modal show={show} onHide={handleClose} >
                                                 <Modal.Header closeButton>Stores Near You</Modal.Header>
