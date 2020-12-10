@@ -60,7 +60,7 @@ const ProductSelector = () => {
                          <Table>
                             <thead>
                                 {/* <th>Order</th> */}
-                                <th>Type</th>
+                                <th>Steps</th>
                                 <th>Brand</th>
                                 <th>Name</th>
 
