@@ -38,6 +38,7 @@
     "react-animated-slider": "^2.0.0",
     "react-animations": "^1.0.0",
     "react-fade-in": "^1.1.1",
+    "react-loader-spinner": "^3.1.14",
     "react-map-gl": "^5.2.10",
     "react-mapbox-gl-geocoder": "^1.1.0",
     "react-slide-animation": "^15.5.0",

@@ -23,7 +23,7 @@ const NavBar = () => {
                 </Nav>
                 <Nav>
                     <Link
-                        to="/login"
+                        to="/"
                         className={location.pathname === "/login" ? "nav-link active" : "nav-link"}>
 
                         {showLogout ? <button id="logout-button" onClick={onLogout}>Logout</button> : ''}

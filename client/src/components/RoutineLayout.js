@@ -21,7 +21,7 @@ const RoutineLayout = () => {
             backgroundAttachment: "fixed",
             position: "absolute",
             width: "100%",
-            height: "auto"
+            height: "100%"
         }} >
             <Container>
                 <Row>
