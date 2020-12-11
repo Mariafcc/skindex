@@ -24,6 +24,7 @@ class Map extends Component {
                 lat: 0,
                 long: 0
             },
+            storeChain: props.store,
             storeLocations: [],
             selectedStore: null
         };
@@ -31,34 +32,49 @@ class Map extends Component {
         console.log(props.store)
     }
 
-    getTargetStores = () => {
-        console.log("getTargetStores running")
-        let targetURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/target.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
-        console.log(targetURL);
-        fetch(targetURL)
+    getStores = () => {
+        console.log("getStores running")
+        let storesURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/` + (this.state.storeChain) + `.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
+        console.log(storesURL);
+        fetch(storesURL)
             .then(response => response.json())
-            .then(targetStores => {
-                console.log(targetStores.features)
+            .then(stores => {
+                console.log(stores.features)
                 this.setState({
-                    storeLocations: targetStores.features
+                    storeLocations: stores.features
                 })
             })
         console.log("componentDidMount", this.state.userLocation);
     }
 
-    getSephoraStores = () => {
-        console.log("getSephoraStores running")
-        let sephoraURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/sephora.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
-        console.log(sephoraURL);
-        fetch(sephoraURL)
-            .then(response => response.json())
-            .then(sephoraStores => {
-                console.log(sephoraStores.features)
-                this.setState({
-                    storeLocations: sephoraStores.features
-                })
-            })
-    }
+    // getTargetStores = () => {
+    //     console.log("getTargetStores running")
+    //     let targetURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/target.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
+    //     console.log(targetURL);
+    //     fetch(targetURL)
+    //         .then(response => response.json())
+    //         .then(targetStores => {
+    //             console.log(targetStores.features)
+    //             this.setState({
+    //                 storeLocations: targetStores.features
+    //             })
+    //         })
+    //     console.log("componentDidMount", this.state.userLocation);
+    // }
+
+    // getSephoraStores = () => {
+    //     console.log("getSephoraStores running")
+    //     let sephoraURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/sephora.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
+    //     console.log(sephoraURL);
+    //     fetch(sephoraURL)
+    //         .then(response => response.json())
+    //         .then(sephoraStores => {
+    //             console.log(sephoraStores.features)
+    //             this.setState({
+    //                 storeLocations: sephoraStores.features
+    //             })
+    //         })
+    // }
 
     setSelectedStore = (object) => {
         this.setState({
@@ -82,7 +98,11 @@ class Map extends Component {
                         latitude={parseFloat(store.geometry.coordinates[1])}
                         longitude={parseFloat(store.geometry.coordinates[0])}
                     >
+                        {this.state.storeChain === "target" ? 
                         <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-target-logo.png" />
+                        : <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-sephora-logo.jpg" />
+                        }
+                        
                     </Marker>
                 )
             })
@@ -112,7 +132,7 @@ class Map extends Component {
     componentDidUpdate(prevProps, prevState) {
         console.log("componentDidUpdate,", this.state.userLocation)
         if (this.state.userLocation !== prevState.userLocation) {
-            this.getTargetStores()
+            this.getStores()
             // this.getSephoraStores()
         }
     }
