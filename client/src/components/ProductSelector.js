@@ -52,6 +52,10 @@ const ProductSelector = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    // Info modals
+    const [smShow, setSmShow] = useState(false);
+    const [lgShow, setLgShow] = useState(false);
+
 
     // console.log(products)
 
@@ -86,9 +90,9 @@ const ProductSelector = () => {
                                             {/* {product.type} */}
                                             {
                                                 (product.type === 'moisturizer')
-                                                    ? <img src="./icons/moisturizer.png" alt="moisturizer" id="type-image"></img>
+                                                    ? <Button onClick={() => setSmShow(true)}><img src="./icons/moisturizer.png" alt="moisturizer" id="type-image"></img></Button>
                                                     : product.type === 'cleanser'
-                                                        ? <img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img>
+                                                        ? <Button onClick={() => setLgShow(true)}><img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img></Button>
                                                         : product.type === 'spf'
                                                             ? <img src="./icons/spf.png" alt="spf" id="type-image"></img>
                                                             : product.type === 'toner'
@@ -139,6 +143,32 @@ const ProductSelector = () => {
 
                     </div>
                 </Card>
+                <Modal
+                    size="sm"
+                    show={smShow}
+                    onHide={() => setSmShow(false)}
+                    aria-labelledby="example-modal-sizes-title-sm"
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="example-modal-sizes-title-sm">
+                            Small Modal
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
+                <Modal
+                    size="lg"
+                    show={lgShow}
+                    onHide={() => setLgShow(false)}
+                    aria-labelledby="example-modal-sizes-title-lg"
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="example-modal-sizes-title-lg">
+                            Large Modal
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
                 {/* <Map /> */}
             </Container>
         </Fragment >

@@ -97,7 +97,7 @@ const SignupLayout = () => {
 
     const redirectAfterSuccessfulRegister = () => {
         const to = { pathname: `login`, hash: `#hash` };
-        setTimeout(() => history.push(to), 0);
+        setTimeout(() => history.push(to), 1000);
     };
 
     useEffect(() => {
