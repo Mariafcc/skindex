@@ -1,11 +1,12 @@
 
 import React, { Fragment} from "react";
-
 import "./style/steps.css";
+import Map from "./Map"
 
 
 
 const Steps = () => {
+
 
 
 
@@ -17,8 +18,11 @@ const Steps = () => {
 
                 <div className="row">
 
-                    <div className="col-4">Map will go here
-                    
+
+                    <div className="col-4">
+                        <h2>Where to buy:</h2>
+                        <Map />
+
 
                     </div>
                 </div>

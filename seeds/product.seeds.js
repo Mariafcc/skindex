@@ -99,7 +99,7 @@ const InitializeProducts = () => {
       "brand": "La Roche Posey",
       "type": "cleanser",
       "store": "target",
-      "skinType": "oily",
+      "skinType": "all",
       "price": "$",
       "goal": "acne",
       "order": 1
@@ -151,7 +151,7 @@ const InitializeProducts = () => {
       "brand": "CeraVe",
       "type": "cleanser",
       "store": "target",
-      "skinType": "dry",
+      "skinType": "all",
       "price": "$",
       "goal": "dryness",
       "order": 1
@@ -203,7 +203,7 @@ const InitializeProducts = () => {
       "brand": "Soap & Glory",
       "type": "cleanser",
       "store": "target",
-      "skinType": "dry",
+      "skinType": "all",
       "price": "$",
       "goal": "dullness",
       "order": 1
@@ -216,10 +216,10 @@ const InitializeProducts = () => {
       "brand": "Lancome",
       "type": "toner",
       "store": "sephora",
-      "skinType": "dry",
+      "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -232,7 +232,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -245,7 +245,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -258,7 +258,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -271,7 +271,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -284,7 +284,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -297,7 +297,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -307,10 +307,10 @@ const InitializeProducts = () => {
       "brand": "Neutrogena",
       "type": "toner",
       "store": "target",
-      "skinType": "oily",
+      "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -323,7 +323,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -336,7 +336,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -349,7 +349,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -359,10 +359,10 @@ const InitializeProducts = () => {
       "brand": "Heritage Store",
       "type": "toner",
       "store": "target",
-      "skinType": "dry",
+      "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -375,7 +375,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -388,7 +388,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -401,7 +401,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -414,7 +414,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -427,7 +427,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "elasticity",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -440,7 +440,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -453,7 +453,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity ",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -466,7 +466,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -479,7 +479,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -492,7 +492,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -505,7 +505,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -518,7 +518,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -531,7 +531,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -544,7 +544,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -557,7 +557,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -570,7 +570,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -583,7 +583,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -596,7 +596,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -609,7 +609,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -622,7 +622,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -635,7 +635,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -648,7 +648,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -661,7 +661,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -671,10 +671,10 @@ const InitializeProducts = () => {
       "brand": "Artnaturals",
       "type": "serum",
       "store": "target",
-      "skinType": "oily",
+      "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -687,7 +687,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -700,7 +700,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -713,7 +713,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -726,7 +726,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -739,7 +739,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -752,7 +752,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -778,7 +778,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -791,7 +791,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -804,7 +804,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -814,10 +814,10 @@ const InitializeProducts = () => {
       "brand": "First Aid Beauty",
       "type": "serum",
       "store": "sephora",
-      "skinType": "normal",
+      "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -830,7 +830,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -843,7 +843,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -856,7 +856,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -869,7 +869,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -882,7 +882,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -895,7 +895,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -908,7 +908,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -921,7 +921,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -934,7 +934,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -947,7 +947,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -960,7 +960,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -973,7 +973,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -986,7 +986,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -999,7 +999,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": null
+      "order": 7
     }
   );
   Product.create(
@@ -1012,7 +1012,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$",
       "goal": "dullness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -1025,7 +1025,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -1038,7 +1038,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -1051,7 +1051,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1064,7 +1064,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1077,7 +1077,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1090,7 +1090,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1103,7 +1103,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1116,7 +1116,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 6
+      "order": 8
     },
   );
   Product.create(
@@ -1129,7 +1129,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1142,7 +1142,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1155,7 +1155,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1168,7 +1168,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1181,7 +1181,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1194,7 +1194,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1207,7 +1207,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1220,7 +1220,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1233,7 +1233,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1246,7 +1246,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1259,7 +1259,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1272,7 +1272,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1285,7 +1285,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1298,7 +1298,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1311,7 +1311,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1324,7 +1324,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1337,7 +1337,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1350,7 +1350,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1363,7 +1363,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1376,7 +1376,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1389,7 +1389,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1402,7 +1402,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1415,7 +1415,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1428,7 +1428,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1441,7 +1441,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1454,7 +1454,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1467,7 +1467,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1480,7 +1480,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1493,7 +1493,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1506,7 +1506,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1663,6 +1663,648 @@ const InitializeProducts = () => {
       "price": "$",
       "goal": "dullness",
       "order": 9
+    }
+  );
+  Product.create(
+    {
+      "id": 129,
+      "name": "Ultra Facial Cleanser",
+      "brand": "Kiehl's Since 1851",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 1
+    }
+  );
+  Product.create(
+    {
+      "id": 130,
+      "name": "Essential-C Cleanser",
+      "brand": "Murad",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dullness",
+      "order": 1
+    }
+  );
+  Product.create(
+    {
+      "id": 131,
+      "name": "Rise + Shine Gentle Cleanser",
+      "brand": "Saturday Skin",
+      "type": "cleaner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "elasticity",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 132,
+      "name": "Ceramic Slip Cleanser",
+      "brand": "Sunday Riley",
+      "type": "cleaner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 133,
+      "name": "Ultracalming Cleanser",
+      "brand": "Dermalogica",
+      "type": "cleaner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 134,
+      "name": "Plantscription Anti-Aging Cleanser",
+      "brand": "Origins",
+      "type": "cleaner",
+      "store": "sephora",
+      "skinType": "normal",
+      "price": "$$",
+      "goal": "elasticity",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 135,
+      "name": "Argan Cleansing Oil",
+      "brand": "Josie Maran",
+      "type": "cleaner",
+      "store": "sephora",
+      "skinType": "dry",
+      "price": "$$",
+      "goal": "elasticity",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 136,
+      "name": "Renewing Cleansing Cream",
+      "brand": "Murad",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "normal",
+      "price": "$$",
+      "goal": "dullness",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 137,
+      "name": "Salicylic Acid Acne + pore Cleanser",
+      "brand": "The IKEY list",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$",
+      "goal": "acne",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 138,
+      "name": "Clarifying Cleanser",
+      "brand": "Murad",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "acne",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 139,
+      "name": "Squalane + Tea Tree Cleansing",
+      "brand": "Biossance",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "ance",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 140,
+      "name": "Creme Ancienne Infusion Toner",
+      "brand": "Fresh",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dullness",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 141,
+      "name": "8% Glycolic Solutions toner",
+      "brand": "Peter Thomas Roth",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dullness",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 142,
+      "name": "Vitamin C Brightening Toner",
+      "brand": "Dr.Zenovia Skincare",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dullness",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 143,
+      "name": "Botanical soothing Toner",
+      "brand": "Amorepacific",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dryness",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 144,
+      "name": "Hydrating Face Tonic Toner",
+      "brand": "Bobbi Brown",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 145,
+      "name": "Apline Berry Water Toner",
+      "brand": "Primera",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 146,
+      "name": "G.Tox Malachite and AHA Pore Refining Toner",
+      "brand": "Goop",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "acne",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 147,
+      "name": "Calendula Herbal Extract Toner",
+      "brand": "Kiehl's Since 1851",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "acne",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 148,
+      "name": "Umbrian Clay Toner",
+      "brand": "Fresh",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "acne",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 149,
+      "name": "Mood Cream Cleanser",
+      "brand": "Omorovicza",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "acne",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 150,
+      "name": "Precleanse Cleansing Oil",
+      "brand": "Dermalogica",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dryness",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 151,
+      "name": "Enzyme Cleanser",
+      "brand": "Dr.Barbara Sturm",
+      "type": "cleanser",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dullness",
+      "order": 1
+
+    }
+  );
+  Product.create(
+    {
+      "id": 152,
+      "name": "Turnaround",
+      "brand": "Clinique",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "elasticity",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 153,
+      "name": "CoQ-10 Toner",
+      "brand": "Indie Lee",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "elasticity",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 154,
+      "name": "Coconut Rose Toner",
+      "brand": "Kopari",
+      "type": "toner",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "elasticity",
+      "order": 4
+
+    }
+  );
+  Product.create(
+    {
+      "id": 155,
+      "name": "Fermented Soybean Firming Energy Essence",
+      "brand": "Innisfree",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "elasticity ",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 156,
+      "name": "Miracle Seed Essence",
+      "brand": "Primera",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "elasticity ",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 157,
+      "name": "Sake Toning Essence",
+      "brand": "Shani Darden Skin Care",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "elasticity ",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 158,
+      "name": "Concentrated Brightening Essence",
+      "brand": "Tata Harper",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "acne",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 159,
+      "name": "Hungarian Water Essence",
+      "brand": "Belif",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "acne",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 160,
+      "name": "SOS Save.Our.Skin spray",
+      "brand": "Tower 28 Beauty",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "acne",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 161,
+      "name": "GenOptics Spot Essence",
+      "brand": "SK-II",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dryness",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 162,
+      "name": "The True Tincture Essence",
+      "brand": "Belif",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 163,
+      "name": "Ceramidin Liquis",
+      "brand": "Dr.Jart+",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 164,
+      "name": "Ultimate Revival Essence",
+      "brand": "SK-II",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dullness",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 165,
+      "name": "Squalane + Hyaluronic Toning Mist",
+      "brand": "Biossance",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dullness",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 166,
+      "name": "Hydrating Hyaluronic Acid Floral Essence",
+      "brand": "Tata Harper",
+      "type": "essence",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dullness",
+      "order": 5
+
+    }
+  );
+  Product.create(
+    {
+      "id": 167,
+      "name": "Elixer Vitae Serum Wrinkle Solution",
+      "brand": "Tata Harper",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "elasticity",
+      "order": 6
+
+    }
+  );
+  Product.create(
+    {
+      "id": 168,
+      "name": "Squalane + Phyto-Retinol Serum",
+      "brand": "Biossance",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "elasticity",
+      "order": 6
+
+    }
+  );
+  Product.create(
+    {
+      "id": 169,
+      "name": "Neuropeptide Smoothing Facial Conformer",
+      "brand": "Perricone MD",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "acne",
+      "order": 6
+
+    }
+  );
+  Product.create(
+    {
+      "id": 170,
+      "name": "Glow Cycle Retin-Alt Power Serum",
+      "brand": "Olehenriksen",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "acne",
+      "order": 6
+
+    }
+  );
+  Product.create(
+    {
+      "id": 171,
+      "name": "Brightening Serum",
+      "brand": "Dr.Barbara Sturm",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dullness",
+      "order": 6
+
+    }
+  );
+  Product.create(
+    {
+      "id": 172,
+      "name": "Truth Serum",
+      "brand": "Olehenriksen",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dullness",
+      "order": 6
+
+    }
+  );
+  Product.create(
+    {
+      "id": 173,
+      "name": "Hyaluronic Serum",
+      "brand": "Dr.Lara Devgan Scientific Beauty",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$$",
+      "goal": "dryness",
+      "order": 6
+
+    }
+  );
+  Product.create(
+    {
+      "id": 174,
+      "name": "Rose Deep Hydration Oil-Infused Serum",
+      "brand": "Fresh",
+      "type": "serum",
+      "store": "sephora",
+      "skinType": "all",
+      "price": "$$",
+      "goal": "dryness",
+      "order": 6
+
     }
   );
 

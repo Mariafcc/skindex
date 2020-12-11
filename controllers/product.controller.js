@@ -17,80 +17,159 @@ exports.getProducts = (req, res) => {
         });
 };
 
-exports.findAllSkinType = (req, res) => {
+exports.findAllSkinType = async (req, res) => {
+
+
     Result.findAll({
         where: {
             userId: req.userId
         }
     })
-        .then((answers) => {
+        .then( async (answers) => {
             const skinType = answers.find(x => x.question_id == 1);
             const goal = answers.find(x => x.question_id == 2);
             const price = answers.find(x => x.question_id == 3);
-            
+            const amountAnswer = answers.find(x => x.question_id == 4);
+            const amount = parseInt(amountAnswer.answer)
             console.log(skinType);
-            Product.findAll({
+
+            const products = {};
+
+            const cleansers = await Product.findAll({
+                
                 where: {
                     skinType: {
                         [Op.in]: [skinType.answer, 'all']
                     },
                     goal: goal.answer,
-                    price: price.answer
+                    price: price.answer,
+                    type:"cleanser"
                 }
-            })
-                .then(products => {
-                    res.status(200).send({
-                        products
-                    });
-                })
-                .catch(err => {
-                    res.status(500).send({ message: err.message });
-                });
-                // if (amount === 3){
-                //     const amount = answers.find(x => x.question_id == 4);
-                //     Product.findAll({
-                //         where:{
-                //             type: [cleanser, moisturizer,spf]
-                //         }
-                //     })
-                // }
-        })
 
+            });
+            //randomizing selection if more than one product shows for the category.
+            products.cleanser = cleansers[Math.floor(Math.random() * cleansers.length)];
+
+
+            const moisturizers = await Product.findAll({
+                where: {
+                    skinType: {
+                        [Op.in]: [skinType.answer, 'all']
+                    },
+                    goal: goal.answer,
+                    price: price.answer,
+                    type:"moisturizer"
+                }
+            });
+
+            products.moisturizer = moisturizers[Math.floor(Math.random() * moisturizers.length)];
+
+            const spfs = await Product.findAll({
+                where: {
+                    skinType: {
+                        [Op.in]: [skinType.answer, 'all']
+                    },
+                    goal: goal.answer,
+                    price: price.answer,
+                    type:"spf"
+                }
+            });
+
+            products.spf = spfs[Math.floor(Math.random() * spfs.length)];
+
+            if (amount >= 5){
+                const serums = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"serum"
+                    }
+                });
+
+                products.serum = serums[Math.floor(Math.random() * serums.length)];
+
+                const toners = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"toner"
+                    }
+                });
+
+                products.toner = toners[Math.floor(Math.random() * toners.length)];
+            }
+
+
+            if (amount == 9){
+                const essences = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"essence"
+                    }
+
+                });
+
+                products.essence = essences[Math.floor(Math.random() * essences.length)];
+
+                const exfoliators = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"exfoliator"
+                    }
+                });
+
+                products.exfoliator = exfoliators[Math.floor(Math.random() * exfoliators.length)];
+
+                const masks = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"mask"
+                    }
+                    
+                });
+
+
+                products.mask = masks[Math.floor(Math.random() * masks.length)];
+
+                const eyes = await Product.findAll({
+                    where: {
+                        skinType: {
+                            [Op.in]: [skinType.answer, 'all']
+                        },
+                        goal: goal.answer,
+                        price: price.answer,
+                        type:"eye cream"
+                    }
+
+                });
+
+                products.eye = eyes[Math.floor(Math.random() * eyes.length)];
+            }
+            
+
+            res.status(200).send({
+                products
+            });
+        })
         .catch(err => {
             res.status(500).send({ message: err.message });
         });
 };
-
-/*
-// Create and Save a new Tutorial
-exports.create = (req, res) => {
-
-};
-
-// Retrieve all Tutorials from the database.
-exports.findAll = (req, res) => {
-
-};
-
-// Find a single Tutorial with an id
-exports.findOne = (req, res) => {
-
-};
-
-// Update a Tutorial by the id in the request
-exports.update = (req, res) => {
-
-};
-
-// Delete a Tutorial with the specified id in the request
-exports.delete = (req, res) => {
-
-};
-
-// Delete all Tutorials from the database.
-exports.deleteAll = (req, res) => {
-
-};
-
-
-*/

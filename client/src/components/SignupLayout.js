@@ -143,7 +143,7 @@ const SignupLayout = () => {
                     >
                         {message}
                     </div>
-                    <div className="success-message text-center">You will be redirected to longin in 3 seconds</div>
+                    <div className="success-message text-center">You will be redirected to login in 3 seconds</div>
                 </div>
             )}
             <CheckButton style={{ display: "none" }} ref={checkBtn} />

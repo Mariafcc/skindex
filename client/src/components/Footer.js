@@ -3,10 +3,10 @@ import "./style/footer.css"
 
 function Footer() {
     return (
-        <div>
-            <footer className="page-footer font-small cyan darken-3">
+        <div className="">
+            <footer className="footer">
                 <div className="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://mdbootstrap.com/"> SkinDex</a>
+                    <a className="footer-link" href="https://github.com/Mariafcc/skindex"> SkinDex</a>
                 </div>
             </footer>
             {/* <blockquote className="blockquote">

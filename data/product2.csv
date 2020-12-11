@@ -1,0 +1,48 @@
+id,name,brand,type,store,skinType,price,goal,order
+128,Essential-C Cleanser,Murad,cleanser,sephora,all,$$,dullness,1
+129,Rise + Shine Gentle Cleanser,Saturday Skin,cleaner,sephora,all,$$,elasticity,1 
+130,Ceramic Slip Cleanser,Sunday Riley,cleaner,sephora,all,$$,dryness,1 
+131,Ultracalming Cleanser,Dermalogica,cleaner,sephora,all,$$,dryness,1 
+132,Plantscription Anti-Aging Cleanser,Origins,cleaner,sephora,normal,$$,elasticity,1 
+133,Argan Cleansing Oil,Josie Maran,cleaner,sephora,dry,$$,elasticity,1 
+134,Renewing Cleansing Cream,Murad,cleanser,sephora,normal,$$,dullness,1
+135,Salicylic Acid Acne + pore Cleanser,The IKEY list,cleanser,sephora,all,$,acne,1
+136,Clarifying Cleanser,Murad,cleanser,sephora,all,$$,acne,1
+137,Squalane + Tea Tree Cleansing,Biossance,cleanser,sephora,all,$$,ance,1
+138,n/a
+139,n/a
+140,Creme Ancienne Infusion Toner,Fresh,toner,sephora,all,$$$,dullness,2
+141,8% Glycolic Solutions toner,Peter Thomas Roth,toner,sephora,all,$$,dullness,2
+142,Vitamin C Brightening Toner,Dr.Zenovia Skincare,toner,sephora,all,$$,dullness,2
+143,Botanical soothing Toner,Amorepacific,toner,sephora,all,$$$,dryness,2
+144,Hydrating Face Tonic Toner,Bobbi Brown,toner,sephora,all,$$,dryness,2
+145,Apline Berry Water Toner,Primera,toner,sephora,all,$$,dryness,2
+146,G.Tox Malachite and AHA Pore Refining Toner,Goop,toner,sephora,all,$$$,acne,2
+147,Calendula Herbal Extract Toner,Kiehl's Since 1851,toner,sephora,all,$$,acne,2
+148,Umbrian Clay Toner,Fresh,toner,sephora,all,$$,acne,2
+149,Mood Cream Cleanser,Omorovicza,cleanser,sephora,all,$$$,acne,1
+150,Precleanse Cleansing Oil,Dermalogica,cleanser,sephora,all,$$$,dryness,1
+151,Enzyme Cleanser,Dr.Barbara Sturm,cleanser,sephora,all,$$$,dullness,1
+152,Turnaround,Clinique,toner,sephora,all,$$,elasticity,2
+153,CoQ-10 Toner,Indie Lee,toner,sephora,all,$$$,elasticity,2
+154,Coconut Rose Toner,Kopari,toner,sephora,all,$$,elasticity,2
+155,Fermented Soybean Firming Energy Essence,Innisfree,essence,sephora,all,$$,elasticity ,3
+156,Miracle Seed Essence,Primera,essence,sephora,all,$$,elasticity ,3
+157,Sake Toning Essence,Shani Darden Skin Care,essence,sephora,all,$$$,elasticity ,3
+158,Concentrated Brightening Essence,Tata Harper,essence,sephora,all,$$$,acne,3
+159,Hungarian Water Essence,Belif,essence,sephora,all,$$,acne,3
+160,SOS Save.Our.Skin spray,Tower 28 Beauty,essence,sephora,all,$$,acne,3
+161,GenOptics Spot Essence,SK-II,essence,sephora,all,$$$,dryness,3
+162,The True Tincture Essence,Belif,essence,sephora,all,$$,dryness,3
+163,Ceramidin Liquis,Dr.Jart+,essence,sephora,all,$$,dryness,3
+164,Ultimate Revival Essence,SK-II,essence,sephora,all,$$$,dullness,3
+165,Squalane + Hyaluronic Toning Mist,Biossance,essence,sephora,all,$$,dullness,3
+166,Hydrating Hyaluronic Acid Floral Essence,Tata Harper,essence,sephora,all,$$,dullness,3
+167,Elixer Vitae Serum Wrinkle Solution,Tata Harper,serum,sephora,all,$$$,elasticity,4 
+168,Squalane + Phyto-Retinol Serum,Biossance,serum,sephora,all,$$,elasticity,4 
+169,Neuropeptide Smoothing Facial Conformer,Perricone MD,serum,sephora,all,$$$,acne,4
+170,Glow Cycle Retin-Alt Power Serum,Olehenriksen,serum,sephora,all,$$,acne,4
+171,Brightening Serum,Dr.Barbara Sturm,serum,sephora,all,$$$,dullness,4
+172,Truth Serum,Olehenriksen,serum,sephora,all,$$,dullness,4
+173,Hyaluronic Serum,Dr.Lara Devgan Scientific Beauty,serum,sephora,all,$$$,dryness,4
+174,Rose Deep Hydration Oil-Infused Serum,Fresh,serum,sephora,all,$$,dryness,4

@@ -1,11 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 // import { Form, Button} from "react-bootstrap";
 import "./style/opacity.css"
 import ProductSelector from "./ProductSelector.js"
-import Steps from "./Steps"
-import { Container, Row, Col, Card } from 'react-bootstrap'
+// import Steps from "./Steps"
+import { Container, Row, Col, Card } from 'react-bootstrap';
+// import { Button, Modal } from "react-bootstrap";
 
 const RoutineLayout = () => {
+
+    // const [show, setShow] = useState(false);
+
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
 
     return (
         <div className="text-center pt-5 pb-5" style={{
@@ -15,18 +21,32 @@ const RoutineLayout = () => {
             backgroundAttachment: "fixed",
             position: "absolute",
             width: "100%",
-            height: "100%"
+            height: "auto"
         }} >
             <Container>
                 <Row>
-                    <Col className="col-sm-6 pb-5">
-                        <ProductSelector />
-                    </Col>
-                    <Col className="col-sm-6">
+
+                    <ProductSelector />
+                    {/* <Button onClick={handleShow} className="m-4">Find Store</Button>
+                        <Modal show={show} onHide={handleClose} >
+                            <Modal.Header closeButton>Stores Near You</Modal.Header>
+                            <Modal.Body>
+                                <Card className="p-4">
+                                    <Steps />
+                                </Card>
+                            </Modal.Body>
+                            <Modal.Footer variant="secondary" onClick={handleClose}>
+                                <Button>
+                                    Close
+                                </Button>
+                            </Modal.Footer>
+                        </Modal> */}
+
+                    {/* <Col className="col-sm-6">
                         <Card className="p-4">
                             <Steps />
                         </Card>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Container>
         </div>

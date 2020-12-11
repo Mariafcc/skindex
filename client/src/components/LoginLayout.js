@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
-import { Container, Row, Column, Card } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 import LoginForm from "./LoginForm"
 
@@ -16,15 +16,19 @@ const LoginLayout = () => {
 			width: "100%",
 			height: "100%"
 		}} >
-			<Container className="white d-flex justify-content-center">
-				<Card className="bg-light">
-					<Card.Body className="text-black opacity">
-						<LoginForm />
-					</Card.Body>
-				</Card>
+			<Container className="p-4">
+				<Row>
+					<Col className="col-sm-12 col-md-12 col-lg-6 pb-5 mx-auto">
+						<Card className="">
+							<Card.Body className="">
+								<LoginForm />
+							</Card.Body>
+						</Card>
+					</Col>
+				</Row>
 			</Container>
 		</div>
-	)  
+	)
 }
 
 export default LoginLayout;
