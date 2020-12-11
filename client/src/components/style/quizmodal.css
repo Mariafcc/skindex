@@ -1,0 +1,8 @@
+.option-btn {
+    background-color: #cccccc !important;
+    overflow-wrap: normal;
+}
+
+.option-btn-active {
+    background-color: #545b62 !important;
+}
