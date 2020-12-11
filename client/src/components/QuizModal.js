@@ -141,7 +141,6 @@ function QuizModal(props) {
             color: '#21252d',
             height: '90px',
           }}
-          closeButton
         >
           <h2
             style={{
