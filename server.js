@@ -11,9 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./models");
 
 
-
-
-
 //run initially
 // const seeds = require("./seeds");
 // db.sequelize.sync({ force: true }).then(() => {
