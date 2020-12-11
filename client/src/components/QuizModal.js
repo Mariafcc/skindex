@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ButtonGroup, Button, Modal, Alert } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import ResultService from "../services/results.service";
-
+import "./style/quizmodal.css";
 
 
 function QuizModal(props) {
@@ -139,15 +139,14 @@ function QuizModal(props) {
                         <Button
                           className={`${
                             userAnswers.find(item => item.selection === answer)
-                              ? 'active'
+                              ? 'option-btn-active'
                               : ''
-                            }  py-lg-3 border rounded-0`}
+                            }  option-btn py-lg-3 border rounded-0`}
                           variant='secondary'
                           data-selection={answer}
                           data-id={question.id}
                           key={question.id + answer}
                           onClick={handleAnswers}
-                          style={{ overflowWrap: 'normal', backgroundColor: "#cccccc" }}
                         >
                           {answer}
                         </Button>
