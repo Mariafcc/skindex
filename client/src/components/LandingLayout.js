@@ -19,7 +19,7 @@ const LandingLayout = () => {
             backgroundPosition: "fixed",
             position: "absolute",
             width: "100%",
-            height: "auto"
+            height: "100%"
         }} >
             {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
             {/* <Container className="fluid">

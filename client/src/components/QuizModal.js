@@ -10,12 +10,6 @@ function QuizModal(props) {
   const [show, setShow] = useState(false);
   //set props to questions
   const [questions, setQuestions] = useState(props.questions);
-  //set initial answers array mapping questions and getting id value of the question and selected answer, answer empty on the beginning, don't really need this, but makes your life easier
-  /*
-  const initialAnswers = [
-    ...questions.map(item => (item = { id: item.id, selection: '' })),
-  ];
-  */
   //user answers set to initialAnswers
   const [userAnswers, setUserAnswers] = useState([]);
   //state for checking if the form has been submitted
@@ -52,20 +46,7 @@ function QuizModal(props) {
       ResultService.saveQuestion(x.id, questions[index].question, tempSelection);
     });
 
-    //maybe a success message
-
     setIsSubmitted(true);
-
-
-    /*
-    //if there are no empties, the .find method will return undefined, verifying that user selected answers to each series of questions
-    empties !== undefined
-      ? //if user didn't answer all the questions, show it some message, for now just console.log
-      console.log('please select missing answers')
-      : //if all questions has been answered, set isSubmited to true, also here you want to perform your axios call and send user data to DB
-      setIsSubmitted(true);
-    console.log('ready to send userAnswers to DB');
-    */
 
   };
 
@@ -120,7 +101,7 @@ function QuizModal(props) {
         <Modal.Header
           className='py-4'
           style={{
-            backgroundColor: '#ffd7bf',
+            backgroundColor: '#FFDD99',
             color: '#21252d',
             height: '90px',
           }}
@@ -166,7 +147,7 @@ function QuizModal(props) {
                           data-id={question.id}
                           key={question.id + answer}
                           onClick={handleAnswers}
-                          style={{ overflowWrap: 'anywhere' }}
+                          style={{ overflowWrap: 'normal', backgroundColor: "#cccccc" }}
                         >
                           {answer}
                         </Button>
@@ -212,7 +193,7 @@ function QuizModal(props) {
         </Modal.Body>
         <Modal.Footer
           style={{
-            backgroundColor: '#ffd7bf',
+            backgroundColor: '#FFDD99',
             color: '#21252d',
             height: '80px',
           }}
