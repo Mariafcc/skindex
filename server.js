@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
-// app.use(express.static('client/public'));
+app.use(express.static('client/public'));
 
 
 
@@ -22,7 +22,7 @@ const db = require("./models");
 // });
 
 //comment out initially
-db.sequelize.sync();
+// db.sequelize.sync();
 
 // load in routes
 // fs.readdir('./routes', (err, files) => {
