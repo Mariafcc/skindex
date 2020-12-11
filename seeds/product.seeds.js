@@ -219,7 +219,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -232,7 +232,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -245,7 +245,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -258,7 +258,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -271,7 +271,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -284,7 +284,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -297,7 +297,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -310,7 +310,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -323,7 +323,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -336,7 +336,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -349,7 +349,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -362,7 +362,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -375,7 +375,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -388,7 +388,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -401,7 +401,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -414,7 +414,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
     }
   );
   Product.create(
@@ -427,7 +427,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "elasticity",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -440,7 +440,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -453,7 +453,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity ",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -466,7 +466,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -479,7 +479,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -492,7 +492,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -505,7 +505,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -518,7 +518,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -531,7 +531,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -544,7 +544,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -557,7 +557,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -570,7 +570,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -583,7 +583,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -596,7 +596,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -609,7 +609,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -622,7 +622,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
     }
   );
   Product.create(
@@ -635,7 +635,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -648,7 +648,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -661,7 +661,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -674,7 +674,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -687,7 +687,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -700,7 +700,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -713,7 +713,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -726,7 +726,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -739,7 +739,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -752,7 +752,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -778,7 +778,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -791,7 +791,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -804,7 +804,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -817,7 +817,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -830,7 +830,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
     }
   );
   Product.create(
@@ -843,7 +843,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -856,7 +856,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -869,7 +869,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -882,7 +882,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -895,7 +895,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -908,7 +908,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -921,7 +921,7 @@ const InitializeProducts = () => {
       "skinType": "oily",
       "price": "$$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -934,7 +934,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -947,7 +947,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -960,7 +960,7 @@ const InitializeProducts = () => {
       "skinType": "dry",
       "price": "$$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -973,7 +973,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -986,7 +986,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -999,7 +999,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -1012,7 +1012,7 @@ const InitializeProducts = () => {
       "skinType": "normal",
       "price": "$$",
       "goal": "dullness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -1025,7 +1025,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -1038,7 +1038,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 5
+      "order": 7
     }
   );
   Product.create(
@@ -1051,7 +1051,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1064,7 +1064,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1077,7 +1077,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1090,7 +1090,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1103,7 +1103,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1116,7 +1116,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 6
+      "order": 8
     },
   );
   Product.create(
@@ -1129,7 +1129,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1142,7 +1142,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1155,7 +1155,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1168,7 +1168,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1181,7 +1181,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1194,7 +1194,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 6
+      "order": 8
     }
   );
   Product.create(
@@ -1207,7 +1207,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1220,7 +1220,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1233,7 +1233,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1246,7 +1246,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1259,7 +1259,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1272,7 +1272,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1285,7 +1285,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1298,7 +1298,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1311,7 +1311,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1324,7 +1324,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1337,7 +1337,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1350,7 +1350,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 7
+      "order": 2
     }
   );
   Product.create(
@@ -1363,7 +1363,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1376,7 +1376,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1389,7 +1389,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "elasticity",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1402,7 +1402,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1415,7 +1415,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1428,7 +1428,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "acne",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1441,7 +1441,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1454,7 +1454,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1467,7 +1467,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dryness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1480,7 +1480,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1493,7 +1493,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1506,7 +1506,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$",
       "goal": "dullness",
-      "order": 8
+      "order": 3
     }
   );
   Product.create(
@@ -1827,7 +1827,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1841,7 +1841,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1855,7 +1855,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1869,7 +1869,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1883,7 +1883,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1897,7 +1897,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1911,7 +1911,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1925,7 +1925,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1939,7 +1939,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -1995,7 +1995,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -2009,7 +2009,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -2023,7 +2023,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 2
+      "order": 4
 
     }
   );
@@ -2037,7 +2037,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity ",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2051,7 +2051,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity ",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2065,7 +2065,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity ",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2079,7 +2079,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2093,7 +2093,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2107,7 +2107,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2121,7 +2121,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2135,7 +2135,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2149,7 +2149,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2163,7 +2163,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2177,7 +2177,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2191,7 +2191,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 3
+      "order": 5
 
     }
   );
@@ -2205,7 +2205,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
 
     }
   );
@@ -2219,7 +2219,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "elasticity",
-      "order": 4
+      "order": 6
 
     }
   );
@@ -2233,7 +2233,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
 
     }
   );
@@ -2247,7 +2247,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "acne",
-      "order": 4
+      "order": 6
 
     }
   );
@@ -2261,7 +2261,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
 
     }
   );
@@ -2275,7 +2275,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dullness",
-      "order": 4
+      "order": 6
 
     }
   );
@@ -2289,7 +2289,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
 
     }
   );
@@ -2303,7 +2303,7 @@ const InitializeProducts = () => {
       "skinType": "all",
       "price": "$$",
       "goal": "dryness",
-      "order": 4
+      "order": 6
 
     }
   );
