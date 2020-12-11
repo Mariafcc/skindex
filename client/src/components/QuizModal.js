@@ -87,23 +87,6 @@ function QuizModal(props) {
     newArray.push({ id, selection })
     setUserAnswers(newArray);
     console.log(userAnswers)
-    /*
-    const inArray = userAnswers.find(item => item.selection === selection);
-    //create a new object to add to our array, 
-    //also checking if the selected button was already selected and we have the same object in the array, 
-    //in that case so we are going to deselect it and set the selection value to emty string
-    const userSelection = { id, selection: inArray ? '' : selection };
-    //here we are mapping user answers and checking if we already have the answer with that id, and if we do, we replace it's value
-    const finalSelection = userAnswers.map(item => {
-      if (item.id === id) {
-        item = userSelection;
-      }
-      return item;
-
-    });
-    //finally assigning new state to user answers 
-    setUserAnswers([...finalSelection]);
-    */
   };
 
   const history = useHistory()
