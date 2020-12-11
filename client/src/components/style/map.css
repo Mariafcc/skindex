@@ -53,3 +53,11 @@
     width: 30px;
     height: 30px
 }
+
+.mapboxgl-popup {
+    max-width: 200px
+}
+
+.mapboxgl-popup-content > p {
+    line-height: 1.2
+}
