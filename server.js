@@ -12,7 +12,7 @@ const db = require("./models");
 
 
 //run initially
-const seeds = require("./seeds");
+// const seeds = require("./seeds");
 // db.sequelize.sync({ force: true }).then(() => {
 //     console.log('Drop and Resync Db');
 //     seeds.productSeeds();
