@@ -29,7 +29,11 @@ module.exports = (sequelize, Sequelize) => {
         order: {
             type: Sequelize.INTEGER
 
+        },
+        link:{
+            type: Sequelize.STRING
         }
+
     });
 
     return Product;
