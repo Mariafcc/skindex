@@ -185,10 +185,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="moisturizer">
-                            moisturizer
+                            Moisturizer
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a dime sized amount to palm and evenly distribute across face.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -199,10 +199,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="cleanser">
-                            cleanser
+                            Cleanser
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Lather cleanser on face and use morning and night for 30 seconds.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -213,10 +213,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="toner">
-                            toner
+                            Toner
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply toner to a cotton round and directly to face to remove any remaining dirt and grime and shrink pore size. Rub in until evenly distributed.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -227,10 +227,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="serum">
-                            serum
+                            Serum
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a dropper’s amount of serum to face and rub into face until absorbed.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -241,10 +241,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="essence">
-                            essence
+                            Essence
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>For additional hydration and improved efficiency of your other products, apply a nickel sized amount go essence to your palms and pat to face to apply. </Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -255,10 +255,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="spf">
-                            spf
+                            SPF
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a quarter sized amount of SPF to both your face and neck and blend thoroughly.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -269,10 +269,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="mask">
-                            facemask
+                            Face Mask
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a thin layer of the face mask onto palms and spread evenly across face, avoiding eyes. Use as often as directed on individual product.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -297,10 +297,10 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="eyecream">
-                            eye cream
+                            Eye Cream
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Use a dime sized amount of eye cream and dab across orbital bone. Tap cream until absorbed.</Modal.Body>
                 </Modal>
             </Container>
         </Fragment >
