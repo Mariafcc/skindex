@@ -43,8 +43,8 @@ exports.findAllSkinType = async (req, res) => {
                     },
                     goal: goal.answer,
                     price: price.answer,
-                    type:"cleanser",
-                    link:""
+                    type:"cleanser"
+                    
                 }
 
             });
@@ -59,8 +59,8 @@ exports.findAllSkinType = async (req, res) => {
                     },
                     goal: goal.answer,
                     price: price.answer,
-                    type:"moisturizer",
-                    // link:""
+                    type:"moisturizer"
+                    
                 }
             });
 
@@ -73,8 +73,8 @@ exports.findAllSkinType = async (req, res) => {
                     },
                     goal: goal.answer,
                     price: price.answer,
-                    type:"spf",
-                    // link:""
+                    type:"spf"
+     
                 }
             });
 
@@ -88,8 +88,8 @@ exports.findAllSkinType = async (req, res) => {
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"serum",
-                        // link:""
+                        type:"serum"
+                        
                     }
                 });
 
@@ -102,8 +102,8 @@ exports.findAllSkinType = async (req, res) => {
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"toner",
-                        // link:""
+                        type:"toner"
+                        
                     }
                 });
 
@@ -119,8 +119,7 @@ exports.findAllSkinType = async (req, res) => {
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"essence",
-                        // link:""
+                        type:"essence"
                     }
 
                 });
@@ -134,8 +133,8 @@ exports.findAllSkinType = async (req, res) => {
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"exfoliator",
-                        // link:""
+                        type:"exfoliator"
+                        
                     }
                 });
 
@@ -148,8 +147,8 @@ exports.findAllSkinType = async (req, res) => {
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"mask",
-                        // link:""
+                        type:"mask"
+                        
                     }
                     
                 });
@@ -164,8 +163,8 @@ exports.findAllSkinType = async (req, res) => {
                         },
                         goal: goal.answer,
                         price: price.answer,
-                        type:"eye cream",
-                        // link:""
+                        type:"eye cream"
+      
                     }
 
                 });
