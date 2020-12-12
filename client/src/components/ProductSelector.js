@@ -93,7 +93,7 @@ const ProductSelector = () => {
                     backgroundColor: ""
                 }}>
                     <div>
-                        <Table className="table-fit">
+                        <Table size="sm" className="table-fit">
                             <thead className="thead-dark">
                                 {/* <th>Order</th> */}
                                 <th>Steps</th>

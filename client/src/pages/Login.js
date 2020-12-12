@@ -9,7 +9,7 @@ import "../components/style/backgroundStyle.css";
 const Login = () => {
 
     return (
-        <div id="login-background-img">
+        <div id="routine-background-img">
             {/* < NavBar /> */}
             <LoginLayout />
             <Footer />

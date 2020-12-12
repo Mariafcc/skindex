@@ -6,7 +6,7 @@ import "../components/style/backgroundStyle.css";
 
 const Home = () => {
     return (
-        <div id="quiz-background-img">
+        <div id="routine-background-img">
             {/* <NavBar /> */}
             <div>
                 <Quiz />
