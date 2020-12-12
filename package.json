@@ -35,6 +35,7 @@
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
     "path": "^0.12.7",
+    "react-map-gl": "^5.2.11",
     "sequelize": "^6.3.5",
     "validator": "^13.5.1"
   }
