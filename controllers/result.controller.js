@@ -4,31 +4,48 @@ const Result = db.result;
 
 
 exports.saveResult = (req, res) => {
-    if (!req.body.id){
+    if (!req.body.id) {
         res.status(422).send({ message: "Invalid or blank question id" });
-		return;
+        return;
     }
 
-    if (!req.body.question){
+    if (!req.body.question) {
         res.status(422).send({ message: "Invalid or blank question" });
-		return;
+        return;
     }
 
-    if (!req.body.answer){
+    if (!req.body.answer) {
         res.status(422).send({ message: "Invalid or blank answer" });
-		return;
+        return;
     }
 
-    Result.create({
-        question_id: req.body.id,
-        question: req.body.question,
-        answer: req.body.answer,
-        userId: req.userId
+    Result.findOne({
+        where: {
+            question_id: req.body.id,
+            userId: req.userId
+        }
+    }).then(result => {
+        if (result == null) {
+            Result.create({
+                question_id: req.body.id,
+                question: req.body.question,
+                answer: req.body.answer,
+                userId: req.userId
+            })
+                .then(() => {
+                    res.status(200).send({ message: "Question Saved" });
+                })
+        } else {
+            result.update({
+                question: req.body.question,
+                answer: req.body.answer,
+            }).then(() => {
+                res.status(200).send({ message: "Question Saved" });
+            })
+        }
     })
-    .then(result => {
-        res.status(200).send({message: "Question Saved"});
-    })
-    .catch(err => {
-        res.status(500).send({ message: err.message });
-    });
+        .catch(err => {
+            res.status(500).send({ message: err.message });
+        });
+
 };

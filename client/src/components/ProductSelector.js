@@ -2,12 +2,13 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./style/productSelector.css"
 import RoutineService from "../services/routine.service"
 import Map from "./Map"
-
+import { useHistory } from 'react-router-dom';
 import { Button, Modal } from "react-bootstrap";
 
 // import { useState, useEffect } from "react";
 import { ListGroup, Table } from "react-bootstrap"
 import { Container, Row, Col, Card } from "react-bootstrap";
+
 
 const ProductSelector = () => {
     // const [product, setProduct] = useState("");
@@ -19,6 +20,8 @@ const ProductSelector = () => {
     // };
 
     const [products, setProducts] = useState([]);
+
+    const history = useHistory()
 
     useEffect(() => {
         getProducts();
