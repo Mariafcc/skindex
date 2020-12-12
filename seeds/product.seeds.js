@@ -276,7 +276,7 @@ const InitializeProducts = () => {
       "type": "toner",
       "store": "target",
       "skinType": "all",
-      "price": "$$",
+      "price": "$",
       "goal": "elasticity",
       "order": 4,
       "link": "https://www.target.com/p/pixi-by-petra-collagen-tonic-3-4-fl-oz/-/A-78135910#lnk=sametab"
@@ -2467,6 +2467,21 @@ const InitializeProducts = () => {
   Product.create(
     {
       "id": 174,
+      "name": "Organic Rosewater Facial Toner",
+      "brand": "Cocokind",
+      "type": "toner",
+      "store": "target",
+      "skinType": "all",
+      "price": "$",
+      "goal": "elasticity",
+      "order": 4,
+      "link": "https://www.target.com/p/cocokind-organic-rosewater-facial-toner-4oz/-/A-51148426#lnk=sametab"
+
+    }
+  );
+  Product.create(
+    {
+      "id": 175,
       "name": "Rose Deep Hydration Oil-Infused Serum",
       "brand": "Fresh",
       "type": "serum",
