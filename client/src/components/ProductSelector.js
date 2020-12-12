@@ -133,6 +133,13 @@ const ProductSelector = () => {
                                                 </Modal.Footer>
                                             </Modal>
                                         </td>
+                                        <td id="table-col align-baseline">
+                                            
+                                            <a href={product.link}>
+                                                <img src="./icons/serum.png" alt="serum" id="type-image"></img>
+                                            </a>
+
+                                        </td>
                                     </tr>
 
 
