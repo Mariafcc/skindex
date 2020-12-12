@@ -87,11 +87,12 @@ const ProductSelector = () => {
                     <h3>This is your Routine!</h3>
                     <br></br>
                     <p>Here is a list of products that have been generated for you based on your quiz answers. Enjoy!</p>
+                    <p>Products are listed in the order you should use them. Click on an icon to learn more.</p>
                 </Card>
                 <Card className="mx-auto mb-4" class="table-card" style={{
                     backgroundColor: ""
                 }}>
-                    <div id="product-table">
+                    <div>
                         <Table className="table-fit">
                             <thead className="thead-dark">
                                 {/* <th>Order</th> */}
@@ -104,7 +105,7 @@ const ProductSelector = () => {
                                 return (
 
                                     <tr key={product.order}>
-                                        <td id="table-col align-baseline">
+                                        <td id="table-col product-table">
                                             <p></p>
                                             {/* {product.type} */}
                                             {/* Icons for each product type */}
@@ -131,10 +132,10 @@ const ProductSelector = () => {
                                             }
                                         </td>
 
-                                        <td id="table-col align-baseline">
+                                        <td id="table-col align-baseline" id="product-table">
                                             {product.brand}
                                         </td>
-                                        <td id="table-col">
+                                        <td id="table-col" id="product-table">
                                             {product.name}
                                             <p>
                                                 <a onClick={handleShow} id="fa-images"><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
@@ -182,7 +183,7 @@ const ProductSelector = () => {
                     show={moistureShow}
                     onHide={() => setMoistureShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="moisturizer">
                             moisturizer
                         </Modal.Title>
@@ -196,7 +197,7 @@ const ProductSelector = () => {
                     show={cleanserShow}
                     onHide={() => setCleanserShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="cleanser">
                             cleanser
                     </Modal.Title>
@@ -210,7 +211,7 @@ const ProductSelector = () => {
                     show={tonerShow}
                     onHide={() => setTonerShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="toner">
                             toner
                     </Modal.Title>
@@ -224,7 +225,7 @@ const ProductSelector = () => {
                     show={serumShow}
                     onHide={() => setSerumShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="serum">
                             serum
                     </Modal.Title>
@@ -238,7 +239,7 @@ const ProductSelector = () => {
                     show={essenceShow}
                     onHide={() => setEssenceShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="essence">
                             essence
                     </Modal.Title>
@@ -252,7 +253,7 @@ const ProductSelector = () => {
                     show={spfShow}
                     onHide={() => setSpfShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="spf">
                             spf
                     </Modal.Title>
@@ -266,7 +267,7 @@ const ProductSelector = () => {
                     show={maskShow}
                     onHide={() => setMaskShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="mask">
                             facemask
                     </Modal.Title>
@@ -280,7 +281,7 @@ const ProductSelector = () => {
                     show={exfolShow}
                     onHide={() => setExfolShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="exfoliator">
                             exfoliator
                     </Modal.Title>
@@ -294,7 +295,7 @@ const ProductSelector = () => {
                     show={eyeShow}
                     onHide={() => setEyeShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="eyecream">
                             eye cream
                     </Modal.Title>
