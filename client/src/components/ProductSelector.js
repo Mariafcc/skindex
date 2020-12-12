@@ -177,7 +177,7 @@ const ProductSelector = () => {
                             moisturizer
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a dime sized amount to palm and evenly distribute across face.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -191,7 +191,7 @@ const ProductSelector = () => {
                             cleanser
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Lather cleanser on face and use morning and night for 30 seconds.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -205,7 +205,7 @@ const ProductSelector = () => {
                             toner
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply toner to a cotton round and directly to face to remove any remaining dirt and grime and shrink pore size. Rub in until evenly distributed. </Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -219,7 +219,7 @@ const ProductSelector = () => {
                             serum
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a dropper’s amount of serum to face and rub into face until absorbed</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -233,7 +233,7 @@ const ProductSelector = () => {
                             essence
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>For additional hydration and improved efficiency of your other products, apply a nickel sized amount go essence to your palms and pat to face to apply. </Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -247,7 +247,7 @@ const ProductSelector = () => {
                             spf
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a quarter sized amount of SPF to both your face and neck and blend thoroughly.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -261,7 +261,7 @@ const ProductSelector = () => {
                             facemask
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Apply a thin layer of the face mask onto palms and spread evenly across face, avoiding eyes. Leave on for time directed on individual product. </Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -275,7 +275,7 @@ const ProductSelector = () => {
                             exfoliator
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>On a damp clean face, use exfoliant to massage skin in circular motion, avoiding eyes. Rinse after 30 second massage.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
@@ -289,7 +289,7 @@ const ProductSelector = () => {
                             eye cream
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>Use a dime sized amount of eye cream and dab across orbital bone, tap cream until absorbed.</Modal.Body>
                 </Modal>
             </Container>
         </Fragment >
