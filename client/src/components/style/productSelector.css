@@ -60,14 +60,27 @@ img{
     }
   }
 
-  @media only screen and (max-width: 400px) {
+  #product-table{
+      vertical-align: middle;
+  }
+
+  /* @media only screen and (max-width: 400px) {
     #product-table{
     max-width: 50%;
 }
-  }
+  } */
 
   #routine-card{
     border-color: black;
+  }
+  
+  @media only screen and (min-width: 815px) {
+    #routine-card {
+      padding-right: 4px !important;
+      padding-left: 4px !important;
+      border-color: black;
+      max-width: 80%;
+    }
   }
 
   @media only screen and (max-width: 420px) {
@@ -90,6 +103,13 @@ img{
 #icon-btn:hover{
     background-color: antiquewhite;
 }
+
+#fa-images{
+    color: #93bfb7;
+    padding: 8px;
+    /* display: inline; */
+}
+
 
 /* .modal-body{
     position: relative;

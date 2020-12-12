@@ -8,7 +8,7 @@ import "../components/style/backgroundStyle.css";
 
 const Landing = () => {
     return (
-        <div id="landing-background-img">
+        <div id="routine-background-img">
             <div>
                 {/* <NavBar /> */}
                 <LandingLayout />

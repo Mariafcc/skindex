@@ -82,6 +82,7 @@ function QuizModal(props) {
           top: '50%',
           left: '50%',
           transform: 'translateX(-50%) translateY(-50%)',
+          marginTop: "100px"
         }}
         variant='outline-dark'
         onClick={handleShow}
