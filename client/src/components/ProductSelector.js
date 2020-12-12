@@ -53,8 +53,15 @@ const ProductSelector = () => {
     const handleShow = () => setShow(true);
 
     // Info modals
-    const [smShow, setSmShow] = useState(false);
-    const [lgShow, setLgShow] = useState(false);
+    const [cleanserShow, setCleanserShow] = useState(false);
+    const [tonerShow, setTonerShow] = useState(false);
+    const [serumShow, setSerumShow] = useState(false);
+    const [moistureShow, setMoistureShow] = useState(false);
+    const [essenceShow, setEssenceShow] = useState(false);
+    const [maskShow, setMaskShow] = useState(false);
+    const [eyeShow, setEyeShow] = useState(false);
+    const [exfolShow, setExfolShow] = useState(false);
+    const [spfShow, setSpfShow] = useState(false);
 
 
     // console.log(products)
@@ -88,25 +95,26 @@ const ProductSelector = () => {
                                         <td id="table-col align-baseline">
                                             <p></p>
                                             {/* {product.type} */}
+                                            {/* Icons for each product type */}
                                             {
                                                 (product.type === 'moisturizer')
-                                                    ? <Button onClick={() => setSmShow(true)}><img src="./icons/moisturizer.png" alt="moisturizer" id="type-image"></img></Button>
+                                                    ? <Button onClick={() => setMoistureShow(true)}><img src="./icons/moisturizer.png" alt="moisturizer" id="type-image"></img></Button>
                                                     : product.type === 'cleanser'
-                                                        ? <Button onClick={() => setLgShow(true)}><img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img></Button>
+                                                        ? <Button onClick={() => setCleanserShow(true)}><img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img></Button>
                                                         : product.type === 'spf'
-                                                            ? <img src="./icons/spf.png" alt="spf" id="type-image"></img>
+                                                            ? <Button onClick={() => setSpfShow(true)}><img src="./icons/spf.png" alt="spf" id="type-image"></img></Button>
                                                             : product.type === 'toner'
-                                                                ? <img src="./icons/toner.png" alt="toner" id="type-image"></img>
+                                                                ? <Button onClick={() => setTonerShow(true)}><img src="./icons/toner.png" alt="toner" id="type-image"></img></Button>
                                                                 : product.type === 'essence'
-                                                                    ? <img src="./icons/essence.png" alt="essence" id="type-image"></img>
+                                                                    ? <Button onClick={() => setEssenceShow(true)}><img src="./icons/essence.png" alt="essence" id="type-image"></img></Button>
                                                                     : product.type === 'exfoliator'
-                                                                        ? <img src="./icons/exfoliator.png" alt="exfoliator" id="type-image"></img>
+                                                                        ? <Button onClick={() => setExfolShow(true)}><img src="./icons/exfoliator.png" alt="exfoliator" id="type-image"></img></Button>
                                                                         : product.type === 'eye cream'
-                                                                            ? <img src="./icons/eyecream.png" alt="eyecream" id="type-image"></img>
+                                                                            ? <Button onClick={() => setEyeShow(true)}><img src="./icons/eyecream.png" alt="eyecream" id="type-image"></img></Button>
                                                                             : product.type === 'mask'
-                                                                                ? <img src="./icons/facemask.png" alt="facemask" id="type-image"></img>
+                                                                                ? <Button onClick={() => setMaskShow(true)}><img src="./icons/facemask.png" alt="facemask" id="type-image"></img></Button>
                                                                                 : product.type === 'serum'
-                                                                                    ? <img src="./icons/serum.png" alt="serum" id="type-image"></img>
+                                                                                    ? <Button onClick={() => setSerumShow(true)}><img src="./icons/serum.png" alt="serum" id="type-image"></img></Button>
                                                                                     : <div>not found</div>
                                             }
                                         </td>
@@ -143,33 +151,133 @@ const ProductSelector = () => {
 
                     </div>
                 </Card>
+                {/* Product Type info modals */}
                 <Modal
                     size="sm"
-                    show={smShow}
-                    onHide={() => setSmShow(false)}
-                    aria-labelledby="example-modal-sizes-title-sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={moistureShow}
+                    onHide={() => setMoistureShow(false)}
                 >
                     <Modal.Header closeButton>
-                        <Modal.Title id="example-modal-sizes-title-sm">
-                            Small Modal
+                        <Modal.Title id="moisturizer">
+                            moisturizer
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>...</Modal.Body>
                 </Modal>
                 <Modal
-                    size="lg"
-                    show={lgShow}
-                    onHide={() => setLgShow(false)}
-                    aria-labelledby="example-modal-sizes-title-lg"
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={cleanserShow}
+                    onHide={() => setCleanserShow(false)}
                 >
                     <Modal.Header closeButton>
-                        <Modal.Title id="example-modal-sizes-title-lg">
-                            Large Modal
+                        <Modal.Title id="cleanser">
+                            cleanser
                     </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>...</Modal.Body>
                 </Modal>
-                {/* <Map /> */}
+                <Modal
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={tonerShow}
+                    onHide={() => setTonerShow(false)}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="toner">
+                            toner
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
+                <Modal
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={serumShow}
+                    onHide={() => setSerumShow(false)}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="serum">
+                            serum
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
+                <Modal
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={essenceShow}
+                    onHide={() => setEssenceShow(false)}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="essence">
+                            essence
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
+                <Modal
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={spfShow}
+                    onHide={() => setSpfShow(false)}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="spf">
+                            spf
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
+                <Modal
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={maskShow}
+                    onHide={() => setMaskShow(false)}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="mask">
+                            facemask
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
+                <Modal
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={exfolShow}
+                    onHide={() => setExfolShow(false)}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="exfoliator">
+                            exfoliator
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
+                <Modal
+                    size="sm"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    show={eyeShow}
+                    onHide={() => setEyeShow(false)}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="eyecream">
+                            eye cream
+                    </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>...</Modal.Body>
+                </Modal>
             </Container>
         </Fragment >
 
