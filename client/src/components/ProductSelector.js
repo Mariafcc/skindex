@@ -73,7 +73,7 @@ const ProductSelector = () => {
     const [spfShow, setSpfShow] = useState(false);
 
 
-    // console.log(products)
+
 
     return (
 
@@ -229,9 +229,8 @@ const ProductSelector = () => {
                         <Modal.Title id="serum">
                             Serum
                     </Modal.Title>
-            
-                    <Modal.Body>Apply a dropper’s amount of serum to face and rub into face until absorbed</Modal.Body>
-
+                    </Modal.Header>
+                    <Modal.Body>Apply a dropper’s amount of serum to face and rub into face until absorbed.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
