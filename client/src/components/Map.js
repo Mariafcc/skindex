@@ -9,7 +9,7 @@ const mapStyle = {
     height: 300
 }
 
-const mapboxApiKey = 'pk.eyJ1Ijoic2FyYW1jZ3Vpbm4iLCJhIjoiY2tkdG9wandhMDU3ZTJ4cGxtaG5yd2d3aiJ9.FMU72HehweqVt3eGAhkuDg'
+const mapboxApiKey = process.env.REACT_APP_MAPBOX_API_KEY
 
 class Map extends Component {
     constructor(props) {
@@ -136,8 +136,6 @@ class Map extends Component {
                                     dynamicPosition={true}
                                 >
                                     <p>{this.state.selectedStore.place_name}</p>
-                                    {/* <p>{this.state.selectedStore.properties.address}</p>
-                                    <p>{this.state.selectedStore.context[1].text}</p> */}
                                 </Popup>
                             }
                         </ReactMapGL>

@@ -229,8 +229,9 @@ const ProductSelector = () => {
                         <Modal.Title id="serum">
                             Serum
                     </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Apply a dropper’s amount of serum to face and rub into face until absorbed.</Modal.Body>
+            
+                    <Modal.Body>Apply a dropper’s amount of serum to face and rub into face until absorbed</Modal.Body>
+
                 </Modal>
                 <Modal
                     size="sm"
@@ -286,7 +287,7 @@ const ProductSelector = () => {
                             exfoliator
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>On a damp clean face, use exfoliant to massage skin in circular motion, avoiding eyes. Rinse after 30 second massage.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
