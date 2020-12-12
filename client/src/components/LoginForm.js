@@ -27,6 +27,9 @@ const LoginForm = () => {
     const [message, setMessage] = useState("");
     const history = useHistory()
 
+    const [hideTest, setHideTest] = useState(true)
+    
+
     const onChangeEmail = (e) => {
         const email = e.target.value;
         setEmail(email);
@@ -99,6 +102,7 @@ const LoginForm = () => {
         }
     };
 
+
     return (
         <div>
         <Form  ref={form} className="input-sm">
@@ -114,7 +118,7 @@ const LoginForm = () => {
                 <label>Password</label>
                 <Input type="password" name="password" value={password} onChange={onChangePassword} validations={[required]} className="form-control" placeholder="Enter password" />
             </div>
-            <button onClick={handleLogin} type="submit" className="btn btn-dark btn-lg btn-block">To Take Test</button>
+            <button onClick={ handleLogin} type="submit" className="btn btn-dark btn-lg btn-block">To Take Test</button>
             <button onClick={handleLogintoRoutine} type="submit" className="btn btn-dark btn-lg btn-block">To Routine</button>
 
             {message && (
