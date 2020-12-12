@@ -5,6 +5,7 @@ import ProductSelector from "../components/ProductSelector";
 import Footer from "../components/Footer";
 import RoutineLayout from "../components/RoutineLayout";
 import { Container, Row, Column, Card } from "react-bootstrap";
+import "../components/style/backgroundStyle.css";
 
 
 
@@ -14,7 +15,7 @@ const Routine = () => {
 
     return (
 
-        <div>
+        <div className="text-center pt-5 pb-5" id="routine-background-img">
             <NavBar />
             <RoutineLayout />
             <Footer />

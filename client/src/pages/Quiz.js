@@ -29,16 +29,7 @@ const questions = [
 const Quiz = () => {
 
         return (
-                <div className="text-center pt-5 pb-5" style={{
-                        backgroundImage: `url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg)`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                        backgroundAttachment: "fixed",
-                        backgroundPosition: "fixed",
-                        position: "absolute",
-                        width: "100%",
-                        height: "100%"
-                }} >
+                <div className="text-center pt-5 pb-5">
                         {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
                         {/* <Container className="fluid">
                             <Row>
