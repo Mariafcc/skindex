@@ -4,11 +4,13 @@ import LoginLayout from "../components/LoginLayout";
 import Footer from "../components/Footer";
 
 
+
 const Login = () => {
 
     return (
         <div>
-            < NavBar />
+
+            {/* < NavBar /> */}
             <LoginLayout />
             <Footer />
         </div>

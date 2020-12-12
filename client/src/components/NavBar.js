@@ -28,8 +28,6 @@ const NavBar = () => {
 
                         {showLogout ? <button id="logout-button" onClick={onLogout}>Logout</button> : ''}
                     </Link>
-
-
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

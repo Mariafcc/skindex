@@ -64,6 +64,15 @@ img{
     padding-bottom: 0px;
 }
 
+#icon-btn{
+    background-color: white;
+    border: none;
+}
+
+#icon-btn:hover{
+    background-color: antiquewhite;
+}
+
 
 
 /* table.table-fit {

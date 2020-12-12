@@ -6,7 +6,7 @@ import Quiz from "./Quiz";
 const Home = () => {
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
             <div>
                 <Quiz />
             </div>

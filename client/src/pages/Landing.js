@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const Landing = () => {
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
             <div>
                 <LandingLayout />
             </div>

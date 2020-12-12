@@ -98,23 +98,23 @@ const ProductSelector = () => {
                                             {/* Icons for each product type */}
                                             {
                                                 (product.type === 'moisturizer')
-                                                    ? <Button onClick={() => setMoistureShow(true)}><img src="./icons/moisturizer.png" alt="moisturizer" id="type-image"></img></Button>
+                                                    ? <Button onClick={() => setMoistureShow(true)} id="icon-btn"><img src="./icons/moisturizer.png" alt="moisturizer" id="type-image"></img></Button>
                                                     : product.type === 'cleanser'
-                                                        ? <Button onClick={() => setCleanserShow(true)}><img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img></Button>
+                                                        ? <Button onClick={() => setCleanserShow(true)} id="icon-btn"><img src="./icons/cleanser.png" alt="cleanser" id="type-image"></img></Button>
                                                         : product.type === 'spf'
-                                                            ? <Button onClick={() => setSpfShow(true)}><img src="./icons/spf.png" alt="spf" id="type-image"></img></Button>
+                                                            ? <Button onClick={() => setSpfShow(true)} id="icon-btn"><img src="./icons/spf.png" alt="spf" id="type-image"></img></Button>
                                                             : product.type === 'toner'
-                                                                ? <Button onClick={() => setTonerShow(true)}><img src="./icons/toner.png" alt="toner" id="type-image"></img></Button>
+                                                                ? <Button onClick={() => setTonerShow(true)} id="icon-btn"><img src="./icons/toner.png" alt="toner" id="type-image"></img></Button>
                                                                 : product.type === 'essence'
-                                                                    ? <Button onClick={() => setEssenceShow(true)}><img src="./icons/essence.png" alt="essence" id="type-image"></img></Button>
+                                                                    ? <Button onClick={() => setEssenceShow(true)} id="icon-btn"><img src="./icons/essence.png" alt="essence" id="type-image"></img></Button>
                                                                     : product.type === 'exfoliator'
-                                                                        ? <Button onClick={() => setExfolShow(true)}><img src="./icons/exfoliator.png" alt="exfoliator" id="type-image"></img></Button>
+                                                                        ? <Button onClick={() => setExfolShow(true)} id="icon-btn"><img src="./icons/exfoliator.png" alt="exfoliator" id="type-image"></img></Button>
                                                                         : product.type === 'eye cream'
-                                                                            ? <Button onClick={() => setEyeShow(true)}><img src="./icons/eyecream.png" alt="eyecream" id="type-image"></img></Button>
+                                                                            ? <Button onClick={() => setEyeShow(true)} id="icon-btn"><img src="./icons/eyecream.png" alt="eyecream" id="type-image"></img></Button>
                                                                             : product.type === 'mask'
-                                                                                ? <Button onClick={() => setMaskShow(true)}><img src="./icons/facemask.png" alt="facemask" id="type-image"></img></Button>
+                                                                                ? <Button onClick={() => setMaskShow(true)} id="icon-btn"><img src="./icons/facemask.png" alt="facemask" id="type-image"></img></Button>
                                                                                 : product.type === 'serum'
-                                                                                    ? <Button onClick={() => setSerumShow(true)}><img src="./icons/serum.png" alt="serum" id="type-image"></img></Button>
+                                                                                    ? <Button onClick={() => setSerumShow(true)} id="icon-btn"><img src="./icons/serum.png" alt="serum" id="type-image"></img></Button>
                                                                                     : <div>not found</div>
                                             }
                                         </td>
