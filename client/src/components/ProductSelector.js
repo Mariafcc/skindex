@@ -3,11 +3,17 @@ import "./style/productSelector.css"
 import RoutineService from "../services/routine.service"
 import Map from "./Map"
 import { useHistory } from 'react-router-dom';
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Link, Table, Container, Card } from "react-bootstrap";
+
+// Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+// const element = <FontAwesomeIcon icon={faCoffee} />
 
 // import { useState, useEffect } from "react";
-import { ListGroup, Table } from "react-bootstrap"
-import { Container, Row, Col, Card } from "react-bootstrap";
+// import { ListGroup, Table } from "react-bootstrap"
+// import { Container, Row, Col, Card } from "react-bootstrap";
 
 
 const ProductSelector = () => {
@@ -75,6 +81,9 @@ const ProductSelector = () => {
 
             <Container>
                 <Card className="mx-auto mb-4 p-2 pt-4 pr-5 pl-5 mt-4" class="table-card" id="routine-card">
+                    <Card.Title>
+                        <img src="./img/header.png"></img>
+                    </Card.Title>
                     <h3>This is your Routine!</h3>
                     <br></br>
                     <p>Here is a list of products that have been generated for you based on your quiz answers. Enjoy!</p>
@@ -128,7 +137,8 @@ const ProductSelector = () => {
                                         <td id="table-col">
                                             {product.name}
                                             <p>
-                                                <Button onClick={handleShow} className="m-4 btn-sm" variant="secondary">Find Store</Button>
+                                                <a onClick={handleShow} id="fa-images"><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
+                                                <a href={product.link} target="_blank" id="fa-images"><FontAwesomeIcon icon={faShoppingBag} /></a>
                                             </p>
                                             <Modal
                                                 show={show} onHide={handleClose}
@@ -146,7 +156,7 @@ const ProductSelector = () => {
                                                 </Modal.Footer>
                                             </Modal>
                                         </td>
-                                        <td id="table-col align-baseline">
+                                        {/* <td id="table-col align-baseline">
                                             
 
                                             <a style={{display: "table-cell"}} href={product.link} target="_blank">
@@ -154,7 +164,7 @@ const ProductSelector = () => {
                                                 <img src="./icons/serum.png" alt="serum" id="type-image"></img>
                                             </a>
 
-                                        </td>
+                                        </td> */}
                                     </tr>
 
 

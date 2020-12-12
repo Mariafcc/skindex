@@ -91,6 +91,13 @@ img{
     background-color: antiquewhite;
 }
 
+#fa-images{
+    color: #93bfb7;
+    padding: 8px;
+    /* display: inline; */
+}
+
+
 /* .modal-body{
     position: relative;
     overflow-y: auto;
