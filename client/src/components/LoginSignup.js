@@ -14,7 +14,7 @@ const LoginSignup = () => {
     }
     return (
         <Col>
-            <Card>
+            <Card className="">
                 <div class="card-header" style={{
                     fontFamily: "Helvetica"
                 }}>

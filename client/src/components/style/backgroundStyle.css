@@ -1,0 +1,79 @@
+#landing-background-img {
+    background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+
+}
+
+@media only screen and (max-width: 812px) {
+	#landing-background-img {
+		background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: absolute;
+		width: 100%;
+		height: auto;
+	}
+  }
+
+#routine-background-img {
+    background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			position: absolute;
+			width: 100%;
+			height: auto;
+
+}
+
+#login-background-img {
+    background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+
+}
+
+@media only screen and (max-width: 812px) {
+	#login-background-img {
+		background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: absolute;
+		width: 100%;
+		height: auto;
+	}
+  }
+
+  @media only screen and (max-width: 375px) {
+	#login-background-img {
+		background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+  }
+
+#quiz-background-img {
+    background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+
+}
