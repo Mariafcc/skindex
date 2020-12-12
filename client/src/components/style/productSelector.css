@@ -46,17 +46,35 @@ img{
     border-width: 2px;
 }
 
-#table-card{
+.table-card{
     max-width: 70%;
 }
 @media only screen and (max-width: 815px) {
-    #table-card {
+    .table-card {
       max-width: 90%;
     }
   }
 @media only screen and (max-width: 420px) {
-    #table-card {
+    .table-card {
       max-width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    #product-table{
+    max-width: 50%;
+}
+  }
+
+  #routine-card{
+    border-color: black;
+  }
+
+  @media only screen and (max-width: 420px) {
+    #routine-card {
+      padding-right: 4px !important;
+      padding-left: 4px !important;
+      border-color: black;
     }
   }
 
@@ -73,6 +91,12 @@ img{
     background-color: antiquewhite;
 }
 
+/* .modal-body{
+    position: relative;
+    overflow-y: auto;
+    max-height: auto;
+    padding: 15px;
+} */
 
 
 /* table.table-fit {

@@ -71,15 +71,15 @@ const ProductSelector = () => {
         <Fragment>
 
             <Container>
-                <Card className="mx-auto mb-4 p-2 pr-5 pl-5" id="table-card">
-                    <h3>This is your routine!</h3>
+                <Card className="mx-auto mb-4 p-2 pt-4 pr-5 pl-5 mt-4" class="table-card" id="routine-card">
+                    <h3>This is your Routine!</h3>
                     <br></br>
                     <p>Here is a list of products that have been generated for you based on your quiz answers. Enjoy!</p>
                 </Card>
-                <Card className="mx-auto mb-4" id="table-card" style={{
+                <Card className="mx-auto mb-4" class="table-card" style={{
                     backgroundColor: ""
                 }}>
-                    <div>
+                    <div id="product-table">
                         <Table className="table-fit">
                             <thead className="thead-dark">
                                 {/* <th>Order</th> */}
@@ -127,16 +127,17 @@ const ProductSelector = () => {
                                             <p>
                                                 <Button onClick={handleShow} className="m-4 btn-sm" variant="secondary">Find Store</Button>
                                             </p>
-                                            <Modal show={show} onHide={handleClose} >
-                                                <Modal.Header closeButton>Stores Near You</Modal.Header>
-                                                <Modal.Body>
+                                            <Modal
+                                                show={show} onHide={handleClose}
+                                            >
+                                                <Modal.Header className="d-block text-center" closeButton><h4>Stores Near You</h4></Modal.Header>
+                                                <Modal.Body className="modal-body">
                                                     <Card className="p-4">
                                                         <Map store={product.store} />
-                                                        {/* <p>{product.store}</p> */}
                                                     </Card>
                                                 </Modal.Body>
-                                                <Modal.Footer variant="secondary" onClick={handleClose}>
-                                                    <Button>
+                                                <Modal.Footer onClick={handleClose}>
+                                                    <Button className="btn-secondary">
                                                         Close
                                                     </Button>
                                                 </Modal.Footer>

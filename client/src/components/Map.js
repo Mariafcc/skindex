@@ -65,11 +65,11 @@ class Map extends Component {
                         latitude={parseFloat(store.geometry.coordinates[1])}
                         longitude={parseFloat(store.geometry.coordinates[0])}
                     >
-                        {this.state.storeChain === "target" ? 
-                        <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-target-logo.png" />
-                        : <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-sephora-logo.jpg" />
+                        {this.state.storeChain === "target" ?
+                            <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-target-logo.png" />
+                            : <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-sephora-logo.jpg" />
                         }
-                        
+
                     </Marker>
                 )
             })
@@ -106,7 +106,7 @@ class Map extends Component {
         return (
             <Container fluid={true}>
                 <Row>
-                    <Col>
+                    <Col className="">
                         <ReactMapGL
                             mapboxApiAccessToken={mapboxApiKey}
                             mapStyle="mapbox://styles/mapbox/streets-v11"

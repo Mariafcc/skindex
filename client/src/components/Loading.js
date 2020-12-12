@@ -7,12 +7,14 @@ const Spinner = (props) => {
     return (
         <div>
             {props.visible ? <Loader
-                type="Puff"
-                color="#00BFFF"
+                type="TailSpin"
+                color="#BFE1DB"
                 height={100}
                 width={100}
                 timeout={3000} //3 secs
-            // visible={visible}
+                // visible={visible}
+
+                className="p-10"
             /> : ""}
 
         </div>
