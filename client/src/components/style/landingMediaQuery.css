@@ -1,0 +1,12 @@
+/* @media (max-width: 380) {
+    .iphone {
+      width: 100vw !important;
+      color: purple !important;
+    }
+  } */
+
+  .iphone {
+    width: 1000px !important;
+    display: inline-block !important;
+    color:purple;
+  }
