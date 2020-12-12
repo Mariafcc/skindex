@@ -5,13 +5,18 @@ import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
 import Spinner from "../components/Loading";
+import { Alert } from "react-bootstrap";
 
 import { useHistory } from 'react-router-dom';
 
 const required = (value) => {
     if (!value) {
         return (
-            <div>This field is required!</div>
+            <div>
+                <Alert>
+                    This field is required!
+                </Alert>
+            </div>
         );
     }
 };
@@ -19,7 +24,11 @@ const required = (value) => {
 const validEmail = (value) => {
     if (!isEmail(value)) {
         return (
-            <div>This is not a valid email.</div>
+            <div>
+                <Alert>
+                This is not a valid email!
+                </Alert>
+            </div>
         );
     }
 };
@@ -27,7 +36,11 @@ const validEmail = (value) => {
 const vUsername = (value) => {
     if (value.length < 3 || value.length > 20) {
         return (
-            <div>The username must be between 3 and 20 characters.</div>
+            <div>
+                <Alert>
+                The username must be between 3 and 20 characters.
+                </Alert>
+            </div>
         );
     }
 };
@@ -35,7 +48,11 @@ const vUsername = (value) => {
 const vPassword = (value) => {
     if (value.length < 6 || value.length > 40) {
         return (
-            <div>The password must be between 6 and 40 characters.</div>
+            <div>
+                <Alert>
+                The password must be between 6 and 40 characters.
+                </Alert>
+            </div>
         );
     }
 };

@@ -5,12 +5,16 @@ import CheckButton from "react-validation/build/button";
 import AuthService from "../services/auth.service";
 import { AuthDataContext } from "../authorization/authWrapper";
 import { useHistory } from 'react-router-dom';
+import { Alert } from "react-bootstrap";
 
 const required = (value) => {
     if (!value) {
         return (
-            // make into an Alert!!
-            <div>This field is required!</div>
+            <div>
+                <Alert>
+                    This field is required!
+                </Alert>
+            </div>
         );
     }
 };
@@ -27,8 +31,6 @@ const LoginForm = () => {
     const [message, setMessage] = useState("");
     const history = useHistory()
 
-    const [hideTest, setHideTest] = useState(true)
-    
 
     const onChangeEmail = (e) => {
         const email = e.target.value;
@@ -105,32 +107,32 @@ const LoginForm = () => {
 
     return (
         <div>
-        <Form  ref={form} className="input-sm">
-            <h3>Log in</h3>
+            <Form ref={form} className="input-sm">
+                <h3>Log in</h3>
 
-            <div className="form-group">
-                <label>Email</label>
-                <Input type="text" name="email" value={email} onChange={onChangeEmail}
-                    validations={[required]} className="form-control" placeholder="Enter email" />
-            </div>
-
-            <div className="form-group">
-                <label>Password</label>
-                <Input type="password" name="password" value={password} onChange={onChangePassword} validations={[required]} className="form-control" placeholder="Enter password" />
-            </div>
-            <button onClick={ handleLogin} type="submit" className="btn btn-dark btn-lg btn-block">To Take Test</button>
-            <button onClick={handleLogintoRoutine} type="submit" className="btn btn-dark btn-lg btn-block">To Routine</button>
-
-            {message && (
                 <div className="form-group">
-                    <div className="alert alert-danger" role="alert">
-                        {message}
-                    </div>
+                    <label>Email</label>
+                    <Input type="text" name="email" value={email} onChange={onChangeEmail}
+                        validations={[required]} className="form-control" placeholder="Enter email" />
                 </div>
-            )}
-            <CheckButton style={{ display: "none" }} ref={checkBtn} />
-        </Form>
-    </div>
+
+                <div className="form-group">
+                    <label>Password</label>
+                    <Input type="password" name="password" value={password} onChange={onChangePassword} validations={[required]} className="form-control" placeholder="Enter password" />
+                </div>
+                <button onClick={handleLogin} type="submit" className="btn btn-dark btn-lg btn-block">To Take Test</button>
+                <button onClick={handleLogintoRoutine} type="submit" className="btn btn-dark btn-lg btn-block">To Routine</button>
+
+                {message && (
+                    <div className="form-group">
+                        <div className="alert alert-danger" role="alert">
+                            {message}
+                        </div>
+                    </div>
+                )}
+                <CheckButton style={{ display: "none" }} ref={checkBtn} />
+            </Form>
+        </div>
     )
 }
 
