@@ -73,7 +73,7 @@ const ProductSelector = () => {
     const [spfShow, setSpfShow] = useState(false);
 
 
-    // console.log(products)
+
 
     return (
 
