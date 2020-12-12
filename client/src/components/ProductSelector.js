@@ -286,7 +286,7 @@ const ProductSelector = () => {
                             exfoliator
                     </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>...</Modal.Body>
+                    <Modal.Body>On a damp clean face, use exfoliant to massage skin in circular motion, avoiding eyes. Rinse after 30 second massage.</Modal.Body>
                 </Modal>
                 <Modal
                     size="sm"
