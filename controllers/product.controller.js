@@ -74,7 +74,7 @@ exports.findAllSkinType = async (req, res) => {
                     goal: goal.answer,
                     price: price.answer,
                     type:"spf"
-                    
+     
                 }
             });
 
@@ -120,7 +120,6 @@ exports.findAllSkinType = async (req, res) => {
                         goal: goal.answer,
                         price: price.answer,
                         type:"essence"
-                        
                     }
 
                 });
@@ -165,7 +164,7 @@ exports.findAllSkinType = async (req, res) => {
                         goal: goal.answer,
                         price: price.answer,
                         type:"eye cream"
-                        
+      
                     }
 
                 });

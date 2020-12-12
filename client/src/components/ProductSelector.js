@@ -135,7 +135,9 @@ const ProductSelector = () => {
                                         </td>
                                         <td id="table-col align-baseline">
                                             
+
                                             <a style={{display: "table-cell"}} href={product.link} target="_blank">
+
                                                 <img src="./icons/serum.png" alt="serum" id="type-image"></img>
                                             </a>
 
