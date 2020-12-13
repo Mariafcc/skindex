@@ -9,11 +9,6 @@ function Footer() {
                     <a className="footer-link" href="https://github.com/Mariafcc/skindex"> SkinDex</a>
                 </div>
             </footer>
-            {/* <blockquote className="blockquote">
-                <footer className="blockquote-footer">
-                    <a href="https://github.com/Mariafcc/skindex">skinDex® Copyright 2020</a>
-                </footer>
-            </blockquote> */}
         </div>
     )
 }
