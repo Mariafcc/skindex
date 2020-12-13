@@ -20,22 +20,12 @@ const ProductSelector = () => {
         getProducts();
     }, [])
 
-    // const getProducts = () => {
-    //     RoutineService.productDisplay().then((data) => {
-    //         setProducts(data.data.products);
-    //     }).catch((error) => {
-    //         console.log(error);
-    //     });
-    // };
-    // console.log(reccs)
-
 
     const getProducts = () => {
         RoutineService.routineDisplay().then((res) => {
             const reccs = Object.values(res.data.products)
             reccs.sort((a, b) => { return a.order - b.order })
             setProducts([...reccs]);
-            // console.log(res);
             console.log(reccs);
         })
             .catch((error) => {
@@ -82,7 +72,7 @@ const ProductSelector = () => {
                     <div>
                         <Table size="sm" className="table-fit">
                             <thead className="thead-dark">
-                                
+
                                 <th>Steps</th>
                                 <th>Brand</th>
                                 <th>Name</th>
@@ -94,7 +84,6 @@ const ProductSelector = () => {
                                     <tr key={product.order}>
                                         <td id="table-col product-table">
                                             <p></p>
-                                            {/* {product.type} */}
                                             {/* Icons for each product type */}
                                             {
                                                 (product.type === 'moisturizer')
@@ -125,8 +114,8 @@ const ProductSelector = () => {
                                         <td id="table-col" id="product-table" width="100%">
                                             {product.name}
                                             <p>
-                                                <a onClick={handleShow} id="fa-images"><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
-                                                <a href={product.link} target="_blank" id="fa-images"><FontAwesomeIcon icon={faShoppingBag} /></a>
+                                                <a onClick={handleShow} id="fa-images"><FontAwesomeIcon icon={faMapMarkerAlt} size="lg" /></a>
+                                                <a href={product.link} target="_blank" id="fa-images"><FontAwesomeIcon icon={faShoppingBag} size="lg" /></a>
                                             </p>
                                             <Modal
                                                 show={show} onHide={handleClose}
@@ -144,7 +133,7 @@ const ProductSelector = () => {
                                                 </Modal.Footer>
                                             </Modal>
                                         </td>
-                                       
+
                                     </tr>
 
 
@@ -284,7 +273,7 @@ const ProductSelector = () => {
             </Container>
         </Fragment >
 
-      
+
 
     )
 }

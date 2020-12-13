@@ -99,7 +99,6 @@ const SignupLayout = () => {
             AuthService.register(username, email, password).then(
                 (response) => {
                     setMessage(response.data.message);
-                    // setSuccessful(true)
                     setTimeout(() => setSuccessful(true), 2000);
                 },
                 (error) => {
@@ -120,7 +119,6 @@ const SignupLayout = () => {
     const redirectAfterSuccessfulRegister = () => {
         const to = { pathname: `login`, hash: `#hash` };
         history.push(to)
-        // setTimeout(() => history.push(to), 3000);
     };
 
     useEffect(() => {

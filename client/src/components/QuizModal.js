@@ -21,8 +21,7 @@ function QuizModal(props) {
     if (isSubmitted) {
       setShow(false);
     }
-    //this is bootstrap close modal handler, setting here setIsSubmitted to false, so user can start the quiz again
-    //setIsSubmitted(false);
+    
   };
   const handleShow = () => setShow(true);
   const handleSubmit = e => {
