@@ -9,25 +9,12 @@ import { Button, Modal, Link, Table, Container, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-// const element = <FontAwesomeIcon icon={faCoffee} />
-
-// import { useState, useEffect } from "react";
-// import { ListGroup, Table } from "react-bootstrap"
-// import { Container, Row, Col, Card } from "react-bootstrap";
 
 
 const ProductSelector = () => {
-    // const [product, setProduct] = useState("");
-
-    // const handleSubmit = e => {
-    //     e.preventDefault();
-    //     console.log("product input " + product);
-
-    // };
 
     const [products, setProducts] = useState([]);
 
-    const history = useHistory()
 
     useEffect(() => {
         getProducts();
@@ -95,7 +82,7 @@ const ProductSelector = () => {
                     <div>
                         <Table size="sm" className="table-fit">
                             <thead className="thead-dark">
-                                {/* <th>Order</th> */}
+                                
                                 <th>Steps</th>
                                 <th>Brand</th>
                                 <th>Name</th>
@@ -157,15 +144,7 @@ const ProductSelector = () => {
                                                 </Modal.Footer>
                                             </Modal>
                                         </td>
-                                        {/* <td id="table-col align-baseline">
-                                            
-
-                                            <a style={{display: "table-cell"}} href={product.link} target="_blank">
-
-                                                <img src="./icons/serum.png" alt="serum" id="type-image"></img>
-                                            </a>
-
-                                        </td> */}
+                                       
                                     </tr>
 
 
@@ -305,33 +284,7 @@ const ProductSelector = () => {
             </Container>
         </Fragment >
 
-        // <div className="container">
-        //     <div>
-        //         <div className="col-8">
-        //             <h3>This is your routine!</h3>
-        //             <ul className="list-group">
-        //                 <li className="list-group-item">
-        //                     Cras justo odio
-        //                     <div className="input-group input-group-sm">
-        //                         <div className="input-group-prepend">
-        //                             <span className="input-group-text" id="inputGroup-sizing-sm">Replace Item</span>
-        //                         </div>
-        //                         <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        //                         </input>
-        //                         <div className="input-group-append">
-        //                             <button className="input-group-text">submit</button>
-        //                         </div>
-        //                     </div>
-        //                 </li>
-        //                 <li className="list-group-item">Dapibus ac facilisis in</li>
-        //                 <li className="list-group-item">Morbi leo risus</li>
-        //                 <li className="list-group-item">Porta ac consectetur ac</li>
-        //                 <li className="list-group-item">Vestibulum at eros</li>
-        //             </ul>
-        //         </div>
-        //     </div>
-
-        // </div>
+      
 
     )
 }
