@@ -4,12 +4,13 @@ import LandingLayout from "../components/LandingLayout";
 import Login from "./Login";
 import "../pages/Landing";
 import Footer from "../components/Footer";
+import "../components/style/backgroundStyle.css";
 
 const Landing = () => {
     return (
-        <div>
-            <NavBar />
+        <div id="routine-background-img">
             <div>
+                {/* <NavBar /> */}
                 <LandingLayout />
             </div>
             <Footer />

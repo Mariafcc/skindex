@@ -4,13 +4,19 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
+import Spinner from "../components/Loading";
+import { Alert } from "react-bootstrap";
 
 import { useHistory } from 'react-router-dom';
 
 const required = (value) => {
     if (!value) {
         return (
-            <div>This field is required!</div>
+            <div>
+                <Alert>
+                    This field is required!
+                </Alert>
+            </div>
         );
     }
 };
@@ -18,7 +24,11 @@ const required = (value) => {
 const validEmail = (value) => {
     if (!isEmail(value)) {
         return (
-            <div>This is not a valid email.</div>
+            <div>
+                <Alert>
+                This is not a valid email!
+                </Alert>
+            </div>
         );
     }
 };
@@ -26,7 +36,11 @@ const validEmail = (value) => {
 const vUsername = (value) => {
     if (value.length < 3 || value.length > 20) {
         return (
-            <div>The username must be between 3 and 20 characters.</div>
+            <div>
+                <Alert>
+                The username must be between 3 and 20 characters.
+                </Alert>
+            </div>
         );
     }
 };
@@ -34,7 +48,11 @@ const vUsername = (value) => {
 const vPassword = (value) => {
     if (value.length < 6 || value.length > 40) {
         return (
-            <div>The password must be between 6 and 40 characters.</div>
+            <div>
+                <Alert>
+                The password must be between 6 and 40 characters.
+                </Alert>
+            </div>
         );
     }
 };
@@ -50,6 +68,8 @@ const SignupLayout = () => {
     const [successful, setSuccessful] = useState(false);
     const [message, setMessage] = useState("");
     const history = useHistory();
+
+    const [showSpinner, setShowSpinner] = useState(false);
 
     const onChangeUsername = (e) => {
         const username = e.target.value;
@@ -71,6 +91,7 @@ const SignupLayout = () => {
 
         setMessage("");
         setSuccessful(false);
+        setShowSpinner(true);
 
         form.current.validateAll();
 
@@ -78,7 +99,8 @@ const SignupLayout = () => {
             AuthService.register(username, email, password).then(
                 (response) => {
                     setMessage(response.data.message);
-                    setSuccessful(true);
+                    // setSuccessful(true)
+                    setTimeout(() => setSuccessful(true), 2000);
                 },
                 (error) => {
                     const resMessage =
@@ -97,57 +119,63 @@ const SignupLayout = () => {
 
     const redirectAfterSuccessfulRegister = () => {
         const to = { pathname: `login`, hash: `#hash` };
-        setTimeout(() => history.push(to), 3000);
+        history.push(to)
+        // setTimeout(() => history.push(to), 3000);
     };
 
     useEffect(() => {
         if (successful) {
+            setShowSpinner(false);
             redirectAfterSuccessfulRegister();
         }
-    });
+    }, [successful]);
 
     return (
-        <Form onSubmit={handleRegister} ref={form}>
-            <h3>Signup for Routine</h3>
+        <div>
+            {showSpinner ? <Spinner visible={showSpinner} /> :
+                <Form onSubmit={handleRegister} ref={form}>
+                    <h3>Signup for Routine</h3>
 
-            <div className="form-group">
-                <label>Username</label>
-                <Input type="text" name="username"
-                    value={username}
-                    onChange={onChangeUsername}
-                    validations={[required, vUsername]} className="form-control" placeholder="Username" />
-            </div>
-
-            <div className="form-group">
-                <label>Email</label>
-                <Input type="email" name="email"
-                    value={email}
-                    onChange={onChangeEmail}
-                    validations={[required, validEmail]} className="form-control" placeholder="Enter email" />
-            </div>
-
-            <div className="form-group">
-                <label>Password</label>
-                <Input type="password" name="password"
-                    value={password}
-                    onChange={onChangePassword}
-                    validations={[required, vPassword]} className="form-control" placeholder="Enter password" />
-            </div>
-
-            <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
-            {message && (
-                <div className="form-group">
-                    <div
-                        className={successful ? "alert alert-success" : "alert alert-danger"}
-                        role="alert"
-                    >
-                        {message}
+                    <div className="form-group">
+                        <label>Username</label>
+                        <Input type="text" name="username"
+                            value={username}
+                            onChange={onChangeUsername}
+                            validations={[required, vUsername]} className="form-control" placeholder="Username" />
                     </div>
-                    <div className="success-message text-center">You will be redirected to login in 3 seconds</div>
-                </div>
-            )}
-            <CheckButton style={{ display: "none" }} ref={checkBtn} />
-        </Form>
+
+                    <div className="form-group">
+                        <label>Email</label>
+                        <Input type="email" name="email"
+                            value={email}
+                            onChange={onChangeEmail}
+                            validations={[required, validEmail]} className="form-control" placeholder="Enter email" />
+                    </div>
+
+                    <div className="form-group">
+                        <label>Password</label>
+                        <Input type="password" name="password"
+                            value={password}
+                            onChange={onChangePassword}
+                            validations={[required, vPassword]} className="form-control" placeholder="Enter password" />
+                    </div>
+
+                    <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
+                    {message && (
+                        <div className="form-group">
+                            <div
+                                className={successful ? "alert alert-success" : "alert alert-danger"}
+                                role="alert"
+                            >
+                                {message}
+                            </div>
+                            <div className="success-message text-center">You will be redirected to login in 3 seconds</div>
+                        </div>
+                    )}
+                    <CheckButton style={{ display: "none" }} ref={checkBtn} />
+                </Form>
+            }
+        </div>
     );
 
 }

@@ -44,6 +44,7 @@ exports.findAllSkinType = async (req, res) => {
                     goal: goal.answer,
                     price: price.answer,
                     type:"cleanser"
+                    
                 }
 
             });
@@ -59,6 +60,7 @@ exports.findAllSkinType = async (req, res) => {
                     goal: goal.answer,
                     price: price.answer,
                     type:"moisturizer"
+                    
                 }
             });
 
@@ -72,6 +74,7 @@ exports.findAllSkinType = async (req, res) => {
                     goal: goal.answer,
                     price: price.answer,
                     type:"spf"
+     
                 }
             });
 
@@ -86,6 +89,7 @@ exports.findAllSkinType = async (req, res) => {
                         goal: goal.answer,
                         price: price.answer,
                         type:"serum"
+                        
                     }
                 });
 
@@ -99,6 +103,7 @@ exports.findAllSkinType = async (req, res) => {
                         goal: goal.answer,
                         price: price.answer,
                         type:"toner"
+                        
                     }
                 });
 
@@ -129,6 +134,7 @@ exports.findAllSkinType = async (req, res) => {
                         goal: goal.answer,
                         price: price.answer,
                         type:"exfoliator"
+                        
                     }
                 });
 
@@ -142,6 +148,7 @@ exports.findAllSkinType = async (req, res) => {
                         goal: goal.answer,
                         price: price.answer,
                         type:"mask"
+                        
                     }
                     
                 });
@@ -157,6 +164,7 @@ exports.findAllSkinType = async (req, res) => {
                         goal: goal.answer,
                         price: price.answer,
                         type:"eye cream"
+      
                     }
 
                 });

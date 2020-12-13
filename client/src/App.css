@@ -16,3 +16,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* fixing white bar issue */
+html{
+  background-image: url(https://availdermatology.com/wp-content/uploads/2020/09/history-of-skincare-blog-photo.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: absolute;
+		width: 100%;
+		height: auto;
+}

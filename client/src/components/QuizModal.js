@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ButtonGroup, Button, Modal, Alert } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import ResultService from "../services/results.service";
-
+import "./style/quizmodal.css";
 
 
 function QuizModal(props) {
@@ -10,12 +10,6 @@ function QuizModal(props) {
   const [show, setShow] = useState(false);
   //set props to questions
   const [questions, setQuestions] = useState(props.questions);
-  //set initial answers array mapping questions and getting id value of the question and selected answer, answer empty on the beginning, don't really need this, but makes your life easier
-  /*
-  const initialAnswers = [
-    ...questions.map(item => (item = { id: item.id, selection: '' })),
-  ];
-  */
   //user answers set to initialAnswers
   const [userAnswers, setUserAnswers] = useState([]);
   //state for checking if the form has been submitted
@@ -52,20 +46,7 @@ function QuizModal(props) {
       ResultService.saveQuestion(x.id, questions[index].question, tempSelection);
     });
 
-    //maybe a success message
-
     setIsSubmitted(true);
-
-
-    /*
-    //if there are no empties, the .find method will return undefined, verifying that user selected answers to each series of questions
-    empties !== undefined
-      ? //if user didn't answer all the questions, show it some message, for now just console.log
-      console.log('please select missing answers')
-      : //if all questions has been answered, set isSubmited to true, also here you want to perform your axios call and send user data to DB
-      setIsSubmitted(true);
-    console.log('ready to send userAnswers to DB');
-    */
 
   };
 
@@ -87,23 +68,6 @@ function QuizModal(props) {
     newArray.push({ id, selection })
     setUserAnswers(newArray);
     console.log(userAnswers)
-    /*
-    const inArray = userAnswers.find(item => item.selection === selection);
-    //create a new object to add to our array, 
-    //also checking if the selected button was already selected and we have the same object in the array, 
-    //in that case so we are going to deselect it and set the selection value to emty string
-    const userSelection = { id, selection: inArray ? '' : selection };
-    //here we are mapping user answers and checking if we already have the answer with that id, and if we do, we replace it's value
-    const finalSelection = userAnswers.map(item => {
-      if (item.id === id) {
-        item = userSelection;
-      }
-      return item;
-
-    });
-    //finally assigning new state to user answers 
-    setUserAnswers([...finalSelection]);
-    */
   };
 
   const history = useHistory()
@@ -118,6 +82,7 @@ function QuizModal(props) {
           top: '50%',
           left: '50%',
           transform: 'translateX(-50%) translateY(-50%)',
+          marginTop: "100px"
         }}
         variant='outline-dark'
         onClick={handleShow}
@@ -137,7 +102,7 @@ function QuizModal(props) {
         <Modal.Header
           className='py-4'
           style={{
-            backgroundColor: '#ffd7bf',
+            backgroundColor: '#FFDD99',
             color: '#21252d',
             height: '90px',
           }}
@@ -175,15 +140,14 @@ function QuizModal(props) {
                         <Button
                           className={`${
                             userAnswers.find(item => item.selection === answer)
-                              ? 'active'
+                              ? 'option-btn-active'
                               : ''
-                            }  py-lg-3 border rounded-0`}
+                            }  option-btn py-lg-3 border rounded-0`}
                           variant='secondary'
                           data-selection={answer}
                           data-id={question.id}
                           key={question.id + answer}
                           onClick={handleAnswers}
-                          style={{ overflowWrap: 'anywhere' }}
                         >
                           {answer}
                         </Button>
@@ -229,7 +193,7 @@ function QuizModal(props) {
         </Modal.Body>
         <Modal.Footer
           style={{
-            backgroundColor: '#ffd7bf',
+            backgroundColor: '#FFDD99',
             color: '#21252d',
             height: '80px',
           }}

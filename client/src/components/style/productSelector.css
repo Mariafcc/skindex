@@ -46,17 +46,48 @@ img{
     border-width: 2px;
 }
 
-#table-card{
+.table-card{
     max-width: 70%;
 }
 @media only screen and (max-width: 815px) {
-    #table-card {
+    .table-card {
       max-width: 90%;
     }
   }
 @media only screen and (max-width: 420px) {
-    #table-card {
+    .table-card {
       max-width: 100%;
+    }
+  }
+
+  #product-table{
+      vertical-align: middle;
+  }
+
+  /* @media only screen and (max-width: 400px) {
+    #product-table{
+    max-width: 50%;
+}
+  } */
+
+  #routine-card{
+    border-color: black;
+  }
+  
+  @media only screen and (min-width: 815px) {
+    #routine-card {
+      padding-right: 4px !important;
+      padding-left: 4px !important;
+      border-color: black;
+      max-width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    #routine-card {
+      padding-right: 4px !important;
+      padding-left: 4px !important;
+      border-color: black;
     }
   }
 
@@ -64,6 +95,28 @@ img{
     padding-bottom: 0px;
 }
 
+#icon-btn{
+    background-color: white;
+    border: none;
+}
+
+#icon-btn:hover{
+    background-color: antiquewhite;
+}
+
+#fa-images{
+    color: #93bfb7;
+    padding: 8px;
+    /* display: inline; */
+}
+
+
+/* .modal-body{
+    position: relative;
+    overflow-y: auto;
+    max-height: auto;
+    padding: 15px;
+} */
 
 
 /* table.table-fit {

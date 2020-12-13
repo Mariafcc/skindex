@@ -9,7 +9,7 @@ const mapStyle = {
     height: 300
 }
 
-const mapboxApiKey = 'pk.eyJ1Ijoic2FyYW1jZ3Vpbm4iLCJhIjoiY2tkdG9wandhMDU3ZTJ4cGxtaG5yd2d3aiJ9.FMU72HehweqVt3eGAhkuDg'
+const mapboxApiKey = process.env.REACT_APP_MAPBOX_API_KEY
 
 class Map extends Component {
     constructor(props) {
@@ -28,8 +28,6 @@ class Map extends Component {
             storeLocations: [],
             selectedStore: null
         };
-        // props.store does get corresponding store for item passed from productselector.js
-        console.log(props.store)
     }
 
     getStores = () => {
@@ -39,42 +37,11 @@ class Map extends Component {
         fetch(storesURL)
             .then(response => response.json())
             .then(stores => {
-                console.log(stores.features)
                 this.setState({
                     storeLocations: stores.features
                 })
             })
-        console.log("componentDidMount", this.state.userLocation);
     }
-
-    // getTargetStores = () => {
-    //     console.log("getTargetStores running")
-    //     let targetURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/target.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
-    //     console.log(targetURL);
-    //     fetch(targetURL)
-    //         .then(response => response.json())
-    //         .then(targetStores => {
-    //             console.log(targetStores.features)
-    //             this.setState({
-    //                 storeLocations: targetStores.features
-    //             })
-    //         })
-    //     console.log("componentDidMount", this.state.userLocation);
-    // }
-
-    // getSephoraStores = () => {
-    //     console.log("getSephoraStores running")
-    //     let sephoraURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/sephora.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
-    //     console.log(sephoraURL);
-    //     fetch(sephoraURL)
-    //         .then(response => response.json())
-    //         .then(sephoraStores => {
-    //             console.log(sephoraStores.features)
-    //             this.setState({
-    //                 storeLocations: sephoraStores.features
-    //             })
-    //         })
-    // }
 
     setSelectedStore = (object) => {
         this.setState({
@@ -98,11 +65,11 @@ class Map extends Component {
                         latitude={parseFloat(store.geometry.coordinates[1])}
                         longitude={parseFloat(store.geometry.coordinates[0])}
                     >
-                        {this.state.storeChain === "target" ? 
-                        <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-target-logo.png" />
-                        : <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-sephora-logo.jpg" />
+                        {this.state.storeChain === "target" ?
+                            <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-target-logo.png" />
+                            : <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-sephora-logo.jpg" />
                         }
-                        
+
                     </Marker>
                 )
             })
@@ -126,27 +93,20 @@ class Map extends Component {
                 userLocation: currentUserLocation
             }))
         })
-        console.log("componentDidMount", this.state.userLocation);
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log("componentDidUpdate,", this.state.userLocation)
         if (this.state.userLocation !== prevState.userLocation) {
             this.getStores()
-            // this.getSephoraStores()
         }
     }
 
     render() {
         const { viewport, markers } = this.state;
-        { console.log("render", this.state.userLocation) }
         return (
             <Container fluid={true}>
-                {/* <Row>
-                    <Col><h2>Mapbox Tutorial</h2></Col>
-                </Row> */}
                 <Row>
-                    <Col>
+                    <Col className="">
                         <ReactMapGL
                             mapboxApiAccessToken={mapboxApiKey}
                             mapStyle="mapbox://styles/mapbox/streets-v11"
@@ -162,18 +122,22 @@ class Map extends Component {
                                     <img className="location-icon" src="img/map-location-icon.png" />
                                 </Marker>
                             ) : (
-                                    <div>Empty</div>
+                                    <div></div>
                                 )}
                             {this.loadStoreMarkers()}
-                            {this.state.selectedStore !== null ? (
+                            {this.state.selectedStore !== null &&
                                 <Popup
-                                    latitude={parseFloat(this.state.selectedStore.latitude)}
-                                    longitude={parseFloat(this.state.selectedStore.longitude)}
+                                    latitude={parseFloat(this.state.selectedStore.geometry.coordinates[1])}
+                                    longitude={parseFloat(this.state.selectedStore.geometry.coordinates[0])}
                                     onClose={this.closePopup}
+                                    closeButton={true}
+                                    closeOnClick={false}
+                                    anchor="bottom"
+                                    dynamicPosition={true}
                                 >
-                                    <p>Store Information</p>
+                                    <p>{this.state.selectedStore.place_name}</p>
                                 </Popup>
-                            ) : null}
+                            }
                         </ReactMapGL>
                     </Col>
                 </Row>

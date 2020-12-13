@@ -13,33 +13,33 @@ const LoginSignup = () => {
         })
     }
     return (
-        <Col>
-            <Card>
-                <div class="card-header" style={{
-                    fontFamily: "Helvetica"
-                }}>
-                    <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#signuptab" role="tab" aria-controls="description" aria-selected="true">Sign Up</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#logintab" role="tab" aria-controls="history" aria-selected="false">Login</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="signuptab" role="tabpanel">
-                            <SignupLayout />
-                        </div>
 
-                        <div class="tab-pane" id="logintab" role="tabpanel" aria-labelledby="history-tab">
-                            <LoginLayout />
-                        </div>
+        <Card className="">
+            <div className="card-header" style={{
+                fontFamily: "Helvetica"
+            }}>
+                <ul className="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+                    <li className="nav-item">
+                        <a className="nav-link active" href="#signuptab" role="tab" aria-controls="description" aria-selected="true">Sign Up</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#logintab" role="tab" aria-controls="history" aria-selected="false">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div className="card-body">
+                <div className="tab-content">
+                    <div className="tab-pane active" id="signuptab" role="tabpanel">
+                        <SignupLayout />
+                    </div>
+
+                    <div className="tab-pane" id="logintab" role="tabpanel" aria-labelledby="history-tab">
+                        <LoginLayout />
                     </div>
                 </div>
-            </Card>
-        </Col>
+            </div>
+        </Card>
+
         //     <Accordion defaultActiveKey="0">
         //         <Card className="p-4">
         //             <Card.Header>

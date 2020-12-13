@@ -15,8 +15,8 @@ function App() {
           <div>
             <Route exact path="/" component={Landing} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/routine" component={Routine} />
-            <Route exact path="/home" component={Home} />
+            <AuthRouter exact path="/routine" component={Routine} />
+            <AuthRouter exact path="/home" component={Home} />
           </div>
         </header>
         <p></p>
