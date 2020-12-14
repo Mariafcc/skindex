@@ -2,19 +2,14 @@
  
   ## Description
 
-  This is a skincare routine developer that is appropriate for anyone! Our authenticated website allows you to begin your newfound skincare routine with a skin assessment that recommends a skincare routine based on 4 parameters: skin type, extensiveness of routine, price, skin issues. This is a React application that stores our data in MySQl and usess sequelize, React Boostrap, React Router and express to meet the functionality we want to provide to our users. 
+  This is a skincare routine developer that is appropriate for anyone! Our authenticated website allows you to begin your newfound skincare routine with a skin assessment that recommends a skincare routine based on 4 parameters: skin type, extensiveness of routine, price, skin issues. This is a React application that stores data in MySQl and uses sequelize, React-Boostrap, React-Router and Express to meet the functionality we want to provide to our users. 
 
-  ## GitHub
+  ## User Story
 
-  mariafcc
+  “As a user, I want to find a skincare routine personalized for my skin type, concerns, budget and lifestyle, without being limited by brand or retailer.”
 
-  ## Email
-
- mariafcc01@gmail.com, marinarosemartin@gmail.com, sara.s.mcguinn@gmail.com,  carolinelstrickland@outlook.com, 
-
-  ## Project URL
-
-  https://github.com/Mariafcc/skindex
+  ## Screenshots
+  ![Screenshots](client/public/img/skindex.png)
 
 
   ## Table of Contents:
@@ -30,6 +25,15 @@
   * [Tests](#tests)
 
   * [Questions](#questions)
+
+  ## Deployed App
+  https://skindex.herokuapp.com/  
+
+  ## Project URL
+
+  https://github.com/Mariafcc/skindex
+
+
  
   ## Installation
 
@@ -75,6 +79,6 @@
   
   ## Questions
 
-  For any questions regarding this application, please contact mariafcc at carolinelstrickland@outlook.com, mariafcc01@gmail.com, , marinarosemartin@gmail.com, sara.s.mcguinn@gmail.com.
+  For any questions regarding this application, please contact mariafcc at carolinelstrickland@outlook.com, mariafcc01@gmail.com, , marinarosemartin@gmail.com, sara.s.mcguinn@gmail.com
 
   
