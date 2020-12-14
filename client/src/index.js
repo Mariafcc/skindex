@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { BrowserRouter } from "react-router-dom";
 import AuthWrapper from "./authorization/authWrapper";
-import $ from "jquery";
 
 const Root = () => (
   <BrowserRouter>

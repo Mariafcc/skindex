@@ -19,7 +19,6 @@ function App() {
             <AuthRouter exact path="/home" component={Home} />
           </div>
         </header>
-        <p></p>
       </div>
     </Router>
   );

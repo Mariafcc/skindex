@@ -6,7 +6,6 @@ const bcrypt = require("bcryptjs");
 const User = db.user;
 
 exports.signup = (req, res) => {
-	console.log(req.body);
 
 	if (!req.body.username){
 		res.status(422).send({ message: "Invalid or blank username" });

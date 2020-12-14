@@ -1,10 +1,7 @@
 import React from "react"
-// import { Form, Button} from "react-bootstrap";
 import "./style/opacity.css"
-import LoginLayout from "./LoginLayout.js"
-import SignupLayout from "./SignupLayout"
 import DescriptionCard from "./DescriptionCard"
-import { Container, Row, Col, CardImg, Nav, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import LoginSignup from "./LoginSignup";
 
 

@@ -1,7 +1,7 @@
 import React from "react";
 import LoginLayout from "./LoginForm.js";
 import SignupLayout from "./SignupLayout";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import $ from "jquery";
 
 

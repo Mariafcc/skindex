@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import QuizModal from "../components/QuizModal";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -30,16 +30,6 @@ const Quiz = () => {
 
         return (
                 <div className="text-center pt-5 pb-5">
-                        {/* <img className="img-fluid" src="/img/homepic.jpg" alt="serumHand" /> */}
-                        {/* <Container className="fluid">
-                            <Row>
-                                <Col className="">
-                                    <Card className="pb-2 w-75">
-                                        <img src="./img/header.png"></img>
-                                    </Card>
-                                </Col>
-                            </Row>
-                        </Container> */}
                         <Container className="p-4">
                                 <Row>
                                         <Col className="mx-auto my-auto">

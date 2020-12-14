@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
-
 import { Container, Col, Row } from 'react-bootstrap';
 import "./style/map.css"
 
@@ -32,9 +31,8 @@ class Map extends Component {
     }
 
     getStores = () => {
-        console.log("getStores running")
+        
         let storesURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/` + (this.state.storeChain) + `.json?limit=5&proximity=` + (this.state.userLocation.long) + `,` + (this.state.userLocation.lat) + `&access_token=` + mapboxApiKey;
-        console.log(storesURL);
         fetch(storesURL)
             .then(response => response.json())
             .then(stores => {
@@ -57,7 +55,6 @@ class Map extends Component {
     }
 
     loadStoreMarkers = () => {
-        console.log(this.state.storeLocations)
         if (this.state.storeLocations.length > 0) {
             return this.state.storeLocations.map(store => {
                 return (
