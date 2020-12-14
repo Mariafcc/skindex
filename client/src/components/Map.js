@@ -6,7 +6,8 @@ import "./style/map.css"
 
 const mapStyle = {
     width: 300,
-    height: 300
+    height: 300,
+    
 }
 
 const mapboxApiKey = process.env.REACT_APP_MAPBOX_API_KEY

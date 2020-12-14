@@ -122,7 +122,7 @@ const ProductSelector = () => {
                                             >
                                                 <Modal.Header className="d-block text-center" closeButton><h4>Stores Near You</h4></Modal.Header>
                                                 <Modal.Body className="modal-body">
-                                                    <Card className="p-4">
+                                                    <Card className="">
                                                         <Map store={product.store} />
                                                     </Card>
                                                 </Modal.Body>
