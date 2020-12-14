@@ -89,7 +89,7 @@ function QuizModal(props) {
         onClick={handleShow}
         className='text-uppercase font-weight-bold p-lg-4 p-3 rounded-0 bg-light'
       >
-        Begin Your Skin Assessment
+        Begin Your SkinDex Assessment
 			</Button>
       <Modal
         show={show}
@@ -168,7 +168,7 @@ function QuizModal(props) {
           ) : (
               <React.Fragment>
                 <h2 style={{ textAlign: 'center' }}>
-                  Your submitted information:
+                  Your SkinDex Submission:
 							</h2>
                 <ButtonGroup
                   aria-label='selection'
@@ -195,7 +195,7 @@ function QuizModal(props) {
                   onClick={() => history.push('/routine')}
                   style={{ overflowWrap: 'anywhere' }}
                 >
-                  Go To Routine</Button>
+                  My SkinDex Routine</Button>
               </React.Fragment>
             )}
         </Modal.Body>
