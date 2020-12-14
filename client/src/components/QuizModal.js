@@ -21,7 +21,7 @@ function QuizModal(props) {
     if (isSubmitted) {
       setShow(false);
     }
-    
+
   };
   const handleShow = () => setShow(true);
   const handleSubmit = e => {
@@ -30,11 +30,13 @@ function QuizModal(props) {
     //const empties = userAnswers.find(item => item.selection === '');
     if (userAnswers.length != questions.length) {
       //change to alert
-      console.log('please select missing answers');
+      <Alert>
+        Please select missing answers!
+      </Alert>
       return;
     }
 
-    console.log(userAnswers);
+    
     userAnswers.forEach((x, index) => {
       let tempSelection = x.selection;
       if (x.id === 4) {
@@ -66,12 +68,12 @@ function QuizModal(props) {
     }
     newArray.push({ id, selection })
     setUserAnswers(newArray);
-    console.log(userAnswers)
+    
   };
 
   const history = useHistory()
 
-  console.log(userAnswers);
+  
   return (
     <>
       <Button
@@ -115,14 +117,14 @@ function QuizModal(props) {
           >
             Skin Quiz
             <h6
-            style={{
-              fontSize: '0.75rem',
-              fontStyle: 'italic',
-            }}
-          >
-            Double click your selections.
+              style={{
+                fontSize: '0.75rem',
+                fontStyle: 'italic',
+              }}
+            >
+              Double click your selections.
           </h6>
-					</h1>
+          </h1>
         </Modal.Header>
         <Modal.Body className='bg-light my-3'>
           {!isSubmitted ? ( //checking if the user already submit the form, in that case we just show the submited information and if not, we show our questions

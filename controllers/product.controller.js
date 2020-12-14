@@ -31,7 +31,7 @@ exports.findAllSkinType = async (req, res) => {
             const price = answers.find(x => x.question_id == 3);
             const amountAnswer = answers.find(x => x.question_id == 4);
             const amount = parseInt(amountAnswer.answer)
-            console.log(skinType);
+
 
             const products = {};
 

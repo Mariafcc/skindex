@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AuthDataContext } from "../authorization/authWrapper";
-import "./style/NavBar.css"
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import "./style/NavBar.css";
 
 
 const NavBar = () => {

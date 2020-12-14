@@ -1,7 +1,7 @@
 import React from "react"
 import "./style/opacity.css"
 import DescriptionCard from "./DescriptionCard"
-import { Container, Row, Col, CardImg, Nav, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import LoginSignup from "./LoginSignup"
 
 

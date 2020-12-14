@@ -2,8 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./style/productSelector.css"
 import RoutineService from "../services/routine.service"
 import Map from "./Map"
-import { useHistory } from 'react-router-dom';
-import { Button, Modal, Link, Table, Container, Card } from "react-bootstrap";
+import { Button, Modal, Table, Container, Card } from "react-bootstrap";
 
 // Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -26,7 +25,7 @@ const ProductSelector = () => {
             const reccs = Object.values(res.data.products)
             reccs.sort((a, b) => { return a.order - b.order })
             setProducts([...reccs]);
-            console.log(reccs);
+        
         })
             .catch((error) => {
                 console.log(error);
@@ -59,19 +58,19 @@ const ProductSelector = () => {
             <Container>
                 <Card className="mx-auto mb-4 p-2 pt-4 pr-5 pl-5 mt-4" class="table-card" id="routine-card">
                     <Card.Title>
-                        <img src="./img/header.png"></img>
+                        <img alt="header" src="./img/header.png"></img>
                     </Card.Title>
                     <h3>This is your Routine!</h3>
                     <br></br>
                     <p>Here is a list of products that have been generated for you based on your quiz answers. Enjoy!</p>
                     <p>Products are listed in the order you should use them. Click on an icon to learn more.</p>
                 </Card>
-                <Card className="mx-auto mb-12" class="table-card" style={{
-                    backgroundColor: "", width: "20rem"
+                <Card className="mx-auto mb-12" class="table-card" id="routine-card" style={{
+                    
                 }}>
                     <div>
-                        <Table size="sm" className="table-fit">
-                            <thead className="thead-dark">
+                        <Table size="sm" className="table-fit" >
+                            <thead className="thead-dark" >
 
                                 <th>Steps</th>
                                 <th>Brand</th>
@@ -83,7 +82,7 @@ const ProductSelector = () => {
 
                                     <tr key={product.order}>
                                         <td id="table-col product-table">
-                                            <p></p>
+                                            
                                             {/* Icons for each product type */}
                                             {
                                                 (product.type === 'moisturizer')
@@ -111,7 +110,7 @@ const ProductSelector = () => {
                                         <td id="table-col align-baseline" id="product-table">
                                             {product.brand}
                                         </td>
-                                        <td id="table-col" id="product-table" width="100%">
+                                        <td id="table-col" id="product-table">
                                             {product.name}
                                             <p>
                                                 <a onClick={handleShow} id="fa-images"><FontAwesomeIcon icon={faMapMarkerAlt} size="lg" /></a>
