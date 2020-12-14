@@ -69,7 +69,7 @@ const SignupLayout = () => {
     const [message, setMessage] = useState("");
     const history = useHistory();
 
-    const [showSpinner, setShowSpinner] = useState(false);
+    // const [showSpinner, setShowSpinner] = useState(false);
 
     const onChangeUsername = (e) => {
         const username = e.target.value;
@@ -91,7 +91,7 @@ const SignupLayout = () => {
 
         setMessage("");
         setSuccessful(false);
-        setShowSpinner(true);
+        // setShowSpinner(true);
 
         form.current.validateAll();
 
@@ -123,7 +123,7 @@ const SignupLayout = () => {
 
     useEffect(() => {
         if (successful) {
-            setShowSpinner(false);
+            // setShowSpinner(false);
             redirectAfterSuccessfulRegister();
         }
     }, [successful]);
@@ -132,7 +132,7 @@ const SignupLayout = () => {
 
     return (
         <div>
-            {showSpinner ? <Spinner visible={showSpinner} /> :
+            {/* {showSpinner ? <Spinner visible={showSpinner} /> : */}
                 <Form onSubmit={handleRegister} ref={form}>
                     <h3>Signup for Routine</h3>
 
@@ -160,7 +160,7 @@ const SignupLayout = () => {
                             validations={[required, vPassword]} className="form-control" placeholder="Enter password" />
                     </div>
 
-                    <button type="submit" disabled={!username} className="btn btn-dark btn-lg btn-block">Register</button>
+                    <button type="submit" disabled={!password} className="btn btn-dark btn-lg btn-block">Register</button>
                     {message && (
                         <div className="form-group">
                             <div
@@ -174,7 +174,7 @@ const SignupLayout = () => {
                     )}
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
                 </Form>
-            }
+            {/* } */}
         </div>
     );
 
