@@ -82,7 +82,7 @@ const ProductSelector = () => {
                     <div>
                         <Table size="sm" className="table-fit">
                             <thead className="thead-dark">
-                                
+
                                 <th>Steps</th>
                                 <th>Brand</th>
                                 <th>Name</th>
@@ -133,7 +133,7 @@ const ProductSelector = () => {
                                             >
                                                 <Modal.Header className="d-block text-center" closeButton><h4>Stores Near You</h4></Modal.Header>
                                                 <Modal.Body className="modal-body">
-                                                    <Card className="p-4">
+                                                    <Card className="">
                                                         <Map store={product.store} />
                                                     </Card>
                                                 </Modal.Body>
@@ -144,7 +144,7 @@ const ProductSelector = () => {
                                                 </Modal.Footer>
                                             </Modal>
                                         </td>
-                                       
+
                                     </tr>
 
 
@@ -284,7 +284,7 @@ const ProductSelector = () => {
             </Container>
         </Fragment >
 
-      
+
 
     )
 }
