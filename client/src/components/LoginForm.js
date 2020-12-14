@@ -120,8 +120,8 @@ const LoginForm = () => {
                     <label>Password</label>
                     <Input type="password" name="password" value={password} onChange={onChangePassword} validations={[required]} className="form-control" placeholder="Enter password" />
                 </div>
-                <button onClick={handleLogin} type="submit" className="btn btn-dark btn-lg btn-block">To Take Test</button>
-                <button onClick={handleLogintoRoutine} type="submit" className="btn btn-dark btn-lg btn-block">To Routine</button>
+                <button onClick={handleLogin} type="submit" className="btn btn-dark btn-lg btn-block">Take SkinDex Test</button>
+                <button onClick={handleLogintoRoutine} type="submit" className="btn btn-dark btn-lg btn-block">My SkinDex Routine</button>
 
                 {message && (
                     <div className="form-group">

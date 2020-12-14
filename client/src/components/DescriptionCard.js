@@ -11,7 +11,7 @@ function DescriptionCard() {
                 </Card.Title>
                 <Card.Body className="text-black" >
                     <p>SkinDex is an application made just for you!</p>
-                    <p>Beginning your SkinDex experience with our skin care assessment, we can build a personalized skincare routine that meets your specific needs based on your skin type, primary skin concerns, budget and type of routine you are looking for.</p>
+                    <p>Begin your SkinDex experience with our skin care assessment. We can build a personalized skincare routine that meets your specific needs based on your skin type, primary skin concerns, budget and type of routine you are looking for.</p>
                     <p>With our handpicked list of recommended products, we are able to provide you with an easy way to start and end your day and update your routine as your needs change.</p>
                 </Card.Body>
             </Card>
