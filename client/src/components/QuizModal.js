@@ -181,7 +181,7 @@ function QuizModal(props) {
                         variant='dark'
                         key={item.id + item.selection}
                         onClick={handleAnswers}
-                        style={{ overflowWrap: 'anywhere' }}
+                        style={{ overflowWrap: 'normal' }}
                         disabled
                       >
                         {item.selection}
