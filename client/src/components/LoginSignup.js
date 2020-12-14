@@ -40,28 +40,6 @@ const LoginSignup = () => {
             </div>
         </Card>
 
-        //     <Accordion defaultActiveKey="0">
-        //         <Card className="p-4">
-        //             <Card.Header>
-        //                 <Accordion.Toggle as={Button} variant="link" eventKey="0">
-        //                     Sign Up
-        //   </Accordion.Toggle>
-        //             </Card.Header>
-        //             <Accordion.Collapse eventKey="0">
-        //                 <SignupLayout />
-        //             </Accordion.Collapse>
-        //         </Card>
-        //         <Card className="p-4">
-        //             <Card.Header>
-        //                 <Accordion.Toggle as={Button} variant="link" eventKey="1">
-        //                     Login
-        //   </Accordion.Toggle>
-        //             </Card.Header>
-        //             <Accordion.Collapse eventKey="1">
-        //                 <LoginForm />
-        //             </Accordion.Collapse>
-        //         </Card>
-        //     </Accordion>
     )
 }
 

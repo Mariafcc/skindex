@@ -64,12 +64,6 @@ img{
       vertical-align: middle;
   }
 
-  /* @media only screen and (max-width: 400px) {
-    #product-table{
-    max-width: 50%;
-}
-  } */
-
   #routine-card{
     border-color: black;
   }
@@ -107,25 +101,5 @@ img{
 #fa-images{
     color: #93bfb7;
     padding: 8px;
-    /* display: inline; */
 }
 
-
-/* .modal-body{
-    position: relative;
-    overflow-y: auto;
-    max-height: auto;
-    padding: 15px;
-} */
-
-
-/* table.table-fit {
-    width: auto !important;
-    table-layout: auto !important;
-}
-table.table-fit thead th, table.table-fit tfoot th {
-    width: auto !important;
-}
-table.table-fit tbody td, table.table-fit tfoot td {
-    width: auto !important;
-} */

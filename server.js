@@ -21,13 +21,6 @@ const db = require("./models");
 //comment out initially
 db.sequelize.sync();
 
-// load in routes
-// fs.readdir('./routes', (err, files) => {
-//     files.forEach((file) => {
-//         const routeFile = `./routes/${file}`;
-//         require(routeFile)(app);
-//     });
-// });
 
 require('./routes/auth.routes')(app);
 require('./routes/product.routes')(app);

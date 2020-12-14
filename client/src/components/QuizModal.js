@@ -21,8 +21,7 @@ function QuizModal(props) {
     if (isSubmitted) {
       setShow(false);
     }
-    //this is bootstrap close modal handler, setting here setIsSubmitted to false, so user can start the quiz again
-    //setIsSubmitted(false);
+    
   };
   const handleShow = () => setShow(true);
   const handleSubmit = e => {
@@ -98,6 +97,7 @@ function QuizModal(props) {
         aria-labelledby='contained-modal-title-vcenter'
         centered
         size='lg'
+        width="30rem"
       >
         <Modal.Header
           className='py-4'
@@ -107,16 +107,22 @@ function QuizModal(props) {
             height: '90px',
           }}
         >
-          <h2
+          <h1
             style={{
-              position: 'absolute',
-              left: '50%',
-              transform: 'translateX(-50%)',
+              paddingLeft: "20%",
+              alignContent: 'center'
             }}
-            className='pb-5'
           >
             Skin Quiz
-					</h2>
+            <h6
+            style={{
+              fontSize: '0.75rem',
+              fontStyle: 'italic',
+            }}
+          >
+            Double click your selections.
+          </h6>
+					</h1>
         </Modal.Header>
         <Modal.Body className='bg-light my-3'>
           {!isSubmitted ? ( //checking if the user already submit the form, in that case we just show the submited information and if not, we show our questions

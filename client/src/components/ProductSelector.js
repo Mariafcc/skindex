@@ -20,22 +20,12 @@ const ProductSelector = () => {
         getProducts();
     }, [])
 
-    // const getProducts = () => {
-    //     RoutineService.productDisplay().then((data) => {
-    //         setProducts(data.data.products);
-    //     }).catch((error) => {
-    //         console.log(error);
-    //     });
-    // };
-    // console.log(reccs)
-
 
     const getProducts = () => {
         RoutineService.routineDisplay().then((res) => {
             const reccs = Object.values(res.data.products)
             reccs.sort((a, b) => { return a.order - b.order })
             setProducts([...reccs]);
-            // console.log(res);
             console.log(reccs);
         })
             .catch((error) => {
@@ -76,8 +66,8 @@ const ProductSelector = () => {
                     <p>Here is a list of products that have been generated for you based on your quiz answers. Enjoy!</p>
                     <p>Products are listed in the order you should use them. Click on an icon to learn more.</p>
                 </Card>
-                <Card className="mx-auto mb-4" class="table-card" style={{
-                    backgroundColor: ""
+                <Card className="mx-auto mb-12" class="table-card" style={{
+                    backgroundColor: "", width: "20rem"
                 }}>
                     <div>
                         <Table size="sm" className="table-fit">
@@ -94,7 +84,6 @@ const ProductSelector = () => {
                                     <tr key={product.order}>
                                         <td id="table-col product-table">
                                             <p></p>
-                                            {/* {product.type} */}
                                             {/* Icons for each product type */}
                                             {
                                                 (product.type === 'moisturizer')
@@ -122,11 +111,11 @@ const ProductSelector = () => {
                                         <td id="table-col align-baseline" id="product-table">
                                             {product.brand}
                                         </td>
-                                        <td id="table-col" id="product-table">
+                                        <td id="table-col" id="product-table" width="100%">
                                             {product.name}
                                             <p>
-                                                <a onClick={handleShow} id="fa-images"><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
-                                                <a href={product.link} target="_blank" id="fa-images"><FontAwesomeIcon icon={faShoppingBag} /></a>
+                                                <a onClick={handleShow} id="fa-images"><FontAwesomeIcon icon={faMapMarkerAlt} size="lg" /></a>
+                                                <a href={product.link} target="_blank" id="fa-images"><FontAwesomeIcon icon={faShoppingBag} size="lg" /></a>
                                             </p>
                                             <Modal
                                                 show={show} onHide={handleClose}
@@ -262,7 +251,7 @@ const ProductSelector = () => {
                 >
                     <Modal.Header closeButton className="d-block text-center">
                         <Modal.Title id="exfoliator">
-                            exfoliator
+                            Exfoliator
                     </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>On a damp clean face, use exfoliant to massage skin in circular motion, avoiding eyes. Rinse after 30 second massage.</Modal.Body>

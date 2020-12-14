@@ -68,7 +68,7 @@ class Map extends Component {
                     >
                         {this.state.storeChain === "target" ?
                             <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-target-logo.png" />
-                            : <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-sephora-logo.jpg" />
+                            : <img onClick={() => { this.setSelectedStore(store) }} className="location-icon" src="img/map-sephora-logo.png" />
                         }
 
                     </Marker>
