@@ -109,8 +109,9 @@ function QuizModal(props) {
             height: '90px',
           }}
         >
-          <h1
+         <h3
             style={{
+              marginBottom: "20%",
               paddingLeft: "20%",
               alignContent: 'center'
             }}
@@ -124,7 +125,7 @@ function QuizModal(props) {
             >
               Double click your selections.
           </h6>
-          </h1>
+          </h3>
         </Modal.Header>
         <Modal.Body className='bg-light my-3'>
           {!isSubmitted ? ( //checking if the user already submit the form, in that case we just show the submited information and if not, we show our questions

@@ -164,7 +164,7 @@ const SignupLayout = () => {
                     {message && (
                         <div className="form-group">
                             <div
-                                className={successful ? "alert alert-success" : "alert alert-danger"}
+                                className={successful ? "alert alert-success" : "alert alert-success"}
                                 role="alert"
                             >
                                 {message}
