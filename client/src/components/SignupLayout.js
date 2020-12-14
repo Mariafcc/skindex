@@ -128,6 +128,8 @@ const SignupLayout = () => {
         }
     }, [successful]);
 
+
+
     return (
         <div>
             {showSpinner ? <Spinner visible={showSpinner} /> :
@@ -158,7 +160,7 @@ const SignupLayout = () => {
                             validations={[required, vPassword]} className="form-control" placeholder="Enter password" />
                     </div>
 
-                    <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
+                    <button type="submit" disabled={!username} className="btn btn-dark btn-lg btn-block">Register</button>
                     {message && (
                         <div className="form-group">
                             <div
