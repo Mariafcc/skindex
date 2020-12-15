@@ -6,7 +6,6 @@ import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
 import Spinner from "../components/Loading";
 import { Alert } from "react-bootstrap";
-
 import { useHistory } from 'react-router-dom';
 
 const SignupLayout = () => {
@@ -21,7 +20,8 @@ const SignupLayout = () => {
     const [isValid, setValid] = useState(true);
     const history = useHistory();
 
-    // const [showSpinner, setShowSpinner] = useState(false);
+    const [showSpinner, setShowSpinner] = useState(false);
+
 
     const onChangeUsername = (e) => {
         const username = e.target.value;
@@ -106,7 +106,6 @@ const SignupLayout = () => {
         vUsername(username);
         validEmail(email);
         vPassword(password);
-
 
         if (!isValid) {
             setSuccessful(false);
