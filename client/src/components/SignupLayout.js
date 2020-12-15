@@ -20,7 +20,6 @@ const SignupLayout = () => {
     const [message, setMessage] = useState("");
     const [isValid, setValid] = useState(true);
     const history = useHistory();
-
     const [showSpinner, setShowSpinner] = useState(false);
 
     const onChangeUsername = (e) => {
