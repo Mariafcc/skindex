@@ -6,7 +6,6 @@ import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
 import Spinner from "../components/Loading";
 import { Alert } from "react-bootstrap";
-
 import { useHistory } from 'react-router-dom';
 
 const SignupLayout = () => {
