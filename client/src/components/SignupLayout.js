@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect} from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -9,55 +9,6 @@ import { Alert } from "react-bootstrap";
 
 import { useHistory } from 'react-router-dom';
 
-const required = (value) => {
-    if (!value) {
-        return (
-            <div>
-                <Alert>
-                    This field is required!
-                </Alert>
-            </div>
-        );
-    }
-};
-
-const validEmail = (value) => {
-    if (!isEmail(value)) {
-        return (
-            <div>
-                <Alert>
-                This is not a valid email!
-                </Alert>
-            </div>
-        );
-    }
-};
-
-const vUsername = (value) => {
-    if (value.length < 3 || value.length > 20) {
-        return (
-            <div>
-                <Alert>
-                The username must be between 3 and 20 characters.
-                </Alert>
-            </div>
-        );
-    }
-};
-
-const vPassword = (value) => {
-    if (value.length < 6 || value.length > 40) {
-        return (
-            <div>
-                <Alert>
-                The password must be between 6 and 40 characters.
-                </Alert>
-            </div>
-        );
-    }
-};
-
-
 const SignupLayout = () => {
     const form = useRef();
     const checkBtn = useRef();
@@ -67,6 +18,7 @@ const SignupLayout = () => {
     const [password, setPassword] = useState("");
     const [successful, setSuccessful] = useState(false);
     const [message, setMessage] = useState("");
+    const [isValid, setValid] = useState(true);
     const history = useHistory();
 
     // const [showSpinner, setShowSpinner] = useState(false);
@@ -86,20 +38,88 @@ const SignupLayout = () => {
         setPassword(password);
     };
 
+    const required = (value) => {
+        setValid(true);
+        if (!value) {
+            setValid(false);
+            return (
+                <div>
+                    <Alert>
+                        This field is required!
+                    </Alert>
+                </div>
+            );
+        }
+    };
+
+    const validEmail = (value) => {
+        setValid(true);
+        if (!isEmail(value) || !value) {
+            setValid(false);
+            return (
+                <div>
+                    <Alert>
+                        This is not a valid email!
+                    </Alert>
+                </div>
+            );
+        }
+    };
+
+    const vUsername = (value) => {
+        setValid(true);
+        if (value.length < 3 || value.length > 20) {
+            setValid(false);
+            return (
+                <div>
+                    <Alert>
+                        The username must be between 3 and 20 characters.
+                    </Alert>
+                </div>
+            );
+        }
+    };
+
+    const vPassword = (value) => {
+        setValid(true);
+        if (value.length < 6 || value.length > 40) {
+            setValid(false);
+            return (
+                <div>
+                    <Alert>
+                        The password must be between 6 and 40 characters.
+                    </Alert>
+                </div>
+            );
+        }
+    };
+
     const handleRegister = (e) => {
         e.preventDefault();
 
         setMessage("");
         setSuccessful(false);
-        // setShowSpinner(true);
 
-        form.current.validateAll();
+        setShowSpinner(true);
+        setValid(true);
+
+        vUsername(username);
+        validEmail(email);
+        vPassword(password);
+
+
+        if (!isValid) {
+            setSuccessful(false);
+            setShowSpinner(false);
+            return;
+        }
 
         if (checkBtn.current.context._errors.length === 0) {
             AuthService.register(username, email, password).then(
                 (response) => {
                     setMessage(response.data.message);
-                    setTimeout(() => setSuccessful(true), 2000);
+                    setShowSpinner(false);
+                    setTimeout(() => setSuccessful(true), 1000);
                 },
                 (error) => {
                     const resMessage =
@@ -111,8 +131,12 @@ const SignupLayout = () => {
 
                     setMessage(resMessage);
                     setSuccessful(false);
+                    setShowSpinner(false);
                 }
             );
+        }else{
+            setSuccessful(false);
+            setShowSpinner(false);
         }
     };
 
@@ -123,7 +147,9 @@ const SignupLayout = () => {
 
     useEffect(() => {
         if (successful) {
-            // setShowSpinner(false);
+
+            setShowSpinner(true);
+
             redirectAfterSuccessfulRegister();
         }
     }, [successful]);
@@ -169,7 +195,7 @@ const SignupLayout = () => {
                             >
                                 {message}
                             </div>
-                            <div className="success-message text-center">You will be redirected to login in 3 seconds</div>
+                            <div className="success-message text-center">You will be redirected to login in a second</div>
                         </div>
                     )}
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
