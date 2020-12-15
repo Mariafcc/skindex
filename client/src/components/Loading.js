@@ -11,7 +11,7 @@ const Spinner = (props) => {
                 color="#BFE1DB"
                 height={100}
                 width={100}
-                timeout={3000} //3 seconds
+                timeout={20000} //3 seconds
                 className="p-10"
             /> : ""}
 
