@@ -19,7 +19,9 @@ const SignupLayout = () => {
     const [message, setMessage] = useState("");
     const [isValid, setValid] = useState(true);
     const history = useHistory();
+
     const [showSpinner, setShowSpinner] = useState(false);
+
 
     const onChangeUsername = (e) => {
         const username = e.target.value;
@@ -97,6 +99,7 @@ const SignupLayout = () => {
 
         setMessage("");
         setSuccessful(false);
+
         setShowSpinner(true);
         setValid(true);
 
@@ -143,7 +146,9 @@ const SignupLayout = () => {
 
     useEffect(() => {
         if (successful) {
+
             setShowSpinner(true);
+
             redirectAfterSuccessfulRegister();
         }
     }, [successful]);
@@ -152,7 +157,7 @@ const SignupLayout = () => {
 
     return (
         <div>
-            {showSpinner ? <Spinner visible={showSpinner} /> :
+            {/* {showSpinner ? <Spinner visible={showSpinner} /> : */}
                 <Form onSubmit={handleRegister} ref={form}>
                     <h3>Signup for Routine</h3>
 
@@ -194,7 +199,7 @@ const SignupLayout = () => {
                     )}
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
                 </Form>
-            }
+            {/* } */}
         </div>
     );
 
