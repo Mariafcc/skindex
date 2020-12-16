@@ -40,7 +40,7 @@
   To install necessary dependencies, run the following command:
   ```
 
-  npm install axios, reeact-bootstrap, react-dom, react-router-dom, sequelize, react-validation, json-webtkn, bcrypt, nodemon, bodyparser, exprress, sql, materialize-css
+  npm install
 
   ```
 
